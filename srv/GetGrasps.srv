@@ -1,0 +1,4 @@
+float32[] points
+uint32[] mask
+---
+contact_graspnet_ros2/Grasps grasps
