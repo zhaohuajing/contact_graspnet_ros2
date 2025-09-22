@@ -1,1 +1,0 @@
-/home/csrobot/graspnet_ws/src/contact_graspnet_ros2/checkpoints/scene_test_2048_bs3_hor_sigma_001/pointnet2_grasp_direct.py

@@ -1,39 +1,39 @@
 #!/usr/bin/env python3
-import os
-import numpy as np
+
 import rclpy
 from rclpy.node import Node
+
 from geometry_msgs.msg import Pose, Point
 from contact_graspnet_ros2.srv import GetGrasps
 from contact_graspnet_ros2.msg import Grasps
 
-# TF rotations
+import numpy as np
+# import transforms3d as tfs
 import tf_transformations as tfs
 
-# Use ROS 2 share dir to find checkpoints
-from ament_index_python.packages import get_package_share_directory
+# from contact_graspnet_ros2.pointnet2_grasp_direct import GraspEstimator, config_utils  # update path as needed
+import os
+import sys
+sys.path.append(os.path.expanduser('~/graspnet_ws/src/contact_graspnet_ros2/checkpoints/scene_test_2048_bs3_hor_sigma_001'))
+# sys.path.append('/home/csrobot/graspnet_ws/src/contact_graspnet_ros2/checkpoints/scene_test_2048_bs3_hor_sigma_001')
+sys.path.append(os.path.expanduser('~/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet/contact_graspnet'))
 
-# Import backbone from embedded packages (installed by CMake)
-from contact_graspnet.config_utils import load_config
-from contact_graspnet.contact_grasp_estimator import GraspEstimator
+from pointnet2_grasp_direct import GraspEstimator
+
+import config_utils
+
 import tensorflow.compat.v1 as tf
 tf.disable_eager_execution()
 
 class GraspPlanner(Node):
+
     def __init__(self):
         super().__init__('grasp_server')
         self.srv = self.create_service(GetGrasps, 'get_grasps', self.handle_grasp_request)
 
-        # Resolve checkpoints from installed share/
-        share_dir = get_package_share_directory('contact_graspnet_ros2')
-        config_path = os.path.join(
-            share_dir,
-            'checkpoints',
-            'scene_test_2048_bs3_hor_sigma_001'
-        )
-
-        # Load estimator
-        self.config = load_config(config_path, batch_size=5)
+        # TensorFlow and GraspNet loading
+        config_path = 'checkpoints/scene_test_2048_bs3_hor_sigma_001/'  # <-- Update this
+        self.config = config_utils.load_config(config_path, batch_size=5)
         self.grasp_estimator = GraspEstimator(self.config)
         self.grasp_estimator.build_network()
         self.sess = tf.Session()
