@@ -1,56 +1,21 @@
-# #!/bin/bash
-
-# # TensorFlow paths
-# TF_BASE="/home/csrobot/.local/lib/python3.12/site-packages/tensorflow"
-# TF_INC="$TF_BASE/include"
-# TF_LIB="$TF_BASE"
-
-# # CUDA paths (adjust if your CUDA is not at /usr/local/cuda)
-# CUDA_HOME="/usr/local/cuda"
-# # CUDA_HOME="/usr/local/cuda-12.9"
-# CUDA_INC="$CUDA_HOME/include"
-# CUDA_LIB="$CUDA_HOME/lib64"
-
-# echo "TF_INC: $TF_INC"
-# echo "TF_LIB: $TF_LIB"
-# echo "CUDA_INC: $CUDA_INC"
-# echo "CUDA_LIB: $CUDA_LIB"
-
-# rm -f *.o *.so
-
-# nvcc -std=c++14 -c -o tf_sampling_g.cu.o tf_sampling_g.cu \
-#     -I $TF_INC -I $TF_INC/external/nsync/public -I $CUDA_INC \
-#     -D GOOGLE_CUDA=1 -x cu -Xcompiler -fPIC
-
-# g++ -std=c++14 -shared -o tf_sampling_so.so tf_sampling.cpp tf_sampling_g.cu.o \
-#     -I $TF_INC -I $TF_INC/external/nsync/public -I $CUDA_INC \
-#     -L $TF_LIB -L $CUDA_LIB -ltensorflow_framework.2 -lcudart -fPIC -O2
-
-
 #!/bin/bash
-# Compile TensorFlow custom op for Contact-GraspNet (sampling)
 
-# Explicit paths
-TF_BASE=/home/csrobot/.local/lib/python3.12/site-packages/tensorflow
-TF_INC=$TF_BASE/include
-TF_LIB=$TF_BASE
+# Get TF compile and link flags
+TF_CFLAGS=$(python3.10 -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))')
+TF_LFLAGS=$(python3.10 -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))')
+
+# Optional: explicitly set your CUDA path if it's nonstandard
 CUDA_HOME=/usr/local/cuda
-CUDA_INC=$CUDA_HOME/include
-CUDA_LIB=$CUDA_HOME/lib64
 
-echo "TF_INC: $TF_INC"
-echo "TF_LIB: $TF_LIB"
-echo "CUDA_INC: $CUDA_INC"
-echo "CUDA_LIB: $CUDA_LIB"
+# Compile .cu file with -std=c++17
+/usr/local/cuda/bin/nvcc tf_sampling_g.cu -c -o tf_sampling_g.cu.o \
+    -std=c++17 \
+    -x cu -Xcompiler -fPIC \
+    -I/usr/include \
+    -I${CUDA_HOME}/include \
+    ${TF_CFLAGS}
 
-# Clean old .so
-rm -f tf_sampling_so.so
-
-# Compile the .cpp (not .cu) with nvcc
-nvcc tf_sampling.cpp -o tf_sampling_so.so \
-    -std=c++17 -c -O2 -DGOOGLE_CUDA=1 -x cu -Xcompiler -fPIC \
-    -I $TF_INC -I $TF_INC/external/nsync/public \
-    -I $CUDA_INC -L $CUDA_LIB -L $TF_LIB \
-    -ltensorflow_framework
-
-
+# Link with g++ using the same standard
+g++ -std=c++17 -shared -o tf_sampling_so.so tf_sampling.cpp tf_sampling_g.cu.o \
+    -fPIC ${TF_CFLAGS} ${TF_LFLAGS} \
+    -L${CUDA_HOME}/lib64 -lcudart

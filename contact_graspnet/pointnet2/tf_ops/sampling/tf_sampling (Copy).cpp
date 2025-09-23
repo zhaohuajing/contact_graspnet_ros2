@@ -1,182 +1,210 @@
-/* Furthest point sampling
- * Original author: Haoqiang Fan
- * Modified by Charles R. Qi
- * All Rights Reserved. 2017. 
- */
+// tf_sampling.cpp (TF 2.20+ compatible)
+// Registers PointNet++ sampling/interpolation ops with absl::Status shape fns.
+// CPU kernels below are stubs that report UNIMPLEMENTED (GPU expected).
+
 #include "tensorflow/core/framework/op.h"
 #include "tensorflow/core/framework/op_kernel.h"
 #include "tensorflow/core/framework/shape_inference.h"
-#include "tensorflow/core/framework/common_shape_fns.h"
-#include <cuda_runtime.h>
-
-// Add this for TF2.20+
 #include "absl/status/status.h"
 
-using namespace tensorflow;
+#include "tensorflow/tsl/platform/status.h"
 
-REGISTER_OP("ProbSample")
-  .Input("inp: float32")
-  .Input("inpr: float32")
-  .Output("out: int32")
-  .SetShapeFn([](::tensorflow::shape_inference::InferenceContext* c) {
-    ::tensorflow::shape_inference::ShapeHandle dims1; // batch_size * ncategory
-    c->WithRank(c->input(0), 2, &dims1);
-    ::tensorflow::shape_inference::ShapeHandle dims2; // batch_size * npoints
-    c->WithRank(c->input(1), 2, &dims2);
-    // batch_size * npoints
-    ::tensorflow::shape_inference::ShapeHandle output = c->MakeShape({c->Dim(dims2, 0), c->Dim(dims2, 1)});
-    c->set_output(0, output);
-    return Status::OK();
-  });
+using ::tensorflow::DEVICE_CPU;
+using ::tensorflow::DEVICE_GPU;
+using ::tensorflow::OpKernel;
+using ::tensorflow::OpKernelConstruction;
+using ::tensorflow::OpKernelContext;
+// DO NOT 'using' REGISTER_KERNEL_BUILDER (it's a macro)
+namespace shape_inference = ::tensorflow::shape_inference;
+
+// -------------------------------
+// FarthestPointSample
+// -------------------------------
 REGISTER_OP("FarthestPointSample")
-  .Attr("npoint: int")
-  .Input("inp: float32")
-  .Output("out: int32")
-  .SetShapeFn([](::tensorflow::shape_inference::InferenceContext* c) {
-    ::tensorflow::shape_inference::ShapeHandle dims1; // batch_size * npoint * 3
-    c->WithRank(c->input(0), 3, &dims1);
-    int npoint;
-    TF_RETURN_IF_ERROR(c->GetAttr("npoint", &npoint));
-    ::tensorflow::shape_inference::ShapeHandle output = c->MakeShape({c->Dim(dims1, 0), npoint});
-    c->set_output(0, output);
-    return Status::OK();
-  });
+    .Input("points: float32")        // [B, N, 3] or [N, 3]
+    .Input("npoint: int32")          // scalar
+    .Output("idx: int32")            // [B, npoint] or [npoint]
+    .SetShapeFn([](shape_inference::InferenceContext* c) {
+      shape_inference::ShapeHandle pts;
+      TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &pts));
+      TF_RETURN_IF_ERROR(c->WithRank(c->input(1), 0, nullptr));  // npoint scalar
+
+      auto npoint_dim = c->UnknownDim();
+      if (c->RankKnown(pts) && c->Rank(pts) == 3) {
+        auto B = c->Dim(pts, 0);
+        c->set_output(0, c->MakeShape({B, npoint_dim}));
+      } else {
+        c->set_output(0, c->MakeShape({npoint_dim}));
+      }
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+
+    })
+    .Doc(R"doc(
+Selects farthest-point samples.
+
+points: float32, [B, N, 3] or [N, 3]
+npoint: int32 scalar
+idx: int32, [B, npoint] or [npoint]
+)doc");
+
+// -------------------------------
+// GatherPoint / GatherPointGrad
+// -------------------------------
 REGISTER_OP("GatherPoint")
-  .Input("inp: float32")
-  .Input("idx: int32")
-  .Output("out: float32")
-  .SetShapeFn([](::tensorflow::shape_inference::InferenceContext* c) {
-    ::tensorflow::shape_inference::ShapeHandle dims1; // batch_size * ndataset * 3
-    c->WithRank(c->input(0), 3, &dims1);
-    ::tensorflow::shape_inference::ShapeHandle dims2; // batch_size * npoints
-    c->WithRank(c->input(1), 2, &dims2);
-    // batch_size * npoints * 3
-    ::tensorflow::shape_inference::ShapeHandle output = c->MakeShape({c->Dim(dims1, 0), c->Dim(dims2, 1), c->Dim(dims1, 2)});
-    c->set_output(0, output);
-    return Status::OK();
-  });
+    .Input("points: float32")   // [B, C, N] or [C, N]
+    .Input("idx: int32")        // [B, M] or [M]
+    .Output("out: float32")     // [B, C, M] or [C, M]
+    .SetShapeFn([](shape_inference::InferenceContext* c) {
+      shape_inference::ShapeHandle pts, idx;
+      TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &pts));
+      TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(1), 1, &idx));
+
+      if (c->RankKnown(pts) && c->Rank(pts) == 3 &&
+          c->RankKnown(idx) && c->Rank(idx) == 2) {
+        auto B = c->Dim(pts, 0);
+        auto C = c->Dim(pts, 1);
+        auto M = c->Dim(idx, 1);
+        c->set_output(0, c->MakeShape({B, C, M}));
+      } else if (c->RankKnown(pts) && c->Rank(pts) == 2 &&
+                 c->RankKnown(idx) && c->Rank(idx) == 1) {
+        auto C = c->Dim(pts, 0);
+        auto M = c->Dim(idx, 0);
+        c->set_output(0, c->MakeShape({C, M}));
+      } else {
+        c->set_output(0, c->UnknownShape());
+      }
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+
+    });
+
 REGISTER_OP("GatherPointGrad")
-  .Input("inp: float32")
-  .Input("idx: int32")
-  .Input("out_g: float32")
-  .Output("inp_g: float32")
-  .SetShapeFn([](::tensorflow::shape_inference::InferenceContext* c) {
-    c->set_output(0, c->input(0));
-    return Status::OK();
-  });
+    .Input("points: float32")   // [B, C, N] or [C, N] (for shape)
+    .Input("idx: int32")        // [B, M] or [M]
+    .Input("grad_out: float32") // [B, C, M] or [C, M]
+    .Output("grad_points: float32") // [B, C, N] or [C, N]
+    .SetShapeFn([](shape_inference::InferenceContext* c) {
+      c->set_output(0, c->input(0)); // same shape as points
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
 
-void probsampleLauncher(int b,int n,int m,const float * inp_p,const float * inp_r,float * temp,int * out);
-class ProbSampleGpuOp: public OpKernel{
-  public:
-    explicit ProbSampleGpuOp(OpKernelConstruction* context):OpKernel(context){}
-    void Compute(OpKernelContext * context)override{
-      const Tensor& inp_tensor=context->input(0);
-      const Tensor& inpr_tensor=context->input(1);
-      auto inp_flat=inp_tensor.flat<float>();
-      auto inpr_flat=inpr_tensor.flat<float>();
-      const float * inp=&(inp_flat(0));
-      const float * inpr=&(inpr_flat(0));
-      OP_REQUIRES(context,inp_tensor.dims()==2,errors::InvalidArgument("ProbSample expects (batch_size,num_choices) inp shape"));
-      int b=inp_tensor.shape().dim_size(0);
-      int n=inp_tensor.shape().dim_size(1);
-      OP_REQUIRES(context,inpr_tensor.dims()==2 && inpr_tensor.shape().dim_size(0)==b,errors::InvalidArgument("ProbSample expects (batch_size,num_points) inpr shape"));
-      int m=inpr_tensor.shape().dim_size(1);
-      Tensor * out_tensor=NULL;
-      OP_REQUIRES_OK(context,context->allocate_output(0,TensorShape{b,m},&out_tensor));
-      auto out_flat=out_tensor->flat<int>();
-      int * out=&(out_flat(0));
-      Tensor temp_tensor;
-      OP_REQUIRES_OK(context,context->allocate_temp(DataTypeToEnum<float>::value,TensorShape{b,n},&temp_tensor));
-      auto temp_flat=temp_tensor.flat<float>();
-      float * temp=&(temp_flat(0));
-      probsampleLauncher(b,n,m,inp,inpr,temp,out);
-    }
+    });
+
+// -------------------------------
+// ThreeNN
+// -------------------------------
+REGISTER_OP("ThreeNN")
+    .Input("unknown: float32")   // [B, n, 3] or [n, 3]
+    .Input("known: float32")     // [B, m, 3] or [m, 3]
+    .Output("dist2: float32")    // [B, n, 3] or [n, 3]
+    .Output("idx: int32")        // [B, n, 3] or [n, 3]
+    .SetShapeFn([](shape_inference::InferenceContext* c) {
+      shape_inference::ShapeHandle unk;
+      TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &unk));
+      if (c->RankKnown(unk)) {
+        if (c->Rank(unk) == 3) {
+          auto B = c->Dim(unk, 0);
+          auto n = c->Dim(unk, 1);
+          c->set_output(0, c->MakeShape({B, n, 3}));
+          c->set_output(1, c->MakeShape({B, n, 3}));
+        } else {
+          auto n = c->Dim(unk, 0);
+          c->set_output(0, c->MakeShape({n, 3}));
+          c->set_output(1, c->MakeShape({n, 3}));
+        }
+      } else {
+        c->set_output(0, c->UnknownShape());
+        c->set_output(1, c->UnknownShape());
+      }
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+
+    });
+
+// -------------------------------
+// ThreeInterpolate / ThreeInterpolateGrad
+// -------------------------------
+REGISTER_OP("ThreeInterpolate")
+    .Input("points: float32")    // [B, C, m] or [C, m]
+    .Input("idx: int32")         // [B, n, 3] or [n, 3]
+    .Input("weight: float32")    // [B, n, 3] or [n, 3]
+    .Output("out: float32")      // [B, C, n] or [C, n]
+    .SetShapeFn([](shape_inference::InferenceContext* c) {
+      shape_inference::ShapeHandle pts, idx, w;
+      TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &pts));
+      TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(1), 2, &idx));
+      TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(2), 2, &w));
+
+      if (c->RankKnown(pts) && c->Rank(pts) == 3 &&
+          c->RankKnown(idx) && c->Rank(idx) == 3) {
+        auto B = c->Dim(pts, 0);
+        auto C = c->Dim(pts, 1);
+        auto n = c->Dim(idx, 1);
+        c->set_output(0, c->MakeShape({B, C, n}));
+      } else if (c->RankKnown(pts) && c->Rank(pts) == 2 &&
+                 c->RankKnown(idx) && c->Rank(idx) == 2) {
+        auto C = c->Dim(pts, 0);
+        auto n = c->Dim(idx, 0);
+        c->set_output(0, c->MakeShape({C, n}));
+      } else {
+        c->set_output(0, c->UnknownShape());
+      }
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+    });
+
+REGISTER_OP("ThreeInterpolateGrad")
+    .Input("grad_out: float32")  // [B, C, n] or [C, n]
+    .Input("idx: int32")         // [B, n, 3] or [n, 3]
+    .Input("weight: float32")    // [B, n, 3] or [n, 3]
+    .Input("m: int32")           // scalar (size m)
+    .Output("grad_points: float32") // [B, C, m] or [C, m]
+    .SetShapeFn([](shape_inference::InferenceContext* c) {
+      shape_inference::ShapeHandle gout;
+      TF_RETURN_IF_ERROR(c->WithRankAtLeast(c->input(0), 2, &gout));
+      if (c->RankKnown(gout) && c->Rank(gout) == 3) {
+        auto B = c->Dim(gout, 0);
+        auto C = c->Dim(gout, 1);
+        c->set_output(0, c->MakeShape({B, C, c->UnknownDim()}));
+      } else if (c->RankKnown(gout) && c->Rank(gout) == 2) {
+        auto C = c->Dim(gout, 0);
+        c->set_output(0, c->MakeShape({C, c->UnknownDim()}));
+      } else {
+        c->set_output(0, c->UnknownShape());
+      }
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+
+    });
+
+// =====================================================================
+// CPU STUB KERNELS
+// =====================================================================
+
+template <typename T>
+class UnimplementedCpuKernel : public OpKernel {
+ public:
+  explicit UnimplementedCpuKernel(OpKernelConstruction* ctx) : OpKernel(ctx) {}
+  void Compute(OpKernelContext* ctx) override {
+    ctx->CtxFailure(
+        ::tensorflow::errors::Unimplemented(
+            "This op is only implemented for GPU in Contact-GraspNet "
+            "(PointNet++ custom ops). Ensure the CUDA kernels are built and "
+            "loaded (e.g., *_g.cu compiled into the same .so)."));
+  }
 };
-REGISTER_KERNEL_BUILDER(Name("ProbSample").Device(DEVICE_GPU), ProbSampleGpuOp);
 
-void farthestpointsamplingLauncher(int b,int n,int m,const float * inp,float * temp,int * out);
-class FarthestPointSampleGpuOp: public OpKernel{
-  public:
-    explicit FarthestPointSampleGpuOp(OpKernelConstruction* context):OpKernel(context) {
-                    OP_REQUIRES_OK(context, context->GetAttr("npoint", &npoint_));
-                    OP_REQUIRES(context, npoint_ > 0, errors::InvalidArgument("FarthestPointSample expects positive npoint"));
-                }
-    void Compute(OpKernelContext * context)override{
-      int m = npoint_;
+#define REGISTER_CPU_STUB(OPNAME) \
+  REGISTER_KERNEL_BUILDER(        \
+      Name(OPNAME).Device(DEVICE_CPU), UnimplementedCpuKernel<float>)
 
-      const Tensor& inp_tensor=context->input(0);
-      OP_REQUIRES(context,inp_tensor.dims()==3 && inp_tensor.shape().dim_size(2)==3,errors::InvalidArgument("FarthestPointSample expects (batch_size,num_points,3) inp shape"));
-      int b=inp_tensor.shape().dim_size(0);
-      int n=inp_tensor.shape().dim_size(1);
-      auto inp_flat=inp_tensor.flat<float>();
-      const float * inp=&(inp_flat(0));
-      Tensor * out_tensor;
-      OP_REQUIRES_OK(context,context->allocate_output(0,TensorShape{b,m},&out_tensor));
-      auto out_flat=out_tensor->flat<int>();
-      int * out=&(out_flat(0));
-      Tensor temp_tensor;
-      OP_REQUIRES_OK(context,context->allocate_temp(DataTypeToEnum<float>::value,TensorShape{32,n},&temp_tensor));
-      auto temp_flat=temp_tensor.flat<float>();
-      float * temp=&(temp_flat(0));
-      farthestpointsamplingLauncher(b,n,m,inp,temp,out);
-    }
-    private:
-        int npoint_;
-};
-REGISTER_KERNEL_BUILDER(Name("FarthestPointSample").Device(DEVICE_GPU),FarthestPointSampleGpuOp);
+// Register CPU stubs for all ops
+REGISTER_CPU_STUB("FarthestPointSample");
+REGISTER_CPU_STUB("GatherPoint");
+REGISTER_CPU_STUB("GatherPointGrad");
+REGISTER_CPU_STUB("ThreeNN");
+REGISTER_CPU_STUB("ThreeInterpolate");
+REGISTER_CPU_STUB("ThreeInterpolateGrad");
 
-void gatherpointLauncher(int b,int n,int m,const float * inp,const int * idx,float * out);
-class GatherPointGpuOp: public OpKernel{
-  public:
-    explicit GatherPointGpuOp(OpKernelConstruction * context):OpKernel(context){}
-    void Compute(OpKernelContext * context)override{
-      const Tensor& inp_tensor=context->input(0);
-      OP_REQUIRES(context,inp_tensor.dims()==3 && inp_tensor.shape().dim_size(2)==3,errors::InvalidArgument("GatherPoint expects (batch_size,num_points,3) inp shape"));
-      int b=inp_tensor.shape().dim_size(0);
-      int n=inp_tensor.shape().dim_size(1);
-      const Tensor& idx_tensor=context->input(1);
-      OP_REQUIRES(context,idx_tensor.dims()==2 && idx_tensor.shape().dim_size(0)==b,errors::InvalidArgument("GatherPoint expects (batch_size,num_result) idx shape"));
-      int m=idx_tensor.shape().dim_size(1);
-      auto inp_flat=inp_tensor.flat<float>();
-      const float * inp=&(inp_flat(0));
-      auto idx_flat=idx_tensor.flat<int>();
-      const int * idx=&(idx_flat(0));
-      Tensor * out_tensor=NULL;
-      OP_REQUIRES_OK(context,context->allocate_output(0,TensorShape{b,m,3},&out_tensor));
-      auto out_flat=out_tensor->flat<float>();
-      float * out=&(out_flat(0));
-      gatherpointLauncher(b,n,m,inp,idx,out);
-    }
-};
-REGISTER_KERNEL_BUILDER(Name("GatherPoint").Device(DEVICE_GPU),GatherPointGpuOp);
-
-void scatteraddpointLauncher(int b,int n,int m,const float * out_g,const int * idx,float * inp_g);
-class GatherPointGradGpuOp: public OpKernel{
-  public:
-    explicit GatherPointGradGpuOp(OpKernelConstruction * context):OpKernel(context){}
-    void Compute(OpKernelContext * context)override{
-      const Tensor& inp_tensor=context->input(0);
-      OP_REQUIRES(context,inp_tensor.dims()==3 && inp_tensor.shape().dim_size(2)==3,errors::InvalidArgument("GatherPointGradGpuOp expects (batch_size,num_points,3) inp"));
-      int b=inp_tensor.shape().dim_size(0);
-      int n=inp_tensor.shape().dim_size(1);
-      const Tensor& idx_tensor=context->input(1);
-      OP_REQUIRES(context,idx_tensor.dims()==2 && idx_tensor.shape().dim_size(0)==b,errors::InvalidArgument("GatherPointGradGpuOp expects (batch_size,num_result) idx shape"));
-      int m=idx_tensor.shape().dim_size(1);
-      auto inp_flat=inp_tensor.flat<float>();
-      const float * inp=&(inp_flat(0));
-      auto idx_flat=idx_tensor.flat<int>();
-      const int * idx=&(idx_flat(0));
-      const Tensor& out_g_tensor=context->input(2);
-      OP_REQUIRES(context,out_g_tensor.dims()==3 && out_g_tensor.shape().dim_size(0)==b && out_g_tensor.shape().dim_size(1)==m && out_g_tensor.shape().dim_size(2)==3,errors::InvalidArgument("GatherPointGradGpuOp expects (batch_size,num_result,3) out_g shape"));
-      auto out_g_flat=out_g_tensor.flat<float>();
-      const float * out_g=&(out_g_flat(0));
-      Tensor * inp_g_tensor=NULL;
-      OP_REQUIRES_OK(context,context->allocate_output(0,TensorShape{b,n,3},&inp_g_tensor));
-      auto inp_g_flat=inp_g_tensor->flat<float>();
-      float * inp_g=&(inp_g_flat(0));
-      cudaMemset(inp_g,0,b*n*3*4);
-      scatteraddpointLauncher(b,n,m,out_g,idx,inp_g);
-    }
-};
-REGISTER_KERNEL_BUILDER(Name("GatherPointGrad").Device(DEVICE_GPU),GatherPointGradGpuOp);
-
+#undef REGISTER_CPU_STUB

@@ -1,0 +1,184 @@
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-23 17:07:33.313055: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/types.h:22,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/numeric_types.h:22,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/numeric_types.h:24,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/bfloat16.h:19,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/types.h:24,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/op_def_builder.h:28,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/full_type_inference_util.h:23,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/op.h:27,
+                 from tf_sampling.cpp:5:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:169:53: error: ‘is_arithmetic_v’ is not a member of ‘std’; did you mean ‘is_arithmetic’?
+  169 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                     ^~~~~~~~~~~~~~~
+      |                                                     is_arithmetic
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:169:53: error: ‘is_arithmetic_v’ is not a member of ‘std’; did you mean ‘is_arithmetic’?
+  169 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                     ^~~~~~~~~~~~~~~
+      |                                                     is_arithmetic
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:169:69: error: template argument 1 is invalid
+  169 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                                     ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:169:72: error: expected unqualified-id before ‘>’ token
+  169 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                                        ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:184:53: error: ‘is_arithmetic_v’ is not a member of ‘std’; did you mean ‘is_arithmetic’?
+  184 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                     ^~~~~~~~~~~~~~~
+      |                                                     is_arithmetic
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:184:53: error: ‘is_arithmetic_v’ is not a member of ‘std’; did you mean ‘is_arithmetic’?
+  184 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                     ^~~~~~~~~~~~~~~
+      |                                                     is_arithmetic
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:184:69: error: template argument 1 is invalid
+  184 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                                     ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:184:72: error: expected unqualified-id before ‘>’ token
+  184 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                                        ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:219:53: error: ‘is_arithmetic_v’ is not a member of ‘std’; did you mean ‘is_arithmetic’?
+  219 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                     ^~~~~~~~~~~~~~~
+      |                                                     is_arithmetic
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:219:53: error: ‘is_arithmetic_v’ is not a member of ‘std’; did you mean ‘is_arithmetic’?
+  219 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                     ^~~~~~~~~~~~~~~
+      |                                                     is_arithmetic
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:219:69: error: template argument 1 is invalid
+  219 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                                     ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:219:72: error: expected unqualified-id before ‘>’ token
+  219 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                                        ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:234:53: error: ‘is_arithmetic_v’ is not a member of ‘std’; did you mean ‘is_arithmetic’?
+  234 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                     ^~~~~~~~~~~~~~~
+      |                                                     is_arithmetic
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:234:53: error: ‘is_arithmetic_v’ is not a member of ‘std’; did you mean ‘is_arithmetic’?
+  234 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                     ^~~~~~~~~~~~~~~
+      |                                                     is_arithmetic
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:234:69: error: template argument 1 is invalid
+  234 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                                     ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:234:72: error: expected unqualified-id before ‘>’ token
+  234 |             typename EnableIf = std::enable_if<std::is_arithmetic_v<T>>>
+      |                                                                        ^
+
+
+
+.....
+
+
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:458:27: error: ‘is_base_of_v’ is not a member of ‘std’; did you mean ‘is_base_of’?
+  458 |     std::enable_if_t<std::is_base_of_v<float8_base<From>, From> &&
+      |                           ^~~~~~~~~~~~
+      |                           is_base_of
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:458:27: error: ‘is_base_of_v’ is not a member of ‘std’; did you mean ‘is_base_of’?
+  458 |     std::enable_if_t<std::is_base_of_v<float8_base<From>, From> &&
+      |                           ^~~~~~~~~~~~
+      |                           is_base_of
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:458:63: error: template argument 1 is invalid
+  458 |     std::enable_if_t<std::is_base_of_v<float8_base<From>, From> &&
+      |                                                               ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:459:48: error: template argument 5 is invalid
+  459 |                      (sizeof(From) < sizeof(To))>> {
+      |                                                ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:459:49: error: expected unqualified-id before ‘>’ token
+  459 |                      (sizeof(From) < sizeof(To))>> {
+      |                                                 ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:557:42: error: ‘is_base_of_v’ is not a member of ‘std’; did you mean ‘is_base_of’?
+  557 |                    std::enable_if_t<std::is_base_of_v<float8_base<To>, To> &&
+      |                                          ^~~~~~~~~~~~
+      |                                          is_base_of
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:557:42: error: ‘is_base_of_v’ is not a member of ‘std’; did you mean ‘is_base_of’?
+  557 |                    std::enable_if_t<std::is_base_of_v<float8_base<To>, To> &&
+      |                                          ^~~~~~~~~~~~
+      |                                          is_base_of
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:557:74: error: template argument 1 is invalid
+  557 |                    std::enable_if_t<std::is_base_of_v<float8_base<To>, To> &&
+      |                                                                          ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:558:63: error: template argument 5 is invalid
+  558 |                                     (sizeof(To) < sizeof(From))>> {
+      |                                                               ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:558:64: error: expected unqualified-id before ‘>’ token
+  558 |                                     (sizeof(To) < sizeof(From))>> {
+      |                                                                ^~
+...
+
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:79:8: error: ‘optional’ in namespace ‘std’ does not name a template type
+   79 |   std::optional<int64_t> bytes_limit;
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:79:3: note: ‘std::optional’ is only available from C++17 onwards
+   79 |   std::optional<int64_t> bytes_limit;
+      |   ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:86:8: error: ‘optional’ in namespace ‘std’ does not name a template type
+   86 |   std::optional<int64_t> bytes_reservable_limit;
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:86:3: note: ‘std::optional’ is only available from C++17 onwards
+   86 |   std::optional<int64_t> bytes_reservable_limit;
+      |   ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:92:8: error: ‘optional’ in namespace ‘std’ does not name a template type
+   92 |   std::optional<int64_t> pool_bytes;
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:92:3: note: ‘std::optional’ is only available from C++17 onwards
+   92 |   std::optional<int64_t> pool_bytes;
+      |   ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:93:8: error: ‘optional’ in namespace ‘std’ does not name a template type
+   93 |   std::optional<int64_t> peak_pool_bytes;
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:93:3: note: ‘std::optional’ is only available from C++17 onwards
+   93 |   std::optional<int64_t> peak_pool_bytes;
+      |   ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = double; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:173:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<double, tsl::float8_internal::float8_e4m3fn, false, false, void>’ used in nested name specifier
+  796 |   return ConvertImpl<From, Derived, kSaturate, kTruncate>::run(from);
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = float; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:175:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<float, tsl::float8_internal::float8_e4m3fn, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = Eigen::bfloat16; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:177:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<Eigen::bfloat16, tsl::float8_internal::float8_e4m3fn, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = Eigen::half; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:179:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<Eigen::half, tsl::float8_internal::float8_e4m3fn, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = double; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:189:29:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e4m3fn, double, false, false, void>’ used in nested name specifier
+  802 |   return ConvertImpl<Derived, To, kSaturate, kTruncate>::run(from);
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = float; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:192:28:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e4m3fn, float, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = Eigen::bfloat16; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:195:38:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e4m3fn, Eigen::bfloat16, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = Eigen::half; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:198:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e4m3fn, Eigen::half, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = double; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:223:32:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<double, tsl::float8_internal::float8_e5m2, false, false, void>’ used in nested name specifier
+  796 |   return ConvertImpl<From, Derived, kSaturate, kTruncate>::run(from);
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = float; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:225:32:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<float, tsl::float8_internal::float8_e5m2, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = Eigen::bfloat16; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:227:32:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<Eigen::bfloat16, tsl::float8_internal::float8_e5m2, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = double; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:239:29:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e5m2, double, false, false, void>’ used in nested name specifier
+  802 |   return ConvertImpl<Derived, To, kSaturate, kTruncate>::run(from);
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = float; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:242:28:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e5m2, float, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = Eigen::bfloat16; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:245:38:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e5m2, Eigen::bfloat16, false, false, void>’ used in nested name specifier

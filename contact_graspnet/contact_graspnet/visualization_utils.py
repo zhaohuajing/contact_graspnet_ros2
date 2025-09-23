@@ -1,5 +1,16 @@
 import numpy as np
-import mayavi.mlab as mlab
+# import mayavi.mlab as mlab
+try:
+    import mayavi.mlab as mlab
+except ImportError:
+    print("Mayavi not available, skipping 3D rendering.")
+    mlab = None
+
+# import open3d as o3d
+# pcd = o3d.geometry.PointCloud()
+# pcd.points = o3d.utility.Vector3dVector(points)
+# o3d.visualization.draw_geometries([pcd])
+
 import matplotlib.pyplot as plt
 from matplotlib import cm
 
@@ -19,12 +30,12 @@ def plot_mesh(mesh, cam_trafo=np.eye(4), mesh_pose=np.eye(4)):
     
     homog_mesh_vert = np.pad(mesh.vertices, (0, 1), 'constant', constant_values=(0, 1))
     mesh_cam = homog_mesh_vert.dot(mesh_pose.T).dot(cam_trafo.T)[:,:3]
-    mlab.triangular_mesh(mesh_cam[:, 0],
-                         mesh_cam[:, 1],
-                         mesh_cam[:, 2],
-                         mesh.faces,
-                         colormap='Blues',
-                         opacity=0.5)
+    # mlab.triangular_mesh(mesh_cam[:, 0],
+    #                      mesh_cam[:, 1],
+    #                      mesh_cam[:, 2],
+    #                      mesh.faces,
+    #                      colormap='Blues',
+    #                      opacity=0.5)
 
 def plot_coordinates(t,r, tube_radius=0.005):
     """
@@ -37,9 +48,9 @@ def plot_coordinates(t,r, tube_radius=0.005):
     Keyword Arguments:
         tube_radius {float} -- radius of the plotted tubes (default: {0.005})
     """
-    mlab.plot3d([t[0],t[0]+0.2*r[0,0]], [t[1],t[1]+0.2*r[1,0]], [t[2],t[2]+0.2*r[2,0]], color=(1,0,0), tube_radius=tube_radius, opacity=1)
-    mlab.plot3d([t[0],t[0]+0.2*r[0,1]], [t[1],t[1]+0.2*r[1,1]], [t[2],t[2]+0.2*r[2,1]], color=(0,1,0), tube_radius=tube_radius, opacity=1)
-    mlab.plot3d([t[0],t[0]+0.2*r[0,2]], [t[1],t[1]+0.2*r[1,2]], [t[2],t[2]+0.2*r[2,2]], color=(0,0,1), tube_radius=tube_radius, opacity=1)
+    # mlab.plot3d([t[0],t[0]+0.2*r[0,0]], [t[1],t[1]+0.2*r[1,0]], [t[2],t[2]+0.2*r[2,0]], color=(1,0,0), tube_radius=tube_radius, opacity=1)
+    # mlab.plot3d([t[0],t[0]+0.2*r[0,1]], [t[1],t[1]+0.2*r[1,1]], [t[2],t[2]+0.2*r[2,1]], color=(0,1,0), tube_radius=tube_radius, opacity=1)
+    # mlab.plot3d([t[0],t[0]+0.2*r[0,2]], [t[1],t[1]+0.2*r[1,2]], [t[2],t[2]+0.2*r[2,2]], color=(0,0,1), tube_radius=tube_radius, opacity=1)
                 
 def show_image(rgb, segmap):
     """

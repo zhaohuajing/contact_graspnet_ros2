@@ -3,7 +3,7 @@ set -euo pipefail
 
 # ---- Paths (adjust if your setup differs) ----
 TF_BASE="/home/csrobot/.local/lib/python3.12/site-packages/tensorflow"
-CUDA_HOME="/usr/local/cuda"
+CUDA_HOME="/usr/local/cuda-12.9"
 
 # ---- TensorFlow includes / link flags (hard-coded; no Python in-script) ----
 TF_CFLAGS="-I${TF_BASE}/include -I${TF_BASE}/include/external/nsync/public"

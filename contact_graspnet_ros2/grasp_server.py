@@ -16,7 +16,9 @@ from ament_index_python.packages import get_package_share_directory
 # Import backbone from embedded packages (installed by CMake)
 from contact_graspnet.config_utils import load_config
 from contact_graspnet.contact_grasp_estimator import GraspEstimator
-import tensorflow.compat.v1 as tf
+# import tensorflow.compat.v1 as tf
+import tensorflow as tf
+
 tf.disable_eager_execution()
 
 class GraspPlanner(Node):

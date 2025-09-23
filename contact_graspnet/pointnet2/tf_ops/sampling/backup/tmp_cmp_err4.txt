@@ -1,0 +1,824 @@
+(tfenv12) csrobot@nerve-desktop-6:~/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet/pointnet2/tf_ops/sampling$ ./compile.sh
+2025-09-23 15:50:55.019539: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-23 15:50:57.922703: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-23 15:51:00.809671: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-23 15:51:03.699058: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/mutex.h:22,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/refcount.h:19,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/lib/core/refcount.h:19,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/resource_base.h:24,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/resource_handle.h:22,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/types.h:30,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_def_builder.h:28,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/full_type_inference_util.h:24,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op.h:27,
+                 from tf_sampling.cpp:5:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:105:24: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  105 |   typedef ::tsl::mutex mutex_type;
+      |                        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:107:37: warning: ‘mutex_type’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  107 |   explicit mutex_lock(mutex_type& mu) TF_EXCLUSIVE_LOCK_FUNCTION(mu)
+      |                                     ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:112:48: warning: ‘mutex_type’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  112 |   mutex_lock(mutex_type& mu, std::try_to_lock_t) TF_EXCLUSIVE_LOCK_FUNCTION(mu)
+      |                                                ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:145:24: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  145 |   typedef ::tsl::mutex mutex_type;
+      |                        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:147:41: warning: ‘mutex_type’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  147 |   explicit tf_shared_lock(mutex_type& mu) TF_SHARED_LOCK_FUNCTION(mu)
+      |                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:152:52: warning: ‘mutex_type’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  152 |   tf_shared_lock(mutex_type& mu, std::try_to_lock_t) TF_SHARED_LOCK_FUNCTION(mu)
+      |                                                    ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:215:78: warning: ‘condition_variable’ is deprecated: Use absl::CondVar instead. [-Wdeprecated-declarations]
+  215 |                                            condition_variable* cv, int64_t ms) {
+      |                                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:183:53: note: declared here
+  183 | class ABSL_DEPRECATED("Use absl::CondVar instead.") condition_variable {
+      |                                                     ^~~~~~~~~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/refcount.h:20:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/refcount.h:158:19: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  158 |     mutable mutex mu;
+      |                   ^~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/strcat.h:23,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/errors.h:29,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/resource_base.h:25:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/strcat.h:108:19: warning: ‘using tsl::strings::Hex = struct absl::lts_20250127::Hex’ is deprecated [-Wdeprecated-declarations]
+  108 |   AlphaNum(Hex hex);  // NOLINT(runtime/explicit)
+      |                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/strcat.h:81:7: note: declared here
+   81 | using Hex ABSL_DEPRECATE_AND_INLINE() = absl::Hex;
+      |       ^~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/errors.h:19,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/errors.h:30:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h: In function ‘absl::lts_20250127::Status tsl::errors::Create(absl::lts_20250127::StatusCode, absl::lts_20250127::string_view, const std::unordered_map<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:154:17: warning: ‘tsl::Status’ is deprecated [-Wdeprecated-declarations]
+  154 |   Status status(code, message);
+      |                 ^~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/status.h:19,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/status.h:25,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/errors.h:27:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/status.h:62:22: note: declared here
+   62 | typedef absl::Status Status ABSL_DEPRECATE_AND_INLINE();
+      |                      ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/resource_base.h: In member function ‘virtual absl::lts_20250127::Status tensorflow::ResourceBase::AsGraphDef(tensorflow::GraphDefBuilder*, tensorflow::Node**) const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/resource_base.h:56:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+   56 |     return errors::Unimplemented("AsGraphDef not implemented for resource ",
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   57 |                                  DebugString());
+      |                                  ~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/resource_handle.h:23:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/tensor_shape.h: In member function ‘absl::lts_20250127::Status tensorflow::TensorShapeBase<Shape>::RemoveDimWithStatus(int64_t)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/tensor_shape.h:250:30: warning: ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*, long int}]’ is deprecated: Use absl::InternalError() instead. [-Wdeprecated-declarations]
+  250 |       return errors::Internal(
+      |              ~~~~~~~~~~~~~~~~^
+  251 |           "Expected dimension index to be non-negative, got ", d);
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:417:14: note: declared here
+  417 | absl::Status Internal(Args... args) {
+      |              ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/tensor_shape.h: In member function ‘absl::lts_20250127::Status tensorflow::TensorShape::AsEigenDSizesWithStatus(Eigen::DSizes<IndexType, NumDims>*) const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/tensor_shape.h:681:28: warning: ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*, int, const char*, int, const char*}]’ is deprecated: Use absl::InternalError() instead. [-Wdeprecated-declarations]
+  681 |     return errors::Internal("Asking for tensor of ", NDIMS,
+      |            ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  682 |                             " dimensions from a tensor of ", dims(),
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  683 |                             " dimensions");
+      |                             ~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:417:14: note: declared here
+  417 | absl::Status Internal(Args... args) {
+      |              ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/tensor_shape.h: In member function ‘absl::lts_20250127::Status tensorflow::TensorShape::AsEigenDSizesWithPaddingWithStatus(Eigen::DSizes<IndexType, NumDims>*) const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/tensor_shape.h:699:28: warning: ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*, int, const char*, int, const char*}]’ is deprecated: Use absl::InternalError() instead. [-Wdeprecated-declarations]
+  699 |     return errors::Internal("Asking for tensor of at most ", NDIMS,
+      |            ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  700 |                             " dimensions from a tensor of ", dims(),
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  701 |                             " dimensions");
+      |                             ~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:417:14: note: declared here
+  417 | absl::Status Internal(Args... args) {
+      |              ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/resource_handle.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/resource_handle.h:157:30: warning: ‘using tsl::StatusOr = class absl::lts_20250127::StatusOr<T*>’ is deprecated [-Wdeprecated-declarations]
+  157 |   StatusOr<T*> GetResource() const {
+      |                              ^~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/statusor.h:19,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/statusor.h:21,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/tensor_shape.h:30:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/statusor.h:94:7: note: declared here
+   94 | using StatusOr ABSL_DEPRECATE_AND_INLINE() = absl::StatusOr<T>;
+      |       ^~~~~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/util/padding.h:26,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/node_def_util.h:39,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/full_type_util.h:24,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op.h:28:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/util/tensor_format.h:438:58: warning: ‘using tensorflow::gtl::ArraySlice = class absl::lts_20250127::Span<const T>’ is deprecated [-Wdeprecated-declarations]
+  438 |                TensorFormat tensor_format, char dimension) {
+      |                                                          ^
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/tensor_shape.h:23:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/lib/gtl/array_slice.h:34:7: note: declared here
+   34 | using ArraySlice ABSL_DEPRECATE_AND_INLINE() = absl::Span<const T>;
+      |       ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/util/tensor_format.h:448:71: warning: ‘using tensorflow::gtl::ArraySlice = class absl::lts_20250127::Span<const T>’ is deprecated [-Wdeprecated-declarations]
+  448 |                FilterTensorFormat filter_tensor_format, char dimension) {
+      |                                                                       ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/lib/gtl/array_slice.h:34:7: note: declared here
+   34 | using ArraySlice ABSL_DEPRECATE_AND_INLINE() = absl::Span<const T>;
+      |       ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/node_def_util.h:268:73: warning: ‘using tsl::StatusOr = class absl::lts_20250127::StatusOr<T>’ is deprecated [-Wdeprecated-declarations]
+  268 | StatusOr<T> GetNodeAttr(const NodeDef& ndef, absl::string_view attr_name) {
+      |                                                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/statusor.h:94:7: note: declared here
+   94 | using StatusOr ABSL_DEPRECATE_AND_INLINE() = absl::StatusOr<T>;
+      |       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op.h:164:17: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  164 |   mutable mutex mu_;
+      |                 ^~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/file_system.h:19,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/file_system.h:34,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/env.h:28,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/threadpool.h:23,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h:33,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:32,
+                 from tf_sampling.cpp:6:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::FileSystem::SetOption(const std::string&, const std::string&)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:532:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  532 |     return errors::Unimplemented("SetOption");
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::FileSystem::SetOption(const std::string&, const std::vector<std::__cxx11::basic_string<char> >&)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:538:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  538 |     return errors::Unimplemented("SetOption");
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::FileSystem::SetOption(const std::string&, const std::vector<long int>&)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:544:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  544 |     return errors::Unimplemented("SetOption");
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::FileSystem::SetOption(const std::string&, const std::vector<double>&)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:550:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  550 |     return errors::Unimplemented("SetOption");
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::FileSystem::SetFileAcl(std::shared_ptr<tsl::FileAcl>)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:557:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  557 |     return errors::Unimplemented("SetFileAcl");
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::RandomAccessFile::Name(absl::lts_20250127::string_view*) const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:771:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  771 |     return errors::Unimplemented("This filesystem does not support Name()");
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::RandomAccessFile::Read(tsl::uint64, absl::lts_20250127::string_view&, absl::lts_20250127::Span<char>) const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:811:16: warning: ‘virtual absl::lts_20250127::Status tsl::RandomAccessFile::Read(tsl::uint64, size_t, absl::lts_20250127::string_view*, char*) const’ is deprecated [-Wdeprecated-declarations]
+  811 |     return Read(offset, scratch.size(), &result, scratch.data());
+      |            ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:790:24: note: declared here
+  790 |   virtual absl::Status Read(uint64 offset, size_t n, absl::string_view* result,
+      |                        ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::RandomAccessFile::Read(tsl::uint64, size_t, absl::lts_20250127::Cord*) const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:817:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  817 |     return errors::Unimplemented(
+      |            ~~~~~~~~~~~~~~~~~~~~~^
+  818 |         "Read(uint64, size_t, absl::Cord*) is not "
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  819 |         "implemented");
+      |         ~~~~~~~~~~~~~~           
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::WritableFile::Name(absl::lts_20250127::string_view*) const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:876:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  876 |     return errors::Unimplemented("This filesystem does not support Name()");
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h: In member function ‘virtual absl::lts_20250127::Status tsl::WritableFile::Tell(int64_t*)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:894:33: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  894 |     return errors::Unimplemented("This filesystem does not support Tell()");
+      |            ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/env.h:19,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/env.h:37:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/env.h: In function ‘absl::lts_20250127::Status tsl::WriteTextProto(Env*, const std::string&, const google::protobuf::MessageLite&)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/env.h:661:31: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  661 |   return errors::Unimplemented("Can't write text protos with protolite.");
+      |          ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/env.h: In function ‘absl::lts_20250127::Status tsl::ReadTextProto(Env*, const std::string&, google::protobuf::MessageLite*)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/env.h:671:31: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  671 |   return errors::Unimplemented("Can't parse text protos with protolite.");
+      |          ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:22,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/Tensor:14,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/types.h:25:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/ThreadPool/EventCount.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:48:73: warning: use of ‘std::hardware_destructive_interference_size’ [-Winterference-size]
+   48 | #define EIGEN_ALIGN_TO_AVOID_FALSE_SHARING EIGEN_ALIGN_TO_BOUNDARY(std::hardware_destructive_interference_size)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:37:44: note: in definition of macro ‘EIGEN_ALIGN_TO_BOUNDARY’
+   37 | #define EIGEN_ALIGN_TO_BOUNDARY(n) alignas(n)
+      |                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/ThreadPool/EventCount.h:193:5: note: in expansion of macro ‘EIGEN_ALIGN_TO_AVOID_FALSE_SHARING’
+  193 |     EIGEN_ALIGN_TO_AVOID_FALSE_SHARING std::atomic<uint64_t> next{kStackMask};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:48:73: note: its value can vary between compiler versions or with different ‘-mtune’ or ‘-mcpu’ flags
+   48 | #define EIGEN_ALIGN_TO_AVOID_FALSE_SHARING EIGEN_ALIGN_TO_BOUNDARY(std::hardware_destructive_interference_size)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:37:44: note: in definition of macro ‘EIGEN_ALIGN_TO_BOUNDARY’
+   37 | #define EIGEN_ALIGN_TO_BOUNDARY(n) alignas(n)
+      |                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/ThreadPool/EventCount.h:193:5: note: in expansion of macro ‘EIGEN_ALIGN_TO_AVOID_FALSE_SHARING’
+  193 |     EIGEN_ALIGN_TO_AVOID_FALSE_SHARING std::atomic<uint64_t> next{kStackMask};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:48:73: note: if this use is part of a public ABI, change it to instead use a constant variable you define
+   48 | #define EIGEN_ALIGN_TO_AVOID_FALSE_SHARING EIGEN_ALIGN_TO_BOUNDARY(std::hardware_destructive_interference_size)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:37:44: note: in definition of macro ‘EIGEN_ALIGN_TO_BOUNDARY’
+   37 | #define EIGEN_ALIGN_TO_BOUNDARY(n) alignas(n)
+      |                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/ThreadPool/EventCount.h:193:5: note: in expansion of macro ‘EIGEN_ALIGN_TO_AVOID_FALSE_SHARING’
+  193 |     EIGEN_ALIGN_TO_AVOID_FALSE_SHARING std::atomic<uint64_t> next{kStackMask};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:48:73: note: the default value for the current CPU tuning is 64 bytes
+   48 | #define EIGEN_ALIGN_TO_AVOID_FALSE_SHARING EIGEN_ALIGN_TO_BOUNDARY(std::hardware_destructive_interference_size)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:37:44: note: in definition of macro ‘EIGEN_ALIGN_TO_BOUNDARY’
+   37 | #define EIGEN_ALIGN_TO_BOUNDARY(n) alignas(n)
+      |                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/ThreadPool/EventCount.h:193:5: note: in expansion of macro ‘EIGEN_ALIGN_TO_AVOID_FALSE_SHARING’
+  193 |     EIGEN_ALIGN_TO_AVOID_FALSE_SHARING std::atomic<uint64_t> next{kStackMask};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:48:73: note: you can stabilize this value with ‘--param hardware_destructive_interference_size=64’, or disable this warning with ‘-Wno-interference-size’
+   48 | #define EIGEN_ALIGN_TO_AVOID_FALSE_SHARING EIGEN_ALIGN_TO_BOUNDARY(std::hardware_destructive_interference_size)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:37:44: note: in definition of macro ‘EIGEN_ALIGN_TO_BOUNDARY’
+   37 | #define EIGEN_ALIGN_TO_BOUNDARY(n) alignas(n)
+      |                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/ThreadPool/EventCount.h:193:5: note: in expansion of macro ‘EIGEN_ALIGN_TO_AVOID_FALSE_SHARING’
+  193 |     EIGEN_ALIGN_TO_AVOID_FALSE_SHARING std::atomic<uint64_t> next{kStackMask};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:48:73: warning: use of ‘std::hardware_destructive_interference_size’ [-Winterference-size]
+   48 | #define EIGEN_ALIGN_TO_AVOID_FALSE_SHARING EIGEN_ALIGN_TO_BOUNDARY(std::hardware_destructive_interference_size)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:37:44: note: in definition of macro ‘EIGEN_ALIGN_TO_BOUNDARY’
+   37 | #define EIGEN_ALIGN_TO_BOUNDARY(n) alignas(n)
+      |                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/ThreadPool/RunQueue.h:176:3: note: in expansion of macro ‘EIGEN_ALIGN_TO_AVOID_FALSE_SHARING’
+  176 |   EIGEN_ALIGN_TO_AVOID_FALSE_SHARING std::atomic<unsigned> front_;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:48:73: warning: use of ‘std::hardware_destructive_interference_size’ [-Winterference-size]
+   48 | #define EIGEN_ALIGN_TO_AVOID_FALSE_SHARING EIGEN_ALIGN_TO_BOUNDARY(std::hardware_destructive_interference_size)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:37:44: note: in definition of macro ‘EIGEN_ALIGN_TO_BOUNDARY’
+   37 | #define EIGEN_ALIGN_TO_BOUNDARY(n) alignas(n)
+      |                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/ThreadPool/RunQueue.h:177:3: note: in expansion of macro ‘EIGEN_ALIGN_TO_AVOID_FALSE_SHARING’
+  177 |   EIGEN_ALIGN_TO_AVOID_FALSE_SHARING std::atomic<unsigned> back_;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:48:73: warning: use of ‘std::hardware_destructive_interference_size’ [-Winterference-size]
+   48 | #define EIGEN_ALIGN_TO_AVOID_FALSE_SHARING EIGEN_ALIGN_TO_BOUNDARY(std::hardware_destructive_interference_size)
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ConfigureVectorization.h:37:44: note: in definition of macro ‘EIGEN_ALIGN_TO_BOUNDARY’
+   37 | #define EIGEN_ALIGN_TO_BOUNDARY(n) alignas(n)
+      |                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/ThreadPool/RunQueue.h:180:3: note: in expansion of macro ‘EIGEN_ALIGN_TO_AVOID_FALSE_SHARING’
+  180 |   EIGEN_ALIGN_TO_AVOID_FALSE_SHARING Elem array_[kSize];
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/threadpool.h:19,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/threadpool.h:27:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/threadpool.h: In static member function ‘static tsl::thread::ThreadPool::SchedulingParams tsl::thread::ThreadPool::SchedulingParams::Fixed(int64_t)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/threadpool.h:79:41: warning: ‘tsl::thread::ThreadPool::SchedulingParams::SchedulingParams(tsl::thread::ThreadPool::SchedulingStrategy, std::optional<long int>, std::optional<long int>)’ is deprecated: Use SchedulingParams::Fixed or SchedulingParams::Adaptive [-Wdeprecated-declarations]
+   79 |                               block_size);
+      |                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/threadpool.h:88:14: note: declared here
+   88 |     explicit SchedulingParams(SchedulingStrategy strategy,
+      |              ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/threadpool.h: In static member function ‘static tsl::thread::ThreadPool::SchedulingParams tsl::thread::ThreadPool::SchedulingParams::Adaptive(int64_t)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/threadpool.h:84:43: warning: ‘tsl::thread::ThreadPool::SchedulingParams::SchedulingParams(tsl::thread::ThreadPool::SchedulingStrategy, std::optional<long int>, std::optional<long int>)’ is deprecated: Use SchedulingParams::Fixed or SchedulingParams::Adaptive [-Wdeprecated-declarations]
+   84 |                               std::nullopt);
+      |                                           ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/threadpool.h:88:14: note: declared here
+   88 |     explicit SchedulingParams(SchedulingStrategy strategy,
+      |              ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h: In member function ‘virtual void tensorflow::DeviceContext::CopyCPUTensorToDevice(const tensorflow::Tensor*, tensorflow::Device*, tensorflow::Tensor*, tsl::StatusCallback, bool) const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h:85:26: warning: ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::InternalError() instead. [-Wdeprecated-declarations]
+   85 |     done(errors::Internal("Unrecognized device type in CPU-to-device Copy"));
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:417:14: note: declared here
+  417 | absl::Status Internal(Args... args) {
+      |              ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h: In member function ‘virtual void tensorflow::DeviceContext::CopyTensorInSameDevice(const tensorflow::Tensor*, tensorflow::Device*, tensorflow::Tensor*, tsl::StatusCallback) const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h:97:31: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+   97 |     done(errors::Unimplemented("Copy in same device not implemented."));
+      |          ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h: In member function ‘virtual void tensorflow::DeviceContext::CopyDeviceTensorToCPU(const tensorflow::Tensor*, absl::lts_20250127::string_view, tensorflow::Device*, tensorflow::Tensor*, tsl::StatusCallback)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h:107:26: warning: ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::InternalError() instead. [-Wdeprecated-declarations]
+  107 |     done(errors::Internal("Unrecognized device type in device-to-CPU Copy"));
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:417:14: note: declared here
+  417 | absl::Status Internal(Args... args) {
+      |              ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h: In member function ‘virtual absl::lts_20250127::Status tensorflow::DeviceContext::ThenExecute(tensorflow::Device*, stream_executor::Stream*, std::function<void()>)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h:122:28: warning: ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::InternalError() instead. [-Wdeprecated-declarations]
+  122 |     return errors::Internal("ThenExecute not supported by device");
+      |            ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:417:14: note: declared here
+  417 | absl::Status Internal(Args... args) {
+      |              ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h: In member function ‘virtual absl::lts_20250127::Status tensorflow::DeviceBase::MakeTensorFromProto(const tensorflow::TensorProto&, tsl::AllocatorAttributes, tensorflow::Tensor*)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h:262:28: warning: ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::InternalError() instead. [-Wdeprecated-declarations]
+  262 |     return errors::Internal("Device does not implement MakeTensorFromProto()");
+      |            ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:417:14: note: declared here
+  417 | absl::Status Internal(Args... args) {
+      |              ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h: In member function ‘virtual void tensorflow::DeviceBase::CopyTensorInSameDevice(const tensorflow::Tensor*, tensorflow::Tensor*, const tensorflow::DeviceContext*, tsl::StatusCallback)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h:286:26: warning: ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char*, const char*}]’ is deprecated: Use absl::InternalError() instead. [-Wdeprecated-declarations]
+  286 |     done(errors::Internal("Device ", name(), " does not implement ",
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  287 |                           "CopyTensorInSameDevice"));
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:417:14: note: declared here
+  417 | absl::Status Internal(Args... args) {
+      |              ^~~~~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:35:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/kernel_def_builder.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/kernel_def_builder.h:47:62: warning: ‘using tensorflow::gtl::ArraySlice = class absl::lts_20250127::Span<const T>’ is deprecated [-Wdeprecated-declarations]
+   47 |                                    gtl::ArraySlice<T> allowed);
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/lib/gtl/array_slice.h:34:7: note: declared here
+   34 | using ArraySlice ABSL_DEPRECATE_AND_INLINE() = absl::Span<const T>;
+      |       ^~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:43:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/session_state.h:47:9: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+   47 |   mutex state_lock_;
+      |         ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/session_state.h:81:9: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+   81 |   mutex lock_;
+      |         ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/session_state.h: In member function ‘std::string tensorflow::TensorStore::TensorAndKey::GetHandle(const std::string&)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/session_state.h:66:29: warning: ‘std::string tsl::strings::StrCat(const AlphaNum&, const AlphaNum&, const AlphaNum&, const AlphaNum&, const AlphaNum&, const AV& ...) [with AV = {}; std::string = std::__cxx11::basic_string<char>]’ is deprecated: Use absl::StrCat() instead. [-Wdeprecated-declarations]
+   66 |       return strings::StrCat(tensor_name, ";", id, ";", device_name);
+      |              ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/strcat.h:190:13: note: declared here
+  190 | std::string StrCat(const AlphaNum &a, const AlphaNum &b, const AlphaNum &c,
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:197:74: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  197 |   absl::Status InputRange(StringPiece input_name, int* start, int* stop) const;
+      |                                                                          ^~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/tstring.h:21,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/types.h:25,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/numeric_types.h:25,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/bfloat16.h:19,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/types.h:27:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:199:39: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  199 |                            int* stop) const;
+      |                                       ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/default/logging.h:37,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/logging.h:26,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/refcount.h:23:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/macros.h:24:55: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+   24 | #define TF_ATTRIBUTE_NOINLINE __attribute__((noinline))
+      |                                                       ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:322:40: note: in expansion of macro ‘TF_ATTRIBUTE_NOINLINE’
+  322 |                        T* value) const TF_ATTRIBUTE_NOINLINE;
+      |                                        ^~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:325:39: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  325 |   bool HasAttr(StringPiece attr_name) const;
+      |                                       ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:456:25: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  456 |   mutex* ref_mutex(int i);
+      |                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:482:56: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  482 |   void set_ref(int i, mutex* mu, Tensor* tensor_for_ref);
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:498:35: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  498 |   TensorValue(mutex* mu, Tensor* t) : mutex_if_ref(mu), tensor(t) {}
+      |                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:524:10: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  524 |   mutex* mutex_if_ref;  // nullptr if not a ref, != nullptr if a ref
+      |          ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:530:9: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  530 |   mutex mu;
+      |         ^~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:736:63: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  736 |   absl::Status input_dtype(StringPiece name, DataType* dtype) const;
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:761:61: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  761 |   absl::Status input(StringPiece name, const Tensor** tensor);
+      |                                                             ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:768:62: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  768 |   absl::Status input_list(StringPiece name, OpInputList* list);
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:778:67: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  778 |   absl::Status input_ref_mutex(StringPiece name, mutex** out_mutex);
+      |                                                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:778:67: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+  778 |   absl::Status input_ref_mutex(StringPiece name, mutex** out_mutex);
+      |                                                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:796:78: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  796 |   absl::Status mutable_input(StringPiece name, Tensor* tensor, bool lock_held);
+      |                                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:804:77: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  804 |   absl::Status mutable_input_list(StringPiece name, OpMutableInputList* list);
+      |                                                                             ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:817:48: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  817 |                                  bool lock_held);
+      |                                                ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:869:55: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  869 |       const TensorShape& output_shape, Tensor** output);
+      |                                                       ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:869:55: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  869 |       const TensorShape& output_shape, Tensor** output);
+      |                                                       ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:915:24: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  915 |       absl::Span<const StringPiece> candidate_input_names,
+      |                        ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:917:22: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  917 |       Tensor** output);
+      |                      ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:938:64: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+  938 |   absl::Status output_list(StringPiece name, OpOutputList* list);
+      |                                                                ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1002:55: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1002 |                                        Tensor** tensor);
+      |                                                       ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1014:64: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1014 |                                        AllocatorAttributes attr);
+      |                                                                ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1034:65: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1034 |   absl::Status set_output(StringPiece name, const Tensor& tensor);
+      |                                                                 ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1035:60: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1035 |   absl::Status set_output(StringPiece name, Tensor&& tensor);
+      |                                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1043:53: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1043 |                               Tensor* tensor_for_ref);
+      |                                                     ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1043:53: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+ 1043 |                               Tensor* tensor_for_ref);
+      |                                                     ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1046:64: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1046 |   absl::Status mutable_output(StringPiece name, Tensor** tensor);
+      |                                                                ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1206:35: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+ 1206 |   mutex* input_ref_mutex(int index);
+      |                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1207:67: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+ 1207 |   void set_output_ref(int index, mutex* mu, Tensor* tensor_for_ref);
+      |                                                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1301:66: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1301 |   absl::Status get_input_index(StringPiece name, int* out_index) const;
+      |                                                                  ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1302:67: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1302 |   absl::Status get_output_index(StringPiece name, int* out_index) const;
+      |                                                                   ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1321:19: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+ 1321 |     mutable mutex mu;
+      |                   ^~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1325:19: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+ 1325 |     mutable mutex stats_mu;
+      |                   ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1424:55: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1424 | std::string KernelsRegisteredForOp(StringPiece op_name);
+      |                                                       ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1520:58: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1520 |     const KernelDef** def, std::string* kernel_class_name);
+      |                                                          ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1520:58: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1520 |     const KernelDef** def, std::string* kernel_class_name);
+      |                                                          ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1520:58: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1520 |     const KernelDef** def, std::string* kernel_class_name);
+      |                                                          ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1541:57: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1541 | KernelList GetRegisteredKernelsForOp(StringPiece op_name);
+      |                                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/macros.h:24:55: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+   24 | #define TF_ATTRIBUTE_NOINLINE __attribute__((noinline))
+      |                                                       ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1561:7: note: in expansion of macro ‘TF_ATTRIBUTE_NOINLINE’
+ 1561 |       TF_ATTRIBUTE_NOINLINE {
+      |       ^~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/macros.h:24:55: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+   24 | #define TF_ATTRIBUTE_NOINLINE __attribute__((noinline))
+      |                                                       ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1569:7: note: in expansion of macro ‘TF_ATTRIBUTE_NOINLINE’
+ 1569 |       TF_ATTRIBUTE_NOINLINE {
+      |       ^~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1585:61: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1585 |                     std::unique_ptr<OpKernelFactory> factory);
+      |                                                             ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1595:54: warning: ‘using tensorflow::StringPiece = using absl::lts_20250127::string_view = using std::string_view = class std::basic_string_view<char>’ is deprecated [-Wdeprecated-declarations]
+ 1595 |                                            T* value) const {
+      |                                                      ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1636:57: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+ 1636 | inline mutex* OpKernelContext::input_ref_mutex(int index) {
+      |                                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1670:50: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+ 1670 | inline mutex* OpMutableInputList::ref_mutex(int i) {
+      |                                                  ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:1719:75: warning: ‘mutex’ is deprecated: Use absl::Mutex instead. [-Wdeprecated-declarations]
+ 1719 | inline void OpOutputList::set_ref(int i, mutex* mu, Tensor* tensor_for_ref) {
+      |                                                                           ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/mutex.h:43:63: note: declared here
+   43 | class TF_LOCKABLE ABSL_DEPRECATED("Use absl::Mutex instead.") mutex {
+      |                                                               ^~~~~
+tf_sampling.cpp: In member function ‘void UnimplementedCpuKernel<T>::Compute(tensorflow::OpKernelContext*)’:
+tf_sampling.cpp:178:44: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  178 |         ::tensorflow::errors::Unimplemented(
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+  179 |             "This op is only implemented for GPU in Contact-GraspNet "
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |             "(PointNet++ custom ops). Ensure the CUDA kernels are built and "
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |             "loaded (e.g., *_g.cu compiled into the same .so)."));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h: In instantiation of ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >}]’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/resource_base.h:56:33:   required from here
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:405:57: warning: ‘std::string tsl::strings::StrCat(const AlphaNum&, const AlphaNum&)’ is deprecated: Use absl::StrCat() instead. [-Wdeprecated-declarations]
+  405 |   return absl::UnimplementedError(::tsl::strings::StrCat(
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~^
+  406 |       ::tsl::errors::internal::PrepareForStrCat(args)...));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/strcat.h:164:13: note: declared here
+  164 | std::string StrCat(const AlphaNum &a, const AlphaNum &b) TF_MUST_USE_RESULT;
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h: In instantiation of ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h:532:33:   required from here
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:405:57: warning: ‘std::string tsl::strings::StrCat(const AlphaNum&)’ is deprecated: Use absl::StrCat() instead. [-Wdeprecated-declarations]
+  405 |   return absl::UnimplementedError(::tsl::strings::StrCat(
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~^
+  406 |       ::tsl::errors::internal::PrepareForStrCat(args)...));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/strcat.h:162:13: note: declared here
+  162 | std::string StrCat(const AlphaNum &a) TF_MUST_USE_RESULT;
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h: In instantiation of ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*}]’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h:85:26:   required from here
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:418:52: warning: ‘std::string tsl::strings::StrCat(const AlphaNum&)’ is deprecated: Use absl::StrCat() instead. [-Wdeprecated-declarations]
+  418 |   return absl::InternalError(::tsl::strings::StrCat(
+      |                              ~~~~~~~~~~~~~~~~~~~~~~^
+  419 |       ::tsl::errors::internal::PrepareForStrCat(args)...));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/strcat.h:162:13: note: declared here
+  162 | std::string StrCat(const AlphaNum &a) TF_MUST_USE_RESULT;
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h: In instantiation of ‘absl::lts_20250127::Status tsl::errors::Internal(Args ...) [with Args = {const char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char*, const char*}]’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/device_base.h:286:26:   required from here
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:418:52: warning: ‘std::string tsl::strings::StrCat(const AlphaNum&, const AlphaNum&, const AlphaNum&, const AlphaNum&)’ is deprecated: Use absl::StrCat() instead. [-Wdeprecated-declarations]
+  418 |   return absl::InternalError(::tsl::strings::StrCat(
+      |                              ~~~~~~~~~~~~~~~~~~~~~~^
+  419 |       ::tsl::errors::internal::PrepareForStrCat(args)...));
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tsl/platform/strcat.h:169:13: note: declared here
+  169 | std::string StrCat(const AlphaNum &a, const AlphaNum &b, const AlphaNum &c,
+      |             ^~~~~~
+tf_sampling.cpp: In instantiation of ‘void UnimplementedCpuKernel<T>::Compute(tensorflow::OpKernelContext*) [with T = float]’:
+tf_sampling.cpp:176:8:   required from here
+tf_sampling.cpp:178:44: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  178 |         ::tensorflow::errors::Unimplemented(
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+  179 |             "This op is only implemented for GPU in Contact-GraspNet "
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |             "(PointNet++ custom ops). Ensure the CUDA kernels are built and "
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |             "loaded (e.g., *_g.cu compiled into the same .so)."));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+tf_sampling.cpp:178:44: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  178 |         ::tensorflow::errors::Unimplemented(
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+  179 |             "This op is only implemented for GPU in Contact-GraspNet "
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |             "(PointNet++ custom ops). Ensure the CUDA kernels are built and "
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |             "loaded (e.g., *_g.cu compiled into the same .so)."));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+tf_sampling.cpp:178:44: warning: ‘absl::lts_20250127::Status tsl::errors::Unimplemented(Args ...) [with Args = {const char*}]’ is deprecated: Use absl::UnimplementedError() instead. [-Wdeprecated-declarations]
+  178 |         ::tensorflow::errors::Unimplemented(
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+  179 |             "This op is only implemented for GPU in Contact-GraspNet "
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  180 |             "(PointNet++ custom ops). Ensure the CUDA kernels are built and "
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  181 |             "loaded (e.g., *_g.cu compiled into the same .so)."));
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/errors.h:404:14: note: declared here
+  404 | absl::Status Unimplemented(Args... args) {
+      |              ^~~~~~~~~~~~~
+(tfenv12) csrobot@nerve-desktop-6:~/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet/pointnet2/tf_ops/sampling$ 
+

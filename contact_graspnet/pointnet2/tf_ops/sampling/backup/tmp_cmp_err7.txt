@@ -1,0 +1,1242 @@
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-23 16:50:38.476910: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:19,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/Tensor:14,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/third_party/eigen3/unsupported/Eigen/CXX11/Tensor:1,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/types.h:23,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/op_def_builder.h:28,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/full_type_inference_util.h:23,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/op.h:27,
+                 from tf_sampling.cpp:5:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Macros.h:707:2: error: #error This compiler appears to be too old to be supported by Eigen
+  707 | #error This compiler appears to be too old to be supported by Eigen
+      |  ^~~~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:159:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:154:37: error: ‘remove_const_t’ is not a member of ‘std’; did you mean ‘remove_const’?
+  154 | struct is_void : is_same<void, std::remove_const_t<T>> {};
+      |                                     ^~~~~~~~~~~~~~
+      |                                     remove_const
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:154:37: error: ‘remove_const_t’ is not a member of ‘std’; did you mean ‘remove_const’?
+  154 | struct is_void : is_same<void, std::remove_const_t<T>> {};
+      |                                     ^~~~~~~~~~~~~~
+      |                                     remove_const
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:154:52: error: template argument 2 is invalid
+  154 | struct is_void : is_same<void, std::remove_const_t<T>> {};
+      |                                                    ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:154:53: error: expected ‘{’ before ‘>’ token
+  154 | struct is_void : is_same<void, std::remove_const_t<T>> {};
+      |                                                     ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:221:48: error: ‘enable_if_t’ is not a member of ‘std’
+  221 | template<typename T> struct array_size<T, std::enable_if_t<((T::SizeAtCompileTime&0)==0)>> {
+      |                                                ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:221:48: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:221:48: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:221:48: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:221:88: error: type/value mismatch at argument 2 in template parameter list for ‘template<class T, class EnableIf> struct Eigen::internal::array_size’
+  221 | template<typename T> struct array_size<T, std::enable_if_t<((T::SizeAtCompileTime&0)==0)>> {
+      |                                                                                        ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:221:88: note:   expected a type, got ‘(<expression error> < ((T::SizeAtCompileTime & 0) == 0))’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:221:89: error: expected unqualified-id before ‘>’ token
+  221 | template<typename T> struct array_size<T, std::enable_if_t<((T::SizeAtCompileTime&0)==0)>> {
+      |                                                                                         ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:252:17: error: ‘index_list_size’ function uses ‘auto’ type specifier without trailing return type
+  252 | EIGEN_CONSTEXPR auto index_list_size(const T& x) {
+      |                 ^~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:252:17: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h: In function ‘constexpr auto Eigen::internal::index_list_size(const T&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:253:18: error: ‘common_type_t’ in namespace ‘std’ does not name a template type; did you mean ‘common_type’?
+  253 |   using R = std::common_type_t<std::ptrdiff_t, std::make_signed_t<decltype(x.size())>>;
+      |                  ^~~~~~~~~~~~~
+      |                  common_type
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:254:22: error: ‘R’ does not name a type
+  254 |   return static_cast<R>(x.size());
+      |                      ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:306:38: error: ‘integer_sequence’ is not a member of ‘std’
+  306 | using reduce_all = std::is_same<std::integer_sequence<bool, values..., true>,
+      |                                      ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:306:38: note: ‘std::integer_sequence’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:306:38: error: ‘integer_sequence’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:306:38: note: ‘std::integer_sequence’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:306:76: error: wrong number of template arguments (1, should be 2)
+  306 | using reduce_all = std::is_same<std::integer_sequence<bool, values..., true>,
+      |                                                                            ^
+In file included from /usr/include/c++/13/bits/stl_pair.h:60,
+                 from /usr/include/c++/13/tuple:38,
+                 from /usr/include/c++/13/functional:53,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/op.h:19:
+/usr/include/c++/13/type_traits:709:12: note: provided for ‘template<class, class> struct std::is_same’
+  709 |     struct is_same;
+      |            ^~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:24: error: ‘integer_sequence’ is not a member of ‘std’
+  312 |     !std::is_same<std::integer_sequence<bool, values..., false>, std::integer_sequence<bool, false, values...> >::value>;
+      |                        ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:24: note: ‘std::integer_sequence’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:24: error: ‘integer_sequence’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:24: note: ‘std::integer_sequence’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:63: error: wrong number of template arguments (1, should be 2)
+  312 |     !std::is_same<std::integer_sequence<bool, values..., false>, std::integer_sequence<bool, false, values...> >::value>;
+      |                                                               ^
+/usr/include/c++/13/type_traits:709:12: note: provided for ‘template<class, class> struct std::is_same’
+  709 |     struct is_same;
+      |            ^~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:71: error: ‘integer_sequence’ is not a member of ‘std’
+  312 |     !std::is_same<std::integer_sequence<bool, values..., false>, std::integer_sequence<bool, false, values...> >::value>;
+      |                                                                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:71: note: ‘std::integer_sequence’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:71: error: ‘integer_sequence’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:71: note: ‘std::integer_sequence’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:312:110: error: wrong number of template arguments (3, should be 2)
+  312 |     !std::is_same<std::integer_sequence<bool, values..., false>, std::integer_sequence<bool, false, values...> >::value>;
+      |                                                                                                              ^
+/usr/include/c++/13/type_traits:62:12: note: provided for ‘template<class _Tp, _Tp __v> struct std::integral_constant’
+   62 |     struct integral_constant
+      |            ^~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:332:68: error: ‘std::enable_if_t’ has not been declared
+  332 |   template <typename C> static meta_yes testFunctor(C const *,std::enable_if_t<(sizeof(return_ptr<C>()->operator()())>0)> * = 0);
+      |                                                                    ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:332:79: error: expected ‘,’ or ‘...’ before ‘<’ token
+  332 |   template <typename C> static meta_yes testFunctor(C const *,std::enable_if_t<(sizeof(return_ptr<C>()->operator()())>0)> * = 0);
+      |                                                                               ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:341:68: error: ‘std::enable_if_t’ has not been declared
+  341 |   template <typename C> static meta_yes testFunctor(C const *,std::enable_if_t<(sizeof(return_ptr<C>()->operator()(IndexType(0)))>0)> * = 0);
+      |                                                                    ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:341:79: error: expected ‘,’ or ‘...’ before ‘<’ token
+  341 |   template <typename C> static meta_yes testFunctor(C const *,std::enable_if_t<(sizeof(return_ptr<C>()->operator()(IndexType(0)))>0)> * = 0);
+      |                                                                               ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:350:68: error: ‘std::enable_if_t’ has not been declared
+  350 |   template <typename C> static meta_yes testFunctor(C const *,std::enable_if_t<(sizeof(return_ptr<C>()->operator()(IndexType(0),IndexType(0)))>0)> * = 0);
+      |                                                                    ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:350:79: error: expected ‘,’ or ‘...’ before ‘<’ token
+  350 |   template <typename C> static meta_yes testFunctor(C const *,std::enable_if_t<(sizeof(return_ptr<C>()->operator()(IndexType(0),IndexType(0)))>0)> * = 0);
+      |                                                                               ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:499:16: warning: variable templates only available with ‘-std=c++14’ or ‘-std=gnu++14’ [-Wc++14-extensions]
+  499 | constexpr bool is_int_or_enum_v = std::is_enum<A>::value || std::is_integral<A>::value;
+      |                ^~~~~~~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:161:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ForwardDeclarations.h:112:46: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  112 |          typename StrideType = typename std::conditional_t<PlainObjectType::IsVectorAtCompileTime,InnerStride<1>,OuterStride<> > > class Ref;
+      |                                              ^~~~~~~~~~~~~
+      |                                              conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/ForwardDeclarations.h:112:59: error: expected ‘>’ before ‘<’ token
+  112 |          typename StrideType = typename std::conditional_t<PlainObjectType::IsVectorAtCompileTime,InnerStride<1>,OuterStride<> > > class Ref;
+      |                                                           ^
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:163:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:105:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  105 |   typedef std::conditional_t<(sizeof(I1)<sizeof(I2)), I2, I1> type;
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h: In function ‘constexpr int Eigen::internal::compute_default_alignment_helper(int, int)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:202:1: error: body of ‘constexpr’ function ‘constexpr int Eigen::internal::compute_default_alignment_helper(int, int)’ not a return-statement
+  202 | }
+      | ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h: In function ‘constexpr unsigned int Eigen::internal::compute_matrix_flags(int)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:247:1: error: body of ‘constexpr’ function ‘constexpr unsigned int Eigen::internal::compute_matrix_flags(int)’ not a return-statement
+  247 | }
+      | ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:395:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  395 |   typedef std::conditional_t<
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:401:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  401 |   typedef std::conditional_t<
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:412:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  412 |   typedef std::conditional_t<
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:449:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  449 |   typedef std::conditional_t<Evaluate, PlainObject, typename ref_selector<T>::type> type;
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:491:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  491 |   typedef std::conditional_t<is_same<CurrentScalarType,NewScalarType>::value,
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:589:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  589 |   typedef std::conditional_t<
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:604:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  604 |   typedef std::conditional_t<
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:621:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  621 |   typedef std::conditional_t<
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:639:65: error: ISO C++ forbids declaration of ‘type name’ with no type [-fpermissive]
+  639 |   typedef CwiseNullaryOp<scalar_constant_op<Scalar>, const std::conditional_t<is_same< typename traits<Expr>::XprKind, MatrixXpr >::value, matrix_type, array_type> > type;
+      |                                                                 ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:639:165: error: template argument 2 is invalid
+  639 |   typedef CwiseNullaryOp<scalar_constant_op<Scalar>, const std::conditional_t<is_same< typename traits<Expr>::XprKind, MatrixXpr >::value, matrix_type, array_type> > type;
+      |                                                                                                                                                                     ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:679:57: error: ‘std::enable_if_t’ has not been declared
+  679 | bool is_same_dense(const T1 &mat1, const T2 &mat2, std::enable_if_t<possibly_same_dense<T1,T2>::value> * = 0)
+      |                                                         ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:679:68: error: expected ‘,’ or ‘...’ before ‘<’ token
+  679 | bool is_same_dense(const T1 &mat1, const T2 &mat2, std::enable_if_t<possibly_same_dense<T1,T2>::value> * = 0)
+      |                                                                    ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:686:49: error: ‘std::enable_if_t’ has not been declared
+  686 | bool is_same_dense(const T1 &, const T2 &, std::enable_if_t<!possibly_same_dense<T1,T2>::value> * = 0)
+      |                                                 ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:686:60: error: expected ‘,’ or ‘...’ before ‘<’ token
+  686 | bool is_same_dense(const T1 &, const T2 &, std::enable_if_t<!possibly_same_dense<T1,T2>::value> * = 0)
+      |                                                            ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:686:6: error: redefinition of ‘template<class T1, class T2> bool Eigen::internal::is_same_dense(const T1&, const T2&, int)’
+  686 | bool is_same_dense(const T1 &, const T2 &, std::enable_if_t<!possibly_same_dense<T1,T2>::value> * = 0)
+      |      ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:679:6: note: ‘template<class T1, class T2> bool Eigen::internal::is_same_dense(const T1&, const T2&, int)’ previously declared here
+  679 | bool is_same_dense(const T1 &mat1, const T2 &mat2, std::enable_if_t<possibly_same_dense<T1,T2>::value> * = 0)
+      |      ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:708:53: error: ‘conditional_t’ is not a member of ‘std’; did you mean ‘conditional’?
+  708 | struct scalar_div_cost<signed long,Vectorized, std::conditional_t<sizeof(long)==8,void,false_type>> { enum { value = 24 }; };
+      |                                                     ^~~~~~~~~~~~~
+      |                                                     conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:708:53: error: ‘conditional_t’ is not a member of ‘std’; did you mean ‘conditional’?
+  708 | struct scalar_div_cost<signed long,Vectorized, std::conditional_t<sizeof(long)==8,void,false_type>> { enum { value = 24 }; };
+      |                                                     ^~~~~~~~~~~~~
+      |                                                     conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:708:88: error: wrong number of template arguments (5, should be at least 1)
+  708 | struct scalar_div_cost<signed long,Vectorized, std::conditional_t<sizeof(long)==8,void,false_type>> { enum { value = 24 }; };
+      |                                                                                        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:694:8: note: provided for ‘template<class T, bool Vectorized, class EnableIf> struct Eigen::internal::scalar_div_cost’
+  694 | struct scalar_div_cost {
+      |        ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:708:98: error: expected unqualified-id before ‘>’ token
+  708 | struct scalar_div_cost<signed long,Vectorized, std::conditional_t<sizeof(long)==8,void,false_type>> { enum { value = 24 }; };
+      |                                                                                                  ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:710:55: error: ‘conditional_t’ is not a member of ‘std’; did you mean ‘conditional’?
+  710 | struct scalar_div_cost<unsigned long,Vectorized, std::conditional_t<sizeof(long)==8,void,false_type>> { enum { value = 21 }; };
+      |                                                       ^~~~~~~~~~~~~
+      |                                                       conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:710:55: error: ‘conditional_t’ is not a member of ‘std’; did you mean ‘conditional’?
+  710 | struct scalar_div_cost<unsigned long,Vectorized, std::conditional_t<sizeof(long)==8,void,false_type>> { enum { value = 21 }; };
+      |                                                       ^~~~~~~~~~~~~
+      |                                                       conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:710:90: error: wrong number of template arguments (5, should be at least 1)
+  710 | struct scalar_div_cost<unsigned long,Vectorized, std::conditional_t<sizeof(long)==8,void,false_type>> { enum { value = 21 }; };
+      |                                                                                          ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:694:8: note: provided for ‘template<class T, bool Vectorized, class EnableIf> struct Eigen::internal::scalar_div_cost’
+  694 | struct scalar_div_cost {
+      |        ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:710:100: error: expected unqualified-id before ‘>’ token
+  710 | struct scalar_div_cost<unsigned long,Vectorized, std::conditional_t<sizeof(long)==8,void,false_type>> { enum { value = 21 }; };
+      |                                                                                                    ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:799:56: error: ‘enable_if_t’ is not a member of ‘std’
+  799 | struct ScalarBinaryOpTraits<T, typename NumTraits<std::enable_if_t<NumTraits<T>::IsComplex,T>>::Real, BinaryOp>
+      |                                                        ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:799:56: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:799:56: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:799:56: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:799:92: error: wrong number of template arguments (2, should be 1)
+  799 | struct ScalarBinaryOpTraits<T, typename NumTraits<std::enable_if_t<NumTraits<T>::IsComplex,T>>::Real, BinaryOp>
+      |                                                                                            ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:423:29: note: provided for ‘template<class T> struct Eigen::NumTraits’
+  423 | template<typename T> struct NumTraits;
+      |                             ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:799:93: error: template argument 2 is invalid
+  799 | struct ScalarBinaryOpTraits<T, typename NumTraits<std::enable_if_t<NumTraits<T>::IsComplex,T>>::Real, BinaryOp>
+      |                                                                                             ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:799:93: error: template argument 3 is invalid
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:804:53: error: ‘enable_if_t’ is not a member of ‘std’
+  804 | struct ScalarBinaryOpTraits<typename NumTraits<std::enable_if_t<NumTraits<T>::IsComplex,T>>::Real, T, BinaryOp>
+      |                                                     ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:804:53: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:804:53: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:804:53: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:804:89: error: wrong number of template arguments (2, should be 1)
+  804 | struct ScalarBinaryOpTraits<typename NumTraits<std::enable_if_t<NumTraits<T>::IsComplex,T>>::Real, T, BinaryOp>
+      |                                                                                         ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Meta.h:423:29: note: provided for ‘template<class T> struct Eigen::NumTraits’
+  423 | template<typename T> struct NumTraits;
+      |                             ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:804:90: error: wrong number of template arguments (1, should be at least 2)
+  804 | struct ScalarBinaryOpTraits<typename NumTraits<std::enable_if_t<NumTraits<T>::IsComplex,T>>::Real, T, BinaryOp>
+      |                                                                                          ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/XprHelper.h:785:8: note: provided for ‘template<class ScalarA, class ScalarB, class BinaryOp> struct Eigen::ScalarBinaryOpTraits’
+  785 | struct ScalarBinaryOpTraits
+      |        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:165:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h: In constructor ‘Eigen::internal::FixedInt<N>::FixedInt(Eigen::internal::VariableAndFixedInt<N>)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h:69:3: error: ‘constexpr’ constructor does not have empty body
+   69 |   }
+      |   ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h:172:82: error: ‘enable_if_t’ is not a member of ‘std’
+  172 | template<typename T, int DynamicKey> struct cleanup_index_type<T,DynamicKey,std::enable_if_t<internal::is_integral<T>::value>> { typedef Index type; };
+      |                                                                                  ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h:172:82: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h:172:82: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h:172:82: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h:172:120: error: type/value mismatch at argument 3 in template parameter list for ‘template<class T, int DynamicKey, class EnableIf> struct Eigen::internal::cleanup_index_type’
+  172 | template<typename T, int DynamicKey> struct cleanup_index_type<T,DynamicKey,std::enable_if_t<internal::is_integral<T>::value>> { typedef Index type; };
+      |                                                                                                                        ^~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h:172:120: note:   expected a type, got ‘(<expression error> < std::is_integral<_Tp>::value)’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h:172:125: error: expected unqualified-id before ‘>’ token
+  172 | template<typename T, int DynamicKey> struct cleanup_index_type<T,DynamicKey,std::enable_if_t<internal::is_integral<T>::value>> { typedef Index type; };
+      |                                                                                                                             ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IntegralConstant.h:186:33: warning: variable templates only available with ‘-std=c++14’ or ‘-std=gnu++14’ [-Wc++14-extensions]
+  186 | constexpr internal::FixedInt<N> fix{};
+      |                                 ^~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:166:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Serializer.h:31:35: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+   31 | class Serializer<T, typename std::enable_if_t<
+      |                                   ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Serializer.h:31:35: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Serializer.h:31:46: error: expected template-argument before ‘<’ token
+   31 | class Serializer<T, typename std::enable_if_t<
+      |                                              ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Serializer.h:31:46: error: expected ‘>’ before ‘<’ token
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/Serializer.h:33:59: error: template argument 2 is invalid
+   33 |                       && std::is_standard_layout<T>::value>> {
+      |                                                           ^~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:169:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/NumTraits.h:167:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  167 |   typedef std::conditional_t<IsInteger, std::conditional_t<sizeof(T)<=2, float, double>, T> NonInteger;
+      |                ^~~~~~~~~~~~~
+      |                conditional
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:170:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:494:17: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  494 |   typename std::enable_if_t<
+      |                 ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:494:17: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:494:28: error: expected template-argument before ‘<’ token
+  494 |   typename std::enable_if_t<
+      |                            ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:494:28: error: expected ‘>’ before ‘<’ token
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:496:3: error: template argument 3 is invalid
+  496 |   >>
+      |   ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h: In static member function ‘static Scalar Eigen::internal::random_default_impl<Scalar, false, true>::run(const Scalar&, const Scalar&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:879:18: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  879 |     typedef std::conditional_t<(ScalarU(-1) > unsigned(-1)), ScalarU, unsigned> ScalarX;
+      |                  ^~~~~~~~~~~~~
+      |                  conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:883:5: error: ‘ScalarX’ was not declared in this scope; did you mean ‘Scalar’?
+  883 |     ScalarX range = ScalarX(y) - ScalarX(x);
+      |     ^~~~~~~
+      |     Scalar
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:884:13: error: expected ‘;’ before ‘offset’
+  884 |     ScalarX offset = 0;
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:885:13: error: expected ‘;’ before ‘divisor’
+  885 |     ScalarX divisor = 1;
+      |             ^~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:886:13: error: expected ‘;’ before ‘multiplier’
+  886 |     ScalarX multiplier = 1;
+      |             ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:888:9: error: ‘range’ was not declared in this scope
+  888 |     if (range <= rand_max) divisor = (rand_max + 1) / (range + 1);
+      |         ^~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:888:28: error: ‘divisor’ was not declared in this scope
+  888 |     if (range <= rand_max) divisor = (rand_max + 1) / (range + 1);
+      |                            ^~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:889:28: error: ‘multiplier’ was not declared in this scope
+  889 |     else                   multiplier = 1 + range / (rand_max + 1);
+      |                            ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:892:7: error: ‘offset’ was not declared in this scope; did you mean ‘off_t’?
+  892 |       offset = (unsigned(std::rand()) * multiplier) / divisor;
+      |       ^~~~~~
+      |       off_t
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:892:41: error: ‘multiplier’ was not declared in this scope
+  892 |       offset = (unsigned(std::rand()) * multiplier) / divisor;
+      |                                         ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:892:55: error: ‘divisor’ was not declared in this scope
+  892 |       offset = (unsigned(std::rand()) * multiplier) / divisor;
+      |                                                       ^~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:893:14: error: ‘offset’ was not declared in this scope; did you mean ‘off_t’?
+  893 |     } while (offset > range);
+      |              ^~~~~~
+      |              off_t
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:893:23: error: ‘range’ was not declared in this scope
+  893 |     } while (offset > range);
+      |                       ^~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:950:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  950 | std::enable_if_t<internal::is_integral<T>::value,bool>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:950:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  950 | std::enable_if_t<internal::is_integral<T>::value,bool>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:955:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  955 | std::enable_if_t<internal::is_integral<T>::value,bool>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:955:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  955 | std::enable_if_t<internal::is_integral<T>::value,bool>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:960:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  960 | std::enable_if_t<internal::is_integral<T>::value,bool>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:960:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  960 | std::enable_if_t<internal::is_integral<T>::value,bool>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:965:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  965 | std::enable_if_t<(!internal::is_integral<T>::value)&&(!NumTraits<T>::IsComplex),bool>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:965:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  965 | std::enable_if_t<(!internal::is_integral<T>::value)&&(!NumTraits<T>::IsComplex),bool>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:980:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  980 | std::enable_if_t<(!internal::is_integral<T>::value)&&(!NumTraits<T>::IsComplex),bool>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:980:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  980 | std::enable_if_t<(!internal::is_integral<T>::value)&&(!NumTraits<T>::IsComplex),bool>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:995:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  995 | std::enable_if_t<(!internal::is_integral<T>::value)&&(!NumTraits<T>::IsComplex),bool>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:995:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  995 | std::enable_if_t<(!internal::is_integral<T>::value)&&(!NumTraits<T>::IsComplex),bool>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1498:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+ 1498 | std::enable_if_t<NumTraits<T>::IsSigned || NumTraits<T>::IsComplex,typename NumTraits<T>::Real>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1498:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+ 1498 | std::enable_if_t<NumTraits<T>::IsSigned || NumTraits<T>::IsComplex,typename NumTraits<T>::Real>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1506:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+ 1506 | std::enable_if_t<!(NumTraits<T>::IsSigned || NumTraits<T>::IsComplex),typename NumTraits<T>::Real>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1506:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+ 1506 | std::enable_if_t<!(NumTraits<T>::IsSigned || NumTraits<T>::IsComplex),typename NumTraits<T>::Real>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1737:28: error: ‘std::enable_if_t’ has not been declared
+ 1737 | template <typename T, std::enable_if_t<!NumTraits<T>::IsComplex, int> = 0>
+      |                            ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1737:39: error: expected ‘>’ before ‘<’ token
+ 1737 | template <typename T, std::enable_if_t<!NumTraits<T>::IsComplex, int> = 0>
+      |                                       ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h: In static member function ‘static bool Eigen::internal::scalar_fuzzy_default_impl<Scalar, false, false>::isMuchSmallerThan(const Scalar&, const OtherScalar&, const RealScalar&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1906:20: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+ 1906 |     return numext::abs(x) <= numext::abs(y) * prec;
+      |                    ^~~
+      |                    abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1906:38: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+ 1906 |     return numext::abs(x) <= numext::abs(y) * prec;
+      |                                      ^~~
+      |                                      abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h: In static member function ‘static bool Eigen::internal::scalar_fuzzy_default_impl<Scalar, false, false>::isApprox(const Scalar&, const Scalar&, const RealScalar&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1911:20: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+ 1911 |     return numext::abs(x - y) <= numext::mini(numext::abs(x), numext::abs(y)) * prec;
+      |                    ^~~
+      |                    abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1911:55: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+ 1911 |     return numext::abs(x - y) <= numext::mini(numext::abs(x), numext::abs(y)) * prec;
+      |                                                       ^~~
+      |                                                       abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1911:71: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+ 1911 |     return numext::abs(x - y) <= numext::mini(numext::abs(x), numext::abs(y)) * prec;
+      |                                                                       ^~~
+      |                                                                       abs2
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:171:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:228:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  228 | std::enable_if_t<unpacket_traits<Packet>::masked_fpops_available, Packet>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:228:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  228 | std::enable_if_t<unpacket_traits<Packet>::masked_fpops_available, Packet>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:274:10: error: ‘enable_if_t’ is not a member of ‘std’
+  274 |     std::enable_if_t<is_scalar<T>::value && NumTraits<T>::RequireInitialization> > {
+      |          ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:274:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:274:10: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:274:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:274:80: error: type/value mismatch at argument 2 in template parameter list for ‘template<class Packet, class EnableIf> struct Eigen::internal::ptrue_impl’
+  274 |     std::enable_if_t<is_scalar<T>::value && NumTraits<T>::RequireInitialization> > {
+      |                                                                                ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:274:80: note:   expected a type, got ‘((<expression error> < Eigen::internal::is_scalar<Packet>::value) && Eigen::NumTraits<T>::RequireInitialization)’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:274:82: error: expected unqualified-id before ‘>’ token
+  274 |     std::enable_if_t<is_scalar<T>::value && NumTraits<T>::RequireInitialization> > {
+      |                                                                                  ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:300:10: error: ‘enable_if_t’ is not a member of ‘std’
+  300 |     std::enable_if_t<is_scalar<T>::value>> {
+      |          ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:300:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:300:10: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:300:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:300:36: error: type/value mismatch at argument 2 in template parameter list for ‘template<class Packet, class EnableIf> struct Eigen::internal::pzero_impl’
+  300 |     std::enable_if_t<is_scalar<T>::value>> {
+      |                                    ^~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:300:36: note:   expected a type, got ‘(<expression error> < Eigen::internal::is_scalar<Packet>::value)’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:300:41: error: expected unqualified-id before ‘>’ token
+  300 |     std::enable_if_t<is_scalar<T>::value>> {
+      |                                         ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:413:17: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  413 |   typename std::enable_if_t<
+      |                 ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:413:17: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:413:28: error: expected template-argument before ‘<’ token
+  413 |   typename std::enable_if_t<
+      |                            ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:413:28: error: expected ‘>’ before ‘<’ token
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:415:3: error: template argument 2 is invalid
+  415 |   > : public operator_bitwise_helper<T> {};
+      |   ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:456:10: error: ‘enable_if_t’ is not a member of ‘std’
+  456 |     std::enable_if_t<is_scalar<Packet>::value> > {
+      |          ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:456:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:456:10: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:456:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:456:46: error: type/value mismatch at argument 2 in template parameter list for ‘template<class Packet, class EnableIf> struct Eigen::internal::pselect_impl’
+  456 |     std::enable_if_t<is_scalar<Packet>::value> > {
+      |                                              ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:456:46: note:   expected a type, got ‘(<expression error> < Eigen::internal::is_scalar<Packet>::value)’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:456:48: error: expected unqualified-id before ‘>’ token
+  456 |     std::enable_if_t<is_scalar<Packet>::value> > {
+      |                                                ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h: In function ‘Packet Eigen::internal::pabs(const Packet&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:547:40: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+  547 | pabs(const Packet& a) { return numext::abs(a); }
+      |                                        ^~~
+      |                                        abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:654:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  654 | std::enable_if_t<unpacket_traits<Packet>::masked_load_available, Packet>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:654:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  654 | std::enable_if_t<unpacket_traits<Packet>::masked_load_available, Packet>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:779:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  779 | std::enable_if_t<unpacket_traits<Packet>::masked_store_available, void>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:779:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  779 | std::enable_if_t<unpacket_traits<Packet>::masked_store_available, void>
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:953:31: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  953 | EIGEN_DEVICE_FUNC inline std::conditional_t<(unpacket_traits<Packet>::size%8)==0,typename unpacket_traits<Packet>::half,Packet>
+      |                               ^~~~~~~~~~~~~
+      |                               conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:1223:33: error: ‘std::enable_if_t’ has not been declared
+ 1223 | template <typename Packet, std::enable_if_t<is_scalar<Packet>::value, int> = 0>
+      |                                 ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:1223:44: error: expected ‘>’ before ‘<’ token
+ 1223 | template <typename Packet, std::enable_if_t<is_scalar<Packet>::value, int> = 0>
+      |                                            ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:1229:33: error: ‘std::enable_if_t’ has not been declared
+ 1229 | template <typename Packet, std::enable_if_t<!is_scalar<Packet>::value, int> = 0>
+      |                                 ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:1229:44: error: expected ‘>’ before ‘<’ token
+ 1229 | template <typename Packet, std::enable_if_t<!is_scalar<Packet>::value, int> = 0>
+      |                                            ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:1230:46: error: redefinition of ‘template<class Packet, <typeprefixerror><anonymous> > Packet Eigen::internal::patan2(const Packet&, const Packet&)’
+ 1230 | EIGEN_DEVICE_FUNC EIGEN_ALWAYS_INLINE Packet patan2(const Packet& y, const Packet& x) {
+      |                                              ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/GenericPacketMath.h:1224:46: note: ‘template<class Packet, <typeprefixerror><anonymous> > Packet Eigen::internal::patan2(const Packet&, const Packet&)’ previously declared here
+ 1224 | EIGEN_DEVICE_FUNC EIGEN_ALWAYS_INLINE Packet patan2(const Packet& y, const Packet& x) {
+      |                                              ^~~~~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:172:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctionsImpl.h: In function ‘std::complex<_Tp> Eigen::internal::complex_sqrt(const std::complex<_Tp>&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctionsImpl.h:272:46: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+  272 |   const T w = numext::sqrt(T(0.5) * (numext::abs(x) + numext::hypot(x, y)));
+      |                                              ^~~
+      |                                              abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctionsImpl.h:278:33: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+  278 |       : std::complex<T>(numext::abs(y) / (2 * w), y < zero ? -w : w );
+      |                                 ^~~
+      |                                 abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctionsImpl.h: In function ‘std::complex<_Tp> Eigen::internal::complex_rsqrt(const std::complex<_Tp>&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctionsImpl.h:311:46: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+  311 |   const T w = numext::sqrt(T(0.5) * (numext::abs(x) + abs_z));
+      |                                              ^~~
+      |                                              abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctionsImpl.h:319:33: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+  319 |       : std::complex<T>(numext::abs(y) / (2 * w * abs_z), y < zero ? woz : -woz );
+      |                                 ^~~
+      |                                 abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctionsImpl.h: In function ‘std::complex<_Tp> Eigen::internal::complex_log(const std::complex<_Tp>&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctionsImpl.h:325:17: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+  325 |   T a = numext::abs(z);
+      |                 ^~~
+      |                 abs2
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:253:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1102:10: error: ‘enable_if_t’ is not a member of ‘std’
+ 1102 |     std::enable_if_t<
+      |          ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1102:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1102:10: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1102:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1104:61: error: type/value mismatch at argument 2 in template parameter list for ‘template<class Packet, class EnableIf> struct Eigen::internal::psign_impl’
+ 1104 |         !NumTraits<typename unpacket_traits<Packet>::type>::IsInteger>> {
+      |                                                             ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1104:61: note:   expected a type, got ‘((<expression error> < (! Eigen::NumTraits<typename Eigen::internal::unpacket_traits<T>::type>::IsComplex)) && (! Eigen::NumTraits<typename Eigen::internal::unpacket_traits<T>::type>::IsInteger))’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1104:70: error: expected unqualified-id before ‘>’ token
+ 1104 |         !NumTraits<typename unpacket_traits<Packet>::type>::IsInteger>> {
+      |                                                                      ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1123:18: error: ‘enable_if_t’ is not a member of ‘std’
+ 1123 |     Packet, std::enable_if_t<
+      |                  ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1123:18: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1123:18: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1123:18: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1126:68: error: type/value mismatch at argument 2 in template parameter list for ‘template<class Packet, class EnableIf> struct Eigen::internal::psign_impl’
+ 1126 |                 NumTraits<typename unpacket_traits<Packet>::type>::IsInteger>> {
+      |                                                                    ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1126:68: note:   expected a type, got ‘(((<expression error> < (! Eigen::NumTraits<typename Eigen::internal::unpacket_traits<T>::type>::IsComplex)) && Eigen::NumTraits<typename Eigen::internal::unpacket_traits<T>::type>::IsSigned) && Eigen::NumTraits<typename Eigen::internal::unpacket_traits<T>::type>::IsInteger)’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1126:77: error: expected unqualified-id before ‘>’ token
+ 1126 |                 NumTraits<typename unpacket_traits<Packet>::type>::IsInteger>> {
+      |                                                                             ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1143:32: error: ‘enable_if_t’ is not a member of ‘std’
+ 1143 | struct psign_impl<Packet, std::enable_if_t<!NumTraits<typename unpacket_traits<Packet>::type>::IsComplex &&
+      |                                ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1143:32: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1143:32: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1143:32: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1145:95: error: type/value mismatch at argument 2 in template parameter list for ‘template<class Packet, class EnableIf> struct Eigen::internal::psign_impl’
+ 1145 |                                            NumTraits<typename unpacket_traits<Packet>::type>::IsInteger>> {
+      |                                                                                               ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1145:95: note:   expected a type, got ‘(((<expression error> < (! Eigen::NumTraits<typename Eigen::internal::unpacket_traits<T>::type>::IsComplex)) && (! Eigen::NumTraits<typename Eigen::internal::unpacket_traits<T>::type>::IsSigned)) && Eigen::NumTraits<typename Eigen::internal::unpacket_traits<T>::type>::IsInteger)’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1145:104: error: expected unqualified-id before ‘>’ token
+ 1145 |                                            NumTraits<typename unpacket_traits<Packet>::type>::IsInteger>> {
+      |                                                                                                        ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1158:32: error: ‘enable_if_t’ is not a member of ‘std’
+ 1158 | struct psign_impl<Packet, std::enable_if_t<NumTraits<typename unpacket_traits<Packet>::type>::IsComplex &&
+      |                                ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1158:32: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1158:32: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1158:32: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1159:69: error: type/value mismatch at argument 2 in template parameter list for ‘template<class Packet, class EnableIf> struct Eigen::internal::psign_impl’
+ 1159 |                                            unpacket_traits<Packet>::vectorizable>> {
+      |                                                                     ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1159:69: note:   expected a type, got ‘((<expression error> < Eigen::NumTraits<typename Eigen::internal::unpacket_traits<T>::type>::IsComplex) && Eigen::internal::unpacket_traits<T>::vectorizable)’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1159:81: error: expected unqualified-id before ‘>’ token
+ 1159 |                                            unpacket_traits<Packet>::vectorizable>> {
+      |                                                                                 ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h: In function ‘Packet Eigen::internal::unary_pow::int_pow(const Packet&, const ScalarExponent&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:1987:30: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+ 1987 |   ScalarExponent m = numext::abs(exponent);
+      |                              ^~~
+      |                              abs2
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:257:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h: In member function ‘const Eigen::internal::scalar_abs_op<Scalar>::result_type Eigen::internal::scalar_abs_op<Scalar>::operator()(const Scalar&) const’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h:44:111: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+   44 |   EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE const result_type operator() (const Scalar& a) const { return numext::abs(a); }
+      |                                                                                                               ^~~
+      |                                                                                                               abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h: In member function ‘const Eigen::internal::abs_knowing_score<Scalar, <template-parameter-1-2> >::result_type Eigen::internal::abs_knowing_score<Scalar, <template-parameter-1-2> >::operator()(const Scalar&, const Score&) const’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h:75:125: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+   75 |   EIGEN_DEVICE_FUNC EIGEN_STRONG_INLINE const result_type operator() (const Scalar& a, const Score&) const { return numext::abs(a); }
+      |                                                                                                                             ^~~
+      |                                                                                                                             abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h:1106:8: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+ 1106 |   std::enable_if_t<IsExactlyRepresentable, void> check_is_representable() const {}
+      |        ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h:1106:3: note: ‘std::enable_if_t’ is only available from C++14 onwards
+ 1106 |   std::enable_if_t<IsExactlyRepresentable, void> check_is_representable() const {}
+      |   ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h:1110:25: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+ 1110 |   EIGEN_DEPRECATED std::enable_if_t<!IsExactlyRepresentable, void> check_is_representable() const {}
+      |                         ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h:1110:20: note: ‘std::enable_if_t’ is only available from C++14 onwards
+ 1110 |   EIGEN_DEPRECATED std::enable_if_t<!IsExactlyRepresentable, void> check_is_representable() const {}
+      |                    ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h: In constructor ‘Eigen::internal::scalar_unary_pow_op<Scalar, ExponentScalar, false, false, false, false>::scalar_unary_pow_op(const ExponentScalar&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h:1114:5: error: there are no arguments to ‘check_is_representable’ that depend on a template parameter, so a declaration of ‘check_is_representable’ must be available [-fpermissive]
+ 1114 |     check_is_representable();
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/UnaryFunctors.h:1114:5: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:258:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/NullaryFunctors.h: In constructor ‘Eigen::internal::linspaced_op_impl<Scalar, false>::linspaced_op_impl(const Scalar&, const Scalar&, Eigen::Index)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/NullaryFunctors.h:50:20: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+   50 |     m_flip(numext::abs(high)<numext::abs(low))
+      |                    ^~~
+      |                    abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/NullaryFunctors.h:50:38: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+   50 |     m_flip(numext::abs(high)<numext::abs(low))
+      |                                      ^~~
+      |                                      abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/NullaryFunctors.h: In constructor ‘Eigen::internal::linspaced_op_impl<Scalar, true>::linspaced_op_impl(const Scalar&, const Scalar&, Eigen::Index)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/NullaryFunctors.h:97:92: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+   97 |     m_divisor(convert_index<Scalar>((high>=low?num_steps:-num_steps)+(high-low))/((numext::abs(high-low)+1)==0?1:(numext::abs(high-low)+1))),
+      |                                                                                            ^~~
+      |                                                                                            abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/NullaryFunctors.h:97:123: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+   97 |     m_divisor(convert_index<Scalar>((high>=low?num_steps:-num_steps)+(high-low))/((numext::abs(high-low)+1)==0?1:(numext::abs(high-low)+1))),
+      |                                                                                                                           ^~~
+      |                                                                                                                           abs2
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/functors/NullaryFunctors.h:98:43: error: ‘abs’ is not a member of ‘Eigen::numext’; did you mean ‘abs2’?
+   98 |     m_use_divisor(num_steps>1 && (numext::abs(high-low)+1)<num_steps)
+      |                                           ^~~
+      |                                           abs2
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:272:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:102:49: error: ‘enable_if_t’ is not a member of ‘std’
+  102 | struct IndexedViewCompatibleType<T,XprSize,std::enable_if_t<internal::is_integral<T>::value>> {
+      |                                                 ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:102:49: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:102:49: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:102:49: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:102:87: error: type/value mismatch at argument 3 in template parameter list for ‘template<class T, int XprSize, class EnableIf> struct Eigen::internal::IndexedViewCompatibleType’
+  102 | struct IndexedViewCompatibleType<T,XprSize,std::enable_if_t<internal::is_integral<T>::value>> {
+      |                                                                                       ^~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:102:87: note:   expected a type, got ‘(<expression error> < std::is_integral<_Tp>::value)’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:102:92: error: expected unqualified-id before ‘>’ token
+  102 | struct IndexedViewCompatibleType<T,XprSize,std::enable_if_t<internal::is_integral<T>::value>> {
+      |                                                                                            ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:110:51: error: ‘enable_if_t’ is not a member of ‘std’
+  110 | struct IndexedViewCompatibleType<T, XprSize, std::enable_if_t<symbolic::is_symbolic<T>::value>> {
+      |                                                   ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:110:51: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:110:51: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:110:51: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:110:89: error: type/value mismatch at argument 3 in template parameter list for ‘template<class T, int XprSize, class EnableIf> struct Eigen::internal::IndexedViewCompatibleType’
+  110 | struct IndexedViewCompatibleType<T, XprSize, std::enable_if_t<symbolic::is_symbolic<T>::value>> {
+      |                                                                                         ^~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:110:89: note:   expected a type, got ‘(<expression error> < Eigen::symbolic::is_symbolic<T>::value)’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:110:94: error: expected unqualified-id before ‘>’ token
+  110 | struct IndexedViewCompatibleType<T, XprSize, std::enable_if_t<symbolic::is_symbolic<T>::value>> {
+      |                                                                                              ^~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:116:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  116 | std::enable_if_t<symbolic::is_symbolic<T>::value,SingleRange>
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/util/IndexedViewHelper.h:116:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  116 | std::enable_if_t<symbolic::is_symbolic<T>::value,SingleRange>
+      | ^~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:274:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/ArithmeticSequence.h:203:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  203 |   typedef std::conditional_t<symbolic::is_symbolic<T>::value, Index, T> type;
+      |                ^~~~~~~~~~~~~
+      |                conditional
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:276:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/IO.h: In function ‘std::ostream& Eigen::internal::print_matrix(std::ostream&, const Derived&, const Eigen::IOFormat&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/IO.h:145:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  145 |   typedef std::conditional_t<
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/IO.h:196:29: error: ‘PrintType’ does not name a type
+  196 |         sstr << static_cast<PrintType>(m.coeff(i,j));
+      |                             ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/IO.h:212:22: error: ‘PrintType’ does not name a type
+  212 |     s << static_cast<PrintType>(m.coeff(i, 0));
+      |                      ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/IO.h:220:24: error: ‘PrintType’ does not name a type
+  220 |       s << static_cast<PrintType>(m.coeff(i, j));
+      |                        ^~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:278:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:20:16: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+   20 |   typedef std::conditional_t<is_arithmetic<T>::value, T, add_const_on_value_type_t<T>> type;
+      |                ^~~~~~~~~~~~~
+      |                conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:51:18: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+   51 |     typedef std::conditional_t<bool(internal::traits<Derived>::Flags&LvalueBit),
+      |                  ^~~~~~~~~~~~~
+      |                  conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:99:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+   99 |     EIGEN_STRONG_INLINE CoeffReturnType coeff(Index row, Index col) const
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:107:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+  107 |     EIGEN_STRONG_INLINE CoeffReturnType coeffByOuterInner(Index outer, Index inner) const
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:118:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+  118 |     EIGEN_STRONG_INLINE CoeffReturnType operator()(Index row, Index col) const
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:141:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+  141 |     EIGEN_STRONG_INLINE CoeffReturnType
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:160:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+  160 |     EIGEN_STRONG_INLINE CoeffReturnType
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:180:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+  180 |     EIGEN_STRONG_INLINE CoeffReturnType
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:190:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+  190 |     EIGEN_STRONG_INLINE CoeffReturnType
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:196:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+  196 |     EIGEN_STRONG_INLINE CoeffReturnType
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:206:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+  206 |     EIGEN_STRONG_INLINE CoeffReturnType
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseCoeffsBase.h:216:25: error: ‘CoeffReturnType’ does not name a type; did you mean ‘ProductReturnType’?
+  216 |     EIGEN_STRONG_INLINE CoeffReturnType
+      |                         ^~~~~~~~~~~~~~~
+      |                         ProductReturnType
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/Core:279:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:203:18: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  203 |     typedef std::conditional_t<internal::is_same<typename internal::traits<Derived>::XprKind,MatrixXpr >::value,
+      |                  ^~~~~~~~~~~~~
+      |                  conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:256:65: error: ‘PlainObject’ was not declared in this scope; did you mean ‘PlainObjectBase’?
+  256 |     typedef CwiseNullaryOp<internal::scalar_constant_op<Scalar>,PlainObject> ConstantReturnType;
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 PlainObjectBase
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:256:76: error: template argument 2 is invalid
+  256 |     typedef CwiseNullaryOp<internal::scalar_constant_op<Scalar>,PlainObject> ConstantReturnType;
+      |                                                                            ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:258:76: error: ‘PlainObject’ was not declared in this scope; did you mean ‘PlainObjectBase’?
+  258 |     EIGEN_DEPRECATED typedef CwiseNullaryOp<internal::linspaced_op<Scalar>,PlainObject> SequentialLinSpacedReturnType;
+      |                                                                            ^~~~~~~~~~~
+      |                                                                            PlainObjectBase
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:258:87: error: template argument 2 is invalid
+  258 |     EIGEN_DEPRECATED typedef CwiseNullaryOp<internal::linspaced_op<Scalar>,PlainObject> SequentialLinSpacedReturnType;
+      |                                                                                       ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:260:59: error: ‘PlainObject’ was not declared in this scope; did you mean ‘PlainObjectBase’?
+  260 |     typedef CwiseNullaryOp<internal::linspaced_op<Scalar>,PlainObject> RandomAccessLinSpacedReturnType;
+      |                                                           ^~~~~~~~~~~
+      |                                                           PlainObjectBase
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:260:70: error: template argument 2 is invalid
+  260 |     typedef CwiseNullaryOp<internal::linspaced_op<Scalar>,PlainObject> RandomAccessLinSpacedReturnType;
+      |                                                                      ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:262:62: error: ‘PlainObject’ was not declared in this scope; did you mean ‘PlainObjectBase’?
+  262 |     typedef CwiseNullaryOp<internal::equalspaced_op<Scalar>, PlainObject> RandomAccessEqualSpacedReturnType;
+      |                                                              ^~~~~~~~~~~
+      |                                                              PlainObjectBase
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:262:73: error: template argument 2 is invalid
+  262 |     typedef CwiseNullaryOp<internal::equalspaced_op<Scalar>, PlainObject> RandomAccessEqualSpacedReturnType;
+      |                                                                         ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:347:50: error: ‘PlainObject’ was not declared in this scope; did you mean ‘PlainObjectBase’?
+  347 |     static const CwiseNullaryOp<CustomNullaryOp, PlainObject>
+      |                                                  ^~~~~~~~~~~
+      |                                                  PlainObjectBase
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:347:61: error: template argument 2 is invalid
+  347 |     static const CwiseNullaryOp<CustomNullaryOp, PlainObject>
+      |                                                             ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:350:50: error: ‘PlainObject’ was not declared in this scope; did you mean ‘PlainObjectBase’?
+  350 |     static const CwiseNullaryOp<CustomNullaryOp, PlainObject>
+      |                                                  ^~~~~~~~~~~
+      |                                                  PlainObjectBase
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:350:61: error: template argument 2 is invalid
+  350 |     static const CwiseNullaryOp<CustomNullaryOp, PlainObject>
+      |                                                             ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:353:50: error: ‘PlainObject’ was not declared in this scope; did you mean ‘PlainObjectBase’?
+  353 |     static const CwiseNullaryOp<CustomNullaryOp, PlainObject>
+      |                                                  ^~~~~~~~~~~
+      |                                                  PlainObjectBase
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:353:61: error: template argument 2 is invalid
+  353 |     static const CwiseNullaryOp<CustomNullaryOp, PlainObject>
+      |                                                             ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:440:23: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  440 |     inline const std::conditional_t<Enable,ForceAlignedAccess<Derived>,Derived&> forceAlignedAccessIf() const;
+      |                       ^~~~~~~~~~~~~
+      |                       conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:442:17: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  442 |     inline std::conditional_t<Enable,ForceAlignedAccess<Derived>,Derived&> forceAlignedAccessIf();
+      |                 ^~~~~~~~~~~~~
+      |                 conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:565:63: error: ‘PlainObject’ was not declared in this scope; did you mean ‘PlainObjectBase’?
+  565 |     typedef CwiseNullaryOp<internal::scalar_random_op<Scalar>,PlainObject> RandomReturnType;
+      |                                                               ^~~~~~~~~~~
+      |                                                               PlainObjectBase
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:565:74: error: template argument 2 is invalid
+  565 |     typedef CwiseNullaryOp<internal::scalar_random_op<Scalar>,PlainObject> RandomReturnType;
+      |                                                                          ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:622:18: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  622 |     typedef std::conditional_t< (Flags&DirectAccessBit)==DirectAccessBit,
+      |                  ^~~~~~~~~~~~~
+      |                  conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:627:18: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  627 |     typedef std::conditional_t< (Flags&DirectAccessBit)==DirectAccessBit,
+      |                  ^~~~~~~~~~~~~
+      |                  conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:634:18: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  634 |     typedef std::conditional_t<IsVectorAtCompileTime, iterator_type, void> iterator;
+      |                  ^~~~~~~~~~~~~
+      |                  conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:636:18: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+  636 |     typedef std::conditional_t<IsVectorAtCompileTime, const_iterator_type, void> const_iterator;
+      |                  ^~~~~~~~~~~~~
+      |                  conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:639:12: error: ‘iterator’ does not name a type
+  639 |     inline iterator begin();
+      |            ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:640:12: error: ‘const_iterator’ does not name a type
+  640 |     inline const_iterator begin() const;
+      |            ^~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:641:12: error: ‘const_iterator’ does not name a type
+  641 |     inline const_iterator cbegin() const;
+      |            ^~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:642:12: error: ‘iterator’ does not name a type
+  642 |     inline iterator end();
+      |            ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:643:12: error: ‘const_iterator’ does not name a type
+  643 |     inline const_iterator end() const;
+      |            ^~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:644:12: error: ‘const_iterator’ does not name a type
+  644 |     inline const_iterator cend() const;
+      |            ^~~~~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:650:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:16:14: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+   16 | typedef std::conditional_t<NumTraits<Scalar>::IsComplex,
+      |              ^~~~~~~~~~~~~
+      |              conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:21:14: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+   21 | typedef std::conditional_t<NumTraits<Scalar>::IsComplex,
+      |              ^~~~~~~~~~~~~
+      |              conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:26:14: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+   26 | typedef std::conditional_t<NumTraits<Scalar>::IsComplex,
+      |              ^~~~~~~~~~~~~
+      |              conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:73:8: error: ‘ConjugateReturnType’ does not name a type; did you mean ‘ConstantReturnType’?
+   73 | inline ConjugateReturnType
+      |        ^~~~~~~~~~~~~~~~~~~
+      |        ConstantReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:86:13: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+   86 | inline std::conditional_t<Cond,ConjugateReturnType,const Derived&>
+      |             ^~~~~~~~~~~~~
+      |             conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:99:8: error: ‘RealReturnType’ does not name a type; did you mean ‘EvalReturnType’?
+   99 | inline RealReturnType
+      |        ^~~~~~~~~~~~~~
+      |        EvalReturnType
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h:167:8: error: ‘NonConstRealReturnType’ does not name a type; did you mean ‘NonConstImagReturnType’?
+  167 | inline NonConstRealReturnType
+      |        ^~~~~~~~~~~~~~~~~~~~~~
+      |        NonConstImagReturnType
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:651:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/BlockMethods.h:1421:6: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+ 1421 | std::conditional_t<Direction==Vertical,ColXpr,RowXpr>
+      |      ^~~~~~~~~~~~~
+      |      conditional
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/BlockMethods.h:1430:6: error: ‘conditional_t’ in namespace ‘std’ does not name a template type; did you mean ‘conditional’?
+ 1430 | std::conditional_t<Direction==Vertical,ConstColXpr,ConstRowXpr>
+      |      ^~~~~~~~~~~~~
+      |      conditional
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/DenseBase.h:652:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:70:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+   70 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:70:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+   70 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:82:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+   82 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:82:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+   82 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:100:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  100 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:100:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  100 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:138:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  138 | std::enable_if_t<
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:138:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  138 | std::enable_if_t<
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:149:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  149 | std::enable_if_t<
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:149:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  149 | std::enable_if_t<
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:160:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  160 | std::enable_if_t<
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:160:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  160 | std::enable_if_t<
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:172:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  172 | std::enable_if_t<symbolic::is_symbolic<IndexType>::value, CoeffReturnType >
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:172:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  172 | std::enable_if_t<symbolic::is_symbolic<IndexType>::value, CoeffReturnType >
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:179:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  179 | std::enable_if_t<IsRowMajor,
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:179:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  179 | std::enable_if_t<IsRowMajor,
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:189:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  189 | std::enable_if_t<!IsRowMajor,
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:189:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  189 | std::enable_if_t<!IsRowMajor,
+      | ^~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:203:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:70:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+   70 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:70:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+   70 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:82:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+   82 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:82:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+   82 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:100:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  100 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:100:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  100 | std::enable_if_t<internal::valid_indexed_view_overload<RowIndices,ColIndices>::value
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:138:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  138 | std::enable_if_t<
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:138:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  138 | std::enable_if_t<
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:149:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  149 | std::enable_if_t<
+      |      ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:149:1: note: ‘std::enable_if_t’ is only available from C++14 onwards
+  149 | std::enable_if_t<
+      | ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/../plugins/IndexedViewMethods.h:160:6: error: ‘enable_if_t’ in namespace ‘std’ does not name a template type
+  160 | std::enable_if_t<
+      |      ^~~~~~~~~~~
+.....
+
+
+      |          ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:458:10: error: ‘enable_if_t’ is not a member of ‘std’
+  458 |     std::enable_if_t<std::is_base_of_v<float8_base<From>, From> &&
+      |          ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:458:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:458:10: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:458:10: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:458:27: error: ‘is_base_of_v’ is not a member of ‘std’; did you mean ‘is_base_of’?
+  458 |     std::enable_if_t<std::is_base_of_v<float8_base<From>, From> &&
+      |                           ^~~~~~~~~~~~
+      |                           is_base_of
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:458:63: error: wrong number of template arguments (6, should be at least 4)
+  458 |     std::enable_if_t<std::is_base_of_v<float8_base<From>, From> &&
+      |                                                               ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:430:8: note: provided for ‘template<class From, class To, bool kSaturate, bool kTruncate, class EnableIf> struct tsl::float8_internal::ConvertImpl’
+  430 | struct ConvertImpl;
+      |        ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:459:23: error: expected unqualified-id before ‘sizeof’
+  459 |                      (sizeof(From) < sizeof(To))>> {
+      |                       ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:459:23: error: expected ‘)’ before ‘sizeof’
+  459 |                      (sizeof(From) < sizeof(To))>> {
+      |                      ~^~~~~~
+      |                       )
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:557:25: error: ‘enable_if_t’ is not a member of ‘std’
+  557 |                    std::enable_if_t<std::is_base_of_v<float8_base<To>, To> &&
+      |                         ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:557:25: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:557:25: error: ‘enable_if_t’ is not a member of ‘std’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:557:25: note: ‘std::enable_if_t’ is only available from C++14 onwards
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:557:42: error: ‘is_base_of_v’ is not a member of ‘std’; did you mean ‘is_base_of’?
+  557 |                    std::enable_if_t<std::is_base_of_v<float8_base<To>, To> &&
+      |                                          ^~~~~~~~~~~~
+      |                                          is_base_of
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:557:74: error: wrong number of template arguments (6, should be at least 4)
+  557 |                    std::enable_if_t<std::is_base_of_v<float8_base<To>, To> &&
+      |                                                                          ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:430:8: note: provided for ‘template<class From, class To, bool kSaturate, bool kTruncate, class EnableIf> struct tsl::float8_internal::ConvertImpl’
+  430 | struct ConvertImpl;
+      |        ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:558:38: error: expected unqualified-id before ‘sizeof’
+  558 |                                     (sizeof(To) < sizeof(From))>> {
+      |                                      ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:558:38: error: expected ‘)’ before ‘sizeof’
+  558 |                                     (sizeof(To) < sizeof(From))>> {
+      |                                     ~^~~~~~
+      |                                      )
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In static member function ‘static tsl::float8_internal::float8_e4m3fn tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e5m2, tsl::float8_internal::float8_e4m3fn, kSaturate, kTruncate>::run(const tsl::float8_internal::float8_e5m2&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:695:10: warning: ‘if constexpr’ only available with ‘-std=c++17’ or ‘-std=gnu++17’ [-Wc++17-extensions]
+  695 |       if constexpr (!kTruncate) {
+      |          ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In static member function ‘static tsl::float8_internal::float8_e5m2 tsl::float8_internal::ConvertImpl<Eigen::half, tsl::float8_internal::float8_e5m2, kTruncate, false>::run(const Eigen::half&)’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:762:8: warning: ‘if constexpr’ only available with ‘-std=c++17’ or ‘-std=gnu++17’ [-Wc++17-extensions]
+  762 |     if constexpr (!kTruncate) {
+      |        ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: At global scope:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:858:31: error: template-id ‘isinf_impl<tsl::float8_e4m3fn>’ for ‘bool Eigen::internal::isinf_impl(const tsl::float8_e4m3fn&)’ does not match any template declaration
+  858 | EIGEN_DEVICE_FUNC inline bool isinf_impl<tsl::float8_e4m3fn>(
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1885:24: note: candidate is: ‘template<class T> bool Eigen::internal::isinf_impl(const std::complex<_Tp>&)’
+ 1885 | EIGEN_DEVICE_FUNC bool isinf_impl(const std::complex<T>& x)
+      |                        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:864:31: error: template-id ‘isinf_impl<tsl::float8_e5m2>’ for ‘bool Eigen::internal::isinf_impl(const tsl::float8_e5m2&)’ does not match any template declaration
+  864 | EIGEN_DEVICE_FUNC inline bool isinf_impl<tsl::float8_e5m2>(
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1885:24: note: candidate is: ‘template<class T> bool Eigen::internal::isinf_impl(const std::complex<_Tp>&)’
+ 1885 | EIGEN_DEVICE_FUNC bool isinf_impl(const std::complex<T>& x)
+      |                        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:870:31: error: template-id ‘isnan_impl<tsl::float8_e4m3fn>’ for ‘bool Eigen::internal::isnan_impl(const tsl::float8_e4m3fn&)’ does not match any template declaration
+  870 | EIGEN_DEVICE_FUNC inline bool isnan_impl<tsl::float8_e4m3fn>(
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1879:24: note: candidate is: ‘template<class T> bool Eigen::internal::isnan_impl(const std::complex<_Tp>&)’
+ 1879 | EIGEN_DEVICE_FUNC bool isnan_impl(const std::complex<T>& x)
+      |                        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:876:31: error: template-id ‘isnan_impl<tsl::float8_e5m2>’ for ‘bool Eigen::internal::isnan_impl(const tsl::float8_e5m2&)’ does not match any template declaration
+  876 | EIGEN_DEVICE_FUNC inline bool isnan_impl<tsl::float8_e5m2>(
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1879:24: note: candidate is: ‘template<class T> bool Eigen::internal::isnan_impl(const std::complex<_Tp>&)’
+ 1879 | EIGEN_DEVICE_FUNC bool isnan_impl(const std::complex<T>& x)
+      |                        ^~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/platform/status.h:20,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/lib/core/status.h:19,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/resource_base.h:20,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/resource_handle.h:21,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/types.h:27:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/platform/macros.h:24:16: warning: variable templates only available with ‘-std=c++14’ or ‘-std=gnu++14’ [-Wc++14-extensions]
+   24 | constexpr auto remove_unused_variable_compiler_warning =
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/allocator.h:32,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/tensor.h:26,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/attr_value_util.h:24,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/node_def_util.h:23,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/full_type_util.h:24,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/op.h:28:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:79:8: error: ‘optional’ in namespace ‘std’ does not name a template type
+   79 |   std::optional<int64_t> bytes_limit;
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:79:3: note: ‘std::optional’ is only available from C++17 onwards
+   79 |   std::optional<int64_t> bytes_limit;
+      |   ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:86:8: error: ‘optional’ in namespace ‘std’ does not name a template type
+   86 |   std::optional<int64_t> bytes_reservable_limit;
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:86:3: note: ‘std::optional’ is only available from C++17 onwards
+   86 |   std::optional<int64_t> bytes_reservable_limit;
+      |   ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:92:8: error: ‘optional’ in namespace ‘std’ does not name a template type
+   92 |   std::optional<int64_t> pool_bytes;
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:92:3: note: ‘std::optional’ is only available from C++17 onwards
+   92 |   std::optional<int64_t> pool_bytes;
+      |   ^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:93:8: error: ‘optional’ in namespace ‘std’ does not name a template type
+   93 |   std::optional<int64_t> peak_pool_bytes;
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/framework/allocator.h:93:3: note: ‘std::optional’ is only available from C++17 onwards
+   93 |   std::optional<int64_t> peak_pool_bytes;
+      |   ^~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/Tensor:73:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h: In instantiation of ‘struct Eigen::internal::nested<Eigen::TensorMap<Eigen::Tensor<float, 1, 1, int>, 16, Eigen::MakePointer>, 1, void>’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/src/Tensor/TensorMap.h:39:59:   required from ‘class Eigen::TensorMap<Eigen::Tensor<float, 1, 1, int>, 16, Eigen::MakePointer>’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/tensor_types.h:106:47:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h:178:42: error: no type named ‘type’ in ‘struct Eigen::internal::ref_selector<Eigen::TensorMap<Eigen::Tensor<float, 1, 1, int>, 16, Eigen::MakePointer> >’
+  178 |   typedef typename ref_selector<T>::type type;
+      |                                          ^~~~
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/tensor.h:28:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/tensor_types.h: In member function ‘void tensorflow::internal::MaybeWith32BitIndexingImpl<Eigen::GpuDevice>::operator()(Func, Args&& ...) const’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/tensor_types.h:176:25: error: use of ‘auto’ in lambda parameter declaration only available with ‘-std=c++14’ or ‘-std=gnu++14’
+  176 |     auto all = [](const auto&... bool_vals) {
+      |                         ^~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/tensor_types.h:176:34: error: expansion pattern ‘const int&’ contains no parameter packs
+  176 |     auto all = [](const auto&... bool_vals) {
+      |                                  ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/tensor_types.h: In lambda function:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/tensor_types.h:177:22: error: ‘bool_vals’ was not declared in this scope
+  177 |       for (bool b : {bool_vals...}) {
+      |                      ^~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h: In instantiation of ‘bool Eigen::numext::isnan(const T&) [with T = float]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/BFloat16.h:351:38:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1360:97: error: no matching function for call to ‘isnan_impl(const float&)’
+ 1360 | template<typename T> EIGEN_DEVICE_FUNC bool (isnan)   (const T &x) { return internal::isnan_impl(x); }
+      |                                                                             ~~~~~~~~~~~~~~~~~~~~^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1879:24: note: candidate: ‘template<class T> bool Eigen::internal::isnan_impl(const std::complex<_Tp>&)’
+ 1879 | EIGEN_DEVICE_FUNC bool isnan_impl(const std::complex<T>& x)
+      |                        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1879:24: note:   template argument deduction/substitution failed:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1360:97: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const float’
+ 1360 | template<typename T> EIGEN_DEVICE_FUNC bool (isnan)   (const T &x) { return internal::isnan_impl(x); }
+      |                                                                             ~~~~~~~~~~~~~~~~~~~~^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h: In instantiation of ‘bool Eigen::numext::isfinite(const T&) [with T = double]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h:71:5:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1362:100: error: no matching function for call to ‘isfinite_impl(const double&)’
+ 1362 | template<typename T> EIGEN_DEVICE_FUNC bool (isfinite)(const T &x) { return internal::isfinite_impl(x); }
+      |                                                                             ~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1873:24: note: candidate: ‘template<class T> bool Eigen::internal::isfinite_impl(const std::complex<_Tp>&)’
+ 1873 | EIGEN_DEVICE_FUNC bool isfinite_impl(const std::complex<T>& x)
+      |                        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1873:24: note:   template argument deduction/substitution failed:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1362:100: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const double’
+ 1362 | template<typename T> EIGEN_DEVICE_FUNC bool (isfinite)(const T &x) { return internal::isfinite_impl(x); }
+      |                                                                             ~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = double; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:173:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<double, tsl::float8_internal::float8_e4m3fn, false, false, void>’ used in nested name specifier
+  796 |   return ConvertImpl<From, Derived, kSaturate, kTruncate>::run(from);
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = float; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:175:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<float, tsl::float8_internal::float8_e4m3fn, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = Eigen::bfloat16; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:177:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<Eigen::bfloat16, tsl::float8_internal::float8_e4m3fn, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = Eigen::half; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:179:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<Eigen::half, tsl::float8_internal::float8_e4m3fn, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = double; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:189:29:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e4m3fn, double, false, false, void>’ used in nested name specifier
+  802 |   return ConvertImpl<Derived, To, kSaturate, kTruncate>::run(from);
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = float; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:192:28:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e4m3fn, float, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = Eigen::bfloat16; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:195:38:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e4m3fn, Eigen::bfloat16, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = Eigen::half; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e4m3fn]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:198:34:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e4m3fn, Eigen::half, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = double; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:223:32:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<double, tsl::float8_internal::float8_e5m2, false, false, void>’ used in nested name specifier
+  796 |   return ConvertImpl<From, Derived, kSaturate, kTruncate>::run(from);
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = float; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:225:32:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<float, tsl::float8_internal::float8_e5m2, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static Derived tsl::float8_internal::float8_base<Derived>::ConvertFrom(const From&) [with bool kSaturate = false; bool kTruncate = false; From = Eigen::bfloat16; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:227:32:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:796:63: error: incomplete type ‘tsl::float8_internal::ConvertImpl<Eigen::bfloat16, tsl::float8_internal::float8_e5m2, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = double; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:239:29:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e5m2, double, false, false, void>’ used in nested name specifier
+  802 |   return ConvertImpl<Derived, To, kSaturate, kTruncate>::run(from);
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = float; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:242:28:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e5m2, float, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h: In instantiation of ‘static To tsl::float8_internal::float8_base<Derived>::ConvertTo(const Derived&) [with To = Eigen::bfloat16; bool kSaturate = false; bool kTruncate = false; Derived = tsl::float8_internal::float8_e5m2]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:245:38:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/float8.h:802:61: error: incomplete type ‘tsl::float8_internal::ConvertImpl<tsl::float8_internal::float8_e5m2, Eigen::bfloat16, false, false, void>’ used in nested name specifier
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h: In instantiation of ‘bool Eigen::numext::isfinite(const T&) [with T = float]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:659:44:   required from ‘Packet Eigen::internal::psincos_float(const Packet&) [with bool ComputeSine = true; Packet = __vector(4) float]’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:712:29:   required from ‘Packet Eigen::internal::psin_float(const Packet&) [with Packet = __vector(4) float]’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/arch/SSE/MathFunctions.h:69:20:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1362:100: error: no matching function for call to ‘isfinite_impl(const float&)’
+ 1362 | template<typename T> EIGEN_DEVICE_FUNC bool (isfinite)(const T &x) { return internal::isfinite_impl(x); }
+      |                                                                             ~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1873:24: note: candidate: ‘template<class T> bool Eigen::internal::isfinite_impl(const std::complex<_Tp>&)’
+ 1873 | EIGEN_DEVICE_FUNC bool isfinite_impl(const std::complex<T>& x)
+      |                        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1873:24: note:   template argument deduction/substitution failed:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1362:100: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const float’
+ 1362 | template<typename T> EIGEN_DEVICE_FUNC bool (isfinite)(const T &x) { return internal::isfinite_impl(x); }
+      |                                                                             ~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h: In instantiation of ‘bool Eigen::numext::isinf(const T&) [with T = float]’:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../src/SpecialFunctions/SpecialFunctionsImpl.h:783:24:   required from ‘static Scalar Eigen::internal::igammac_cf_impl<Scalar, mode>::run(Scalar, Scalar) [with Scalar = float; Eigen::internal::IgammaComputationMode mode = Eigen::internal::VALUE]’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../src/SpecialFunctions/SpecialFunctionsImpl.h:1092:54:   required from ‘static Scalar Eigen::internal::igamma_generic_impl<Scalar, mode>::run(Scalar, Scalar) [with Scalar = float; Eigen::internal::IgammaComputationMode mode = Eigen::internal::VALUE]’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../src/SpecialFunctions/SpecialFunctionsImpl.h:2023:50:   required from ‘typename Eigen::internal::igamma_retval<typename Eigen::internal::global_math_functions_filtering_base<Scalar>::type>::type Eigen::numext::igamma(const Scalar&, const Scalar&) [with Scalar = float; typename Eigen::internal::igamma_retval<typename Eigen::internal::global_math_functions_filtering_base<Scalar>::type>::type = float; typename Eigen::internal::global_math_functions_filtering_base<Scalar>::type = float]’
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../src/SpecialFunctions/SpecialFunctionsBFloat16.h:39:47:   required from here
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1361:97: error: no matching function for call to ‘isinf_impl(const float&)’
+ 1361 | template<typename T> EIGEN_DEVICE_FUNC bool (isinf)   (const T &x) { return internal::isinf_impl(x); }
+      |                                                                             ~~~~~~~~~~~~~~~~~~~~^~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1885:24: note: candidate: ‘template<class T> bool Eigen::internal::isinf_impl(const std::complex<_Tp>&)’
+ 1885 | EIGEN_DEVICE_FUNC bool isinf_impl(const std::complex<T>& x)
+      |                        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1885:24: note:   template argument deduction/substitution failed:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/unsupported/Eigen/CXX11/../../../Eigen/src/Core/MathFunctions.h:1361:97: note:   mismatched types ‘const std::complex<_Tp>’ and ‘const float’
+ 1361 | template<typename T> EIGEN_DEVICE_FUNC bool (isinf)   (const T &x) { return internal::isinf_impl(x); }

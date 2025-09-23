@@ -1,0 +1,1716 @@
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9316:28: error: ‘DebugOptions’ in namespace ‘tensorflow’ does not name a type
+ 9316 | inline const ::tensorflow::DebugOptions& RunOptions::_internal_debug_options() const {
+      |                            ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9321:28: error: ‘DebugOptions’ in namespace ‘tensorflow’ does not name a type
+ 9321 | inline const ::tensorflow::DebugOptions& RunOptions::debug_options() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                            ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9325:13: error: variable or field ‘unsafe_arena_set_allocated_debug_options’ declared void
+ 9325 | inline void RunOptions::unsafe_arena_set_allocated_debug_options(::tensorflow::DebugOptions* value) {
+      |             ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9325:80: error: ‘DebugOptions’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::DebugOptions’?
+ 9325 | inline void RunOptions::unsafe_arena_set_allocated_debug_options(::tensorflow::DebugOptions* value) {
+      |                                                                                ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/debug.pb.h:793:23: note: ‘ml_dtypes::float8_internal::tensorflow::DebugOptions’ declared here
+  793 | class PROTOBUF_EXPORT DebugOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9325:94: error: ‘value’ was not declared in this scope
+ 9325 | inline void RunOptions::unsafe_arena_set_allocated_debug_options(::tensorflow::DebugOptions* value) {
+      |                                                                                              ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9338:22: error: ‘DebugOptions’ in namespace ‘tensorflow’ does not name a type
+ 9338 | inline ::tensorflow::DebugOptions* RunOptions::release_debug_options() {
+      |                      ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9357:22: error: ‘DebugOptions’ in namespace ‘tensorflow’ does not name a type
+ 9357 | inline ::tensorflow::DebugOptions* RunOptions::unsafe_arena_release_debug_options() {
+      |                      ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9366:22: error: ‘DebugOptions’ in namespace ‘tensorflow’ does not name a type
+ 9366 | inline ::tensorflow::DebugOptions* RunOptions::_internal_mutable_debug_options() {
+      |                      ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9374:22: error: ‘DebugOptions’ in namespace ‘tensorflow’ does not name a type
+ 9374 | inline ::tensorflow::DebugOptions* RunOptions::mutable_debug_options() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9380:13: error: variable or field ‘set_allocated_debug_options’ declared void
+ 9380 | inline void RunOptions::set_allocated_debug_options(::tensorflow::DebugOptions* value) {
+      |             ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9380:67: error: ‘DebugOptions’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::DebugOptions’?
+ 9380 | inline void RunOptions::set_allocated_debug_options(::tensorflow::DebugOptions* value) {
+      |                                                                   ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/debug.pb.h:793:23: note: ‘ml_dtypes::float8_internal::tensorflow::DebugOptions’ declared here
+  793 | class PROTOBUF_EXPORT DebugOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9380:81: error: ‘value’ was not declared in this scope
+ 9380 | inline void RunOptions::set_allocated_debug_options(::tensorflow::DebugOptions* value) {
+      |                                                                                 ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘bool ml_dtypes::float8_internal::tensorflow::RunOptions::has_experimental() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9426:36: error: ‘const struct ml_dtypes::float8_internal::tensorflow::RunOptions::Impl_’ has no member named ‘experimental_’
+ 9426 |   PROTOBUF_ASSUME(!value || _impl_.experimental_ != nullptr);
+      |                                    ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/port_def.inc:973:9: note: in definition of macro ‘PROTOBUF_ASSUME’
+  973 |   if (!(pred)) {                                                               \
+      |         ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::RunOptions::clear_experimental()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9431:14: error: ‘struct ml_dtypes::float8_internal::tensorflow::RunOptions::Impl_’ has no member named ‘experimental_’
+ 9431 |   if (_impl_.experimental_ != nullptr) _impl_.experimental_->Clear();
+      |              ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9431:47: error: ‘struct ml_dtypes::float8_internal::tensorflow::RunOptions::Impl_’ has no member named ‘experimental_’
+ 9431 |   if (_impl_.experimental_ != nullptr) _impl_.experimental_->Clear();
+      |                                               ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9434:28: error: ‘RunOptions_Experimental’ in namespace ‘tensorflow’ does not name a type
+ 9434 | inline const ::tensorflow::RunOptions_Experimental& RunOptions::_internal_experimental() const {
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9439:28: error: ‘RunOptions_Experimental’ in namespace ‘tensorflow’ does not name a type
+ 9439 | inline const ::tensorflow::RunOptions_Experimental& RunOptions::experimental() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9443:13: error: variable or field ‘unsafe_arena_set_allocated_experimental’ declared void
+ 9443 | inline void RunOptions::unsafe_arena_set_allocated_experimental(::tensorflow::RunOptions_Experimental* value) {
+      |             ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9443:79: error: ‘RunOptions_Experimental’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunOptions_Experimental’?
+ 9443 | inline void RunOptions::unsafe_arena_set_allocated_experimental(::tensorflow::RunOptions_Experimental* value) {
+      |                                                                               ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:2171:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunOptions_Experimental’ declared here
+ 2171 | class PROTOBUF_EXPORT RunOptions_Experimental final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9443:104: error: ‘value’ was not declared in this scope
+ 9443 | inline void RunOptions::unsafe_arena_set_allocated_experimental(::tensorflow::RunOptions_Experimental* value) {
+      |                                                                                                        ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9456:22: error: ‘RunOptions_Experimental’ in namespace ‘tensorflow’ does not name a type
+ 9456 | inline ::tensorflow::RunOptions_Experimental* RunOptions::release_experimental() {
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9475:22: error: ‘RunOptions_Experimental’ in namespace ‘tensorflow’ does not name a type
+ 9475 | inline ::tensorflow::RunOptions_Experimental* RunOptions::unsafe_arena_release_experimental() {
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9484:22: error: ‘RunOptions_Experimental’ in namespace ‘tensorflow’ does not name a type
+ 9484 | inline ::tensorflow::RunOptions_Experimental* RunOptions::_internal_mutable_experimental() {
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9492:22: error: ‘RunOptions_Experimental’ in namespace ‘tensorflow’ does not name a type
+ 9492 | inline ::tensorflow::RunOptions_Experimental* RunOptions::mutable_experimental() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9498:13: error: variable or field ‘set_allocated_experimental’ declared void
+ 9498 | inline void RunOptions::set_allocated_experimental(::tensorflow::RunOptions_Experimental* value) {
+      |             ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9498:66: error: ‘RunOptions_Experimental’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunOptions_Experimental’?
+ 9498 | inline void RunOptions::set_allocated_experimental(::tensorflow::RunOptions_Experimental* value) {
+      |                                                                  ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:2171:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunOptions_Experimental’ declared here
+ 2171 | class PROTOBUF_EXPORT RunOptions_Experimental final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9498:91: error: ‘value’ was not declared in this scope
+ 9498 | inline void RunOptions::set_allocated_experimental(::tensorflow::RunOptions_Experimental* value) {
+      |                                                                                           ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs::_internal_partition_graphs_size() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9525:39: error: request for member ‘size’ in ‘((const ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs*)this)->ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs::_internal_partition_graphs()’, which is of non-class type ‘const int’
+ 9525 |   return _internal_partition_graphs().size();
+      |                                       ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9530:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9530 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::mutable_partition_graphs(int index)
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9535:59: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9535 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>* RunMetadata_FunctionGraphs::mutable_partition_graphs()
+      |                                                           ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9535:59: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9535 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>* RunMetadata_FunctionGraphs::mutable_partition_graphs()
+      |                                                           ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9535:67: error: template argument 1 is invalid
+ 9535 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>* RunMetadata_FunctionGraphs::mutable_partition_graphs()
+      |                                                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9541:28: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9541 | inline const ::tensorflow::GraphDef& RunMetadata_FunctionGraphs::partition_graphs(int index) const
+      |                            ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9546:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9546 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::add_partition_graphs() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9552:65: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9552 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>& RunMetadata_FunctionGraphs::partition_graphs() const
+      |                                                                 ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9552:65: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9552 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>& RunMetadata_FunctionGraphs::partition_graphs() const
+      |                                                                 ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9552:73: error: template argument 1 is invalid
+ 9552 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>& RunMetadata_FunctionGraphs::partition_graphs() const
+      |                                                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9557:65: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9557 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>&
+      |                                                                 ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9557:65: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9557 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>&
+      |                                                                 ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9557:73: error: template argument 1 is invalid
+ 9557 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>&
+      |                                                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9562:59: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9562 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>*
+      |                                                           ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9562:59: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9562 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>*
+      |                                                           ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9562:67: error: template argument 1 is invalid
+ 9562 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>*
+      |                                                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘bool ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs::has_pre_optimization_graph() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9571:36: error: ‘const struct ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs::Impl_’ has no member named ‘pre_optimization_graph_’
+ 9571 |   PROTOBUF_ASSUME(!value || _impl_.pre_optimization_graph_ != nullptr);
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/port_def.inc:973:9: note: in definition of macro ‘PROTOBUF_ASSUME’
+  973 |   if (!(pred)) {                                                               \
+      |         ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9574:28: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9574 | inline const ::tensorflow::GraphDef& RunMetadata_FunctionGraphs::_internal_pre_optimization_graph() const {
+      |                            ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9579:28: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9579 | inline const ::tensorflow::GraphDef& RunMetadata_FunctionGraphs::pre_optimization_graph() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                            ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9583:13: error: variable or field ‘unsafe_arena_set_allocated_pre_optimization_graph’ declared void
+ 9583 | inline void RunMetadata_FunctionGraphs::unsafe_arena_set_allocated_pre_optimization_graph(::tensorflow::GraphDef* value) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9583:105: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9583 | inline void RunMetadata_FunctionGraphs::unsafe_arena_set_allocated_pre_optimization_graph(::tensorflow::GraphDef* value) {
+      |                                                                                                         ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9583:115: error: ‘value’ was not declared in this scope
+ 9583 | inline void RunMetadata_FunctionGraphs::unsafe_arena_set_allocated_pre_optimization_graph(::tensorflow::GraphDef* value) {
+      |                                                                                                                   ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9596:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9596 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::release_pre_optimization_graph() {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9615:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9615 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::unsafe_arena_release_pre_optimization_graph() {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9624:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9624 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::_internal_mutable_pre_optimization_graph() {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9632:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9632 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::mutable_pre_optimization_graph() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9638:13: error: variable or field ‘set_allocated_pre_optimization_graph’ declared void
+ 9638 | inline void RunMetadata_FunctionGraphs::set_allocated_pre_optimization_graph(::tensorflow::GraphDef* value) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9638:92: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9638 | inline void RunMetadata_FunctionGraphs::set_allocated_pre_optimization_graph(::tensorflow::GraphDef* value) {
+      |                                                                                            ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9638:102: error: ‘value’ was not declared in this scope
+ 9638 | inline void RunMetadata_FunctionGraphs::set_allocated_pre_optimization_graph(::tensorflow::GraphDef* value) {
+      |                                                                                                      ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘bool ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs::has_post_optimization_graph() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9662:36: error: ‘const struct ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs::Impl_’ has no member named ‘post_optimization_graph_’
+ 9662 |   PROTOBUF_ASSUME(!value || _impl_.post_optimization_graph_ != nullptr);
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/port_def.inc:973:9: note: in definition of macro ‘PROTOBUF_ASSUME’
+  973 |   if (!(pred)) {                                                               \
+      |         ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9665:28: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9665 | inline const ::tensorflow::GraphDef& RunMetadata_FunctionGraphs::_internal_post_optimization_graph() const {
+      |                            ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9670:28: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9670 | inline const ::tensorflow::GraphDef& RunMetadata_FunctionGraphs::post_optimization_graph() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                            ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9674:13: error: variable or field ‘unsafe_arena_set_allocated_post_optimization_graph’ declared void
+ 9674 | inline void RunMetadata_FunctionGraphs::unsafe_arena_set_allocated_post_optimization_graph(::tensorflow::GraphDef* value) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9674:106: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9674 | inline void RunMetadata_FunctionGraphs::unsafe_arena_set_allocated_post_optimization_graph(::tensorflow::GraphDef* value) {
+      |                                                                                                          ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9674:116: error: ‘value’ was not declared in this scope
+ 9674 | inline void RunMetadata_FunctionGraphs::unsafe_arena_set_allocated_post_optimization_graph(::tensorflow::GraphDef* value) {
+      |                                                                                                                    ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9687:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9687 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::release_post_optimization_graph() {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9706:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9706 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::unsafe_arena_release_post_optimization_graph() {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9715:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9715 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::_internal_mutable_post_optimization_graph() {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9723:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9723 | inline ::tensorflow::GraphDef* RunMetadata_FunctionGraphs::mutable_post_optimization_graph() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9729:13: error: variable or field ‘set_allocated_post_optimization_graph’ declared void
+ 9729 | inline void RunMetadata_FunctionGraphs::set_allocated_post_optimization_graph(::tensorflow::GraphDef* value) {
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9729:93: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9729 | inline void RunMetadata_FunctionGraphs::set_allocated_post_optimization_graph(::tensorflow::GraphDef* value) {
+      |                                                                                             ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9729:103: error: ‘value’ was not declared in this scope
+ 9729 | inline void RunMetadata_FunctionGraphs::set_allocated_post_optimization_graph(::tensorflow::GraphDef* value) {
+      |                                                                                                       ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘bool ml_dtypes::float8_internal::tensorflow::RunMetadata::has_step_stats() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9757:36: error: ‘const struct ml_dtypes::float8_internal::tensorflow::RunMetadata::Impl_’ has no member named ‘step_stats_’
+ 9757 |   PROTOBUF_ASSUME(!value || _impl_.step_stats_ != nullptr);
+      |                                    ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/port_def.inc:973:9: note: in definition of macro ‘PROTOBUF_ASSUME’
+  973 |   if (!(pred)) {                                                               \
+      |         ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9760:28: error: ‘StepStats’ in namespace ‘tensorflow’ does not name a type
+ 9760 | inline const ::tensorflow::StepStats& RunMetadata::_internal_step_stats() const {
+      |                            ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9765:28: error: ‘StepStats’ in namespace ‘tensorflow’ does not name a type
+ 9765 | inline const ::tensorflow::StepStats& RunMetadata::step_stats() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                            ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9769:13: error: variable or field ‘unsafe_arena_set_allocated_step_stats’ declared void
+ 9769 | inline void RunMetadata::unsafe_arena_set_allocated_step_stats(::tensorflow::StepStats* value) {
+      |             ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9769:78: error: ‘StepStats’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::StepStats’?
+ 9769 | inline void RunMetadata::unsafe_arena_set_allocated_step_stats(::tensorflow::StepStats* value) {
+      |                                                                              ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/step_stats.pb.h:1702:23: note: ‘ml_dtypes::float8_internal::tensorflow::StepStats’ declared here
+ 1702 | class PROTOBUF_EXPORT StepStats final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9769:89: error: ‘value’ was not declared in this scope
+ 9769 | inline void RunMetadata::unsafe_arena_set_allocated_step_stats(::tensorflow::StepStats* value) {
+      |                                                                                         ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9782:22: error: ‘StepStats’ in namespace ‘tensorflow’ does not name a type
+ 9782 | inline ::tensorflow::StepStats* RunMetadata::release_step_stats() {
+      |                      ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9801:22: error: ‘StepStats’ in namespace ‘tensorflow’ does not name a type
+ 9801 | inline ::tensorflow::StepStats* RunMetadata::unsafe_arena_release_step_stats() {
+      |                      ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9810:22: error: ‘StepStats’ in namespace ‘tensorflow’ does not name a type
+ 9810 | inline ::tensorflow::StepStats* RunMetadata::_internal_mutable_step_stats() {
+      |                      ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9818:22: error: ‘StepStats’ in namespace ‘tensorflow’ does not name a type
+ 9818 | inline ::tensorflow::StepStats* RunMetadata::mutable_step_stats() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9824:13: error: variable or field ‘set_allocated_step_stats’ declared void
+ 9824 | inline void RunMetadata::set_allocated_step_stats(::tensorflow::StepStats* value) {
+      |             ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9824:65: error: ‘StepStats’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::StepStats’?
+ 9824 | inline void RunMetadata::set_allocated_step_stats(::tensorflow::StepStats* value) {
+      |                                                                 ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/step_stats.pb.h:1702:23: note: ‘ml_dtypes::float8_internal::tensorflow::StepStats’ declared here
+ 1702 | class PROTOBUF_EXPORT StepStats final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9824:76: error: ‘value’ was not declared in this scope
+ 9824 | inline void RunMetadata::set_allocated_step_stats(::tensorflow::StepStats* value) {
+      |                                                                            ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘bool ml_dtypes::float8_internal::tensorflow::RunMetadata::has_cost_graph() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9848:36: error: ‘const struct ml_dtypes::float8_internal::tensorflow::RunMetadata::Impl_’ has no member named ‘cost_graph_’
+ 9848 |   PROTOBUF_ASSUME(!value || _impl_.cost_graph_ != nullptr);
+      |                                    ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/port_def.inc:973:9: note: in definition of macro ‘PROTOBUF_ASSUME’
+  973 |   if (!(pred)) {                                                               \
+      |         ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9851:28: error: ‘CostGraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9851 | inline const ::tensorflow::CostGraphDef& RunMetadata::_internal_cost_graph() const {
+      |                            ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9856:28: error: ‘CostGraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9856 | inline const ::tensorflow::CostGraphDef& RunMetadata::cost_graph() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                            ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9860:13: error: variable or field ‘unsafe_arena_set_allocated_cost_graph’ declared void
+ 9860 | inline void RunMetadata::unsafe_arena_set_allocated_cost_graph(::tensorflow::CostGraphDef* value) {
+      |             ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9860:78: error: ‘CostGraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::CostGraphDef’?
+ 9860 | inline void RunMetadata::unsafe_arena_set_allocated_cost_graph(::tensorflow::CostGraphDef* value) {
+      |                                                                              ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/cost_graph.pb.h:1116:23: note: ‘ml_dtypes::float8_internal::tensorflow::CostGraphDef’ declared here
+ 1116 | class PROTOBUF_EXPORT CostGraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9860:92: error: ‘value’ was not declared in this scope
+ 9860 | inline void RunMetadata::unsafe_arena_set_allocated_cost_graph(::tensorflow::CostGraphDef* value) {
+      |                                                                                            ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9873:22: error: ‘CostGraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9873 | inline ::tensorflow::CostGraphDef* RunMetadata::release_cost_graph() {
+      |                      ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9892:22: error: ‘CostGraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9892 | inline ::tensorflow::CostGraphDef* RunMetadata::unsafe_arena_release_cost_graph() {
+      |                      ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9901:22: error: ‘CostGraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9901 | inline ::tensorflow::CostGraphDef* RunMetadata::_internal_mutable_cost_graph() {
+      |                      ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9909:22: error: ‘CostGraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9909 | inline ::tensorflow::CostGraphDef* RunMetadata::mutable_cost_graph() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9915:13: error: variable or field ‘set_allocated_cost_graph’ declared void
+ 9915 | inline void RunMetadata::set_allocated_cost_graph(::tensorflow::CostGraphDef* value) {
+      |             ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9915:65: error: ‘CostGraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::CostGraphDef’?
+ 9915 | inline void RunMetadata::set_allocated_cost_graph(::tensorflow::CostGraphDef* value) {
+      |                                                                 ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/cost_graph.pb.h:1116:23: note: ‘ml_dtypes::float8_internal::tensorflow::CostGraphDef’ declared here
+ 1116 | class PROTOBUF_EXPORT CostGraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9915:79: error: ‘value’ was not declared in this scope
+ 9915 | inline void RunMetadata::set_allocated_cost_graph(::tensorflow::CostGraphDef* value) {
+      |                                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::RunMetadata::_internal_partition_graphs_size() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9938:39: error: request for member ‘size’ in ‘((const ml_dtypes::float8_internal::tensorflow::RunMetadata*)this)->ml_dtypes::float8_internal::tensorflow::RunMetadata::_internal_partition_graphs()’, which is of non-class type ‘const int’
+ 9938 |   return _internal_partition_graphs().size();
+      |                                       ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9943:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9943 | inline ::tensorflow::GraphDef* RunMetadata::mutable_partition_graphs(int index)
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9948:59: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9948 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>* RunMetadata::mutable_partition_graphs()
+      |                                                           ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9948:59: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9948 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>* RunMetadata::mutable_partition_graphs()
+      |                                                           ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9948:67: error: template argument 1 is invalid
+ 9948 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>* RunMetadata::mutable_partition_graphs()
+      |                                                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9954:28: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9954 | inline const ::tensorflow::GraphDef& RunMetadata::partition_graphs(int index) const
+      |                            ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9959:22: error: ‘GraphDef’ in namespace ‘tensorflow’ does not name a type
+ 9959 | inline ::tensorflow::GraphDef* RunMetadata::add_partition_graphs() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9965:65: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9965 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>& RunMetadata::partition_graphs() const
+      |                                                                 ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9965:65: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9965 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>& RunMetadata::partition_graphs() const
+      |                                                                 ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9965:73: error: template argument 1 is invalid
+ 9965 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>& RunMetadata::partition_graphs() const
+      |                                                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9970:65: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9970 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>&
+      |                                                                 ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9970:65: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9970 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>&
+      |                                                                 ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9970:73: error: template argument 1 is invalid
+ 9970 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>&
+      |                                                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9975:59: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9975 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>*
+      |                                                           ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9975:59: error: ‘GraphDef’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::GraphDef’?
+ 9975 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>*
+      |                                                           ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/graph.pb.h:73:23: note: ‘ml_dtypes::float8_internal::tensorflow::GraphDef’ declared here
+   73 | class PROTOBUF_EXPORT GraphDef final : public ::google::protobuf::Message
+      |                       ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9975:67: error: template argument 1 is invalid
+ 9975 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::GraphDef>*
+      |                                                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::RunMetadata::_internal_function_graphs_size() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9983:38: error: request for member ‘size’ in ‘((const ml_dtypes::float8_internal::tensorflow::RunMetadata*)this)->ml_dtypes::float8_internal::tensorflow::RunMetadata::_internal_function_graphs()’, which is of non-class type ‘const int’
+ 9983 |   return _internal_function_graphs().size();
+      |                                      ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::RunMetadata::clear_function_graphs()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9990:27: error: request for member ‘Clear’ in ‘((ml_dtypes::float8_internal::tensorflow::RunMetadata*)this)->ml_dtypes::float8_internal::tensorflow::RunMetadata::<anonymous>.ml_dtypes::float8_internal::tensorflow::RunMetadata::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::RunMetadata::Impl_::function_graphs_’, which is of non-class type ‘int’
+ 9990 |   _impl_.function_graphs_.Clear();
+      |                           ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9992:22: error: ‘RunMetadata_FunctionGraphs’ in namespace ‘tensorflow’ does not name a type
+ 9992 | inline ::tensorflow::RunMetadata_FunctionGraphs* RunMetadata::mutable_function_graphs(int index)
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9997:59: error: ‘RunMetadata_FunctionGraphs’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’?
+ 9997 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>* RunMetadata::mutable_function_graphs()
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:5045:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’ declared here
+ 5045 | class PROTOBUF_EXPORT RunMetadata_FunctionGraphs final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9997:59: error: ‘RunMetadata_FunctionGraphs’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’?
+ 9997 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>* RunMetadata::mutable_function_graphs()
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:5045:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’ declared here
+ 5045 | class PROTOBUF_EXPORT RunMetadata_FunctionGraphs final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:9997:85: error: template argument 1 is invalid
+ 9997 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>* RunMetadata::mutable_function_graphs()
+      |                                                                                     ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10003:28: error: ‘RunMetadata_FunctionGraphs’ in namespace ‘tensorflow’ does not name a type
+10003 | inline const ::tensorflow::RunMetadata_FunctionGraphs& RunMetadata::function_graphs(int index) const
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10008:22: error: ‘RunMetadata_FunctionGraphs’ in namespace ‘tensorflow’ does not name a type
+10008 | inline ::tensorflow::RunMetadata_FunctionGraphs* RunMetadata::add_function_graphs() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10014:65: error: ‘RunMetadata_FunctionGraphs’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’?
+10014 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>& RunMetadata::function_graphs() const
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:5045:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’ declared here
+ 5045 | class PROTOBUF_EXPORT RunMetadata_FunctionGraphs final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10014:65: error: ‘RunMetadata_FunctionGraphs’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’?
+10014 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>& RunMetadata::function_graphs() const
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:5045:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’ declared here
+ 5045 | class PROTOBUF_EXPORT RunMetadata_FunctionGraphs final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10014:91: error: template argument 1 is invalid
+10014 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>& RunMetadata::function_graphs() const
+      |                                                                                           ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10019:65: error: ‘RunMetadata_FunctionGraphs’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’?
+10019 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>&
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:5045:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’ declared here
+ 5045 | class PROTOBUF_EXPORT RunMetadata_FunctionGraphs final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10019:65: error: ‘RunMetadata_FunctionGraphs’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’?
+10019 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>&
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:5045:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’ declared here
+ 5045 | class PROTOBUF_EXPORT RunMetadata_FunctionGraphs final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10019:91: error: template argument 1 is invalid
+10019 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>&
+      |                                                                                           ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10024:59: error: ‘RunMetadata_FunctionGraphs’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’?
+10024 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>*
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:5045:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’ declared here
+ 5045 | class PROTOBUF_EXPORT RunMetadata_FunctionGraphs final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10024:59: error: ‘RunMetadata_FunctionGraphs’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’?
+10024 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>*
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:5045:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunMetadata_FunctionGraphs’ declared here
+ 5045 | class PROTOBUF_EXPORT RunMetadata_FunctionGraphs final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10024:85: error: template argument 1 is invalid
+10024 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::RunMetadata_FunctionGraphs>*
+      |                                                                                     ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘bool ml_dtypes::float8_internal::tensorflow::RunMetadata::has_session_metadata() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10033:36: error: ‘const struct ml_dtypes::float8_internal::tensorflow::RunMetadata::Impl_’ has no member named ‘session_metadata_’
+10033 |   PROTOBUF_ASSUME(!value || _impl_.session_metadata_ != nullptr);
+      |                                    ^~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/port_def.inc:973:9: note: in definition of macro ‘PROTOBUF_ASSUME’
+  973 |   if (!(pred)) {                                                               \
+      |         ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::RunMetadata::clear_session_metadata()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10038:14: error: ‘struct ml_dtypes::float8_internal::tensorflow::RunMetadata::Impl_’ has no member named ‘session_metadata_’
+10038 |   if (_impl_.session_metadata_ != nullptr) _impl_.session_metadata_->Clear();
+      |              ^~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10038:51: error: ‘struct ml_dtypes::float8_internal::tensorflow::RunMetadata::Impl_’ has no member named ‘session_metadata_’
+10038 |   if (_impl_.session_metadata_ != nullptr) _impl_.session_metadata_->Clear();
+      |                                                   ^~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10041:28: error: ‘SessionMetadata’ in namespace ‘tensorflow’ does not name a type
+10041 | inline const ::tensorflow::SessionMetadata& RunMetadata::_internal_session_metadata() const {
+      |                            ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10046:28: error: ‘SessionMetadata’ in namespace ‘tensorflow’ does not name a type
+10046 | inline const ::tensorflow::SessionMetadata& RunMetadata::session_metadata() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                            ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10050:13: error: variable or field ‘unsafe_arena_set_allocated_session_metadata’ declared void
+10050 | inline void RunMetadata::unsafe_arena_set_allocated_session_metadata(::tensorflow::SessionMetadata* value) {
+      |             ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10050:84: error: ‘SessionMetadata’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::SessionMetadata’?
+10050 | inline void RunMetadata::unsafe_arena_set_allocated_session_metadata(::tensorflow::SessionMetadata* value) {
+      |                                                                                    ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:692:23: note: ‘ml_dtypes::float8_internal::tensorflow::SessionMetadata’ declared here
+  692 | class PROTOBUF_EXPORT SessionMetadata final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10050:101: error: ‘value’ was not declared in this scope
+10050 | inline void RunMetadata::unsafe_arena_set_allocated_session_metadata(::tensorflow::SessionMetadata* value) {
+      |                                                                                                     ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10063:22: error: ‘SessionMetadata’ in namespace ‘tensorflow’ does not name a type
+10063 | inline ::tensorflow::SessionMetadata* RunMetadata::release_session_metadata() {
+      |                      ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10082:22: error: ‘SessionMetadata’ in namespace ‘tensorflow’ does not name a type
+10082 | inline ::tensorflow::SessionMetadata* RunMetadata::unsafe_arena_release_session_metadata() {
+      |                      ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10091:22: error: ‘SessionMetadata’ in namespace ‘tensorflow’ does not name a type
+10091 | inline ::tensorflow::SessionMetadata* RunMetadata::_internal_mutable_session_metadata() {
+      |                      ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10099:22: error: ‘SessionMetadata’ in namespace ‘tensorflow’ does not name a type
+10099 | inline ::tensorflow::SessionMetadata* RunMetadata::mutable_session_metadata() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10105:13: error: variable or field ‘set_allocated_session_metadata’ declared void
+10105 | inline void RunMetadata::set_allocated_session_metadata(::tensorflow::SessionMetadata* value) {
+      |             ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10105:71: error: ‘SessionMetadata’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::SessionMetadata’?
+10105 | inline void RunMetadata::set_allocated_session_metadata(::tensorflow::SessionMetadata* value) {
+      |                                                                       ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:692:23: note: ‘ml_dtypes::float8_internal::tensorflow::SessionMetadata’ declared here
+  692 | class PROTOBUF_EXPORT SessionMetadata final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10105:88: error: ‘value’ was not declared in this scope
+10105 | inline void RunMetadata::set_allocated_session_metadata(::tensorflow::SessionMetadata* value) {
+      |                                                                                        ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10135:19: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10135 | inline const std::string& TensorConnection::from_tensor() const
+      |                   ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10141:36: error: no declaration matches ‘void ml_dtypes::float8_internal::tensorflow::TensorConnection::set_from_tensor(Arg_&&, Args_ ...)’
+10141 | inline PROTOBUF_ALWAYS_INLINE void TensorConnection::set_from_tensor(Arg_&& arg,
+      |                                    ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:630:8: note: candidate is: ‘template<class Arg_> void ml_dtypes::float8_internal::tensorflow::TensorConnection::set_from_tensor(...)’
+  630 |   void set_from_tensor(Arg_&& arg, Args_... args);
+      |        ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘class ml_dtypes::float8_internal::tensorflow::TensorConnection’ defined here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10147:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10147 | inline std::string* TensorConnection::mutable_from_tensor() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10152:19: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10152 | inline const std::string& TensorConnection::_internal_from_tensor() const {
+      |                   ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10156:68: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10156 | inline void TensorConnection::_internal_set_from_tensor(const std::string& value) {
+      |                                                                    ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::TensorConnection::_internal_set_from_tensor(const int&)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10158:26: error: no matching function for call to ‘google::protobuf::internal::ArenaStringPtr::Set(const int&, google::protobuf::Arena*)’
+10158 |   _impl_.from_tensor_.Set(value, GetArena());
+      |   ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:468:13: note: candidate: ‘void google::protobuf::internal::ArenaStringPtr::Set(const char*, google::protobuf::Arena*)’ (near match)
+  468 | inline void ArenaStringPtr::Set(const char* s, Arena* arena) {
+      |             ^~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:468:13: note:   conversion of argument 1 would be ill-formed:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10158:27: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+10158 |   _impl_.from_tensor_.Set(value, GetArena());
+      |                           ^~~~~
+      |                           |
+      |                           int
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:301:8: note: candidate: ‘template<class ... OverloadDisambiguator> void google::protobuf::internal::ArenaStringPtr::Set(const std::string&, google::protobuf::Arena*)’
+  301 |   void Set(const std::string& value, Arena* arena);
+      |        ^~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:301:8: note:   template argument deduction/substitution failed:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10158:27: note:   cannot convert ‘value’ (type ‘const int’) to type ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’}
+10158 |   _impl_.from_tensor_.Set(value, GetArena());
+      |                           ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:313:8: note: candidate: ‘template<class RefWrappedType> void google::protobuf::internal::ArenaStringPtr::Set(std::reference_wrapper<_Tp>, google::protobuf::Arena*)’
+  313 |   void Set(std::reference_wrapper<RefWrappedType> const_string_ref,
+      |        ^~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:313:8: note:   template argument deduction/substitution failed:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10158:26: note:   mismatched types ‘std::reference_wrapper<_Tp>’ and ‘int’
+10158 |   _impl_.from_tensor_.Set(value, GetArena());
+      |   ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:298:8: note: candidate: ‘void google::protobuf::internal::ArenaStringPtr::Set(absl::lts_20250127::string_view, google::protobuf::Arena*)’
+  298 |   void Set(absl::string_view value, Arena* arena);
+      |        ^~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:298:30: note:   no known conversion for argument 1 from ‘const int’ to ‘absl::lts_20250127::string_view’
+  298 |   void Set(absl::string_view value, Arena* arena);
+      |            ~~~~~~~~~~~~~~~~~~^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:299:8: note: candidate: ‘void google::protobuf::internal::ArenaStringPtr::Set(std::string&&, google::protobuf::Arena*)’
+  299 |   void Set(std::string&& value, Arena* arena);
+      |        ^~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:299:26: note:   no known conversion for argument 1 from ‘const int’ to ‘std::string&&’ {aka ‘std::__cxx11::basic_string<char>&&’}
+  299 |   void Set(std::string&& value, Arena* arena);
+      |            ~~~~~~~~~~~~~~^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:472:13: note: candidate: ‘void google::protobuf::internal::ArenaStringPtr::Set(const char*, size_t, google::protobuf::Arena*)’
+  472 | inline void ArenaStringPtr::Set(const char* s, size_t n, Arena* arena) {
+      |             ^~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:472:13: note:   candidate expects 3 arguments, 2 provided
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10160:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10160 | inline std::string* TensorConnection::_internal_mutable_from_tensor() {
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10164:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10164 | inline std::string* TensorConnection::release_from_tensor() {
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10169:13: error: variable or field ‘set_allocated_from_tensor’ declared void
+10169 | inline void TensorConnection::set_allocated_from_tensor(std::string* value) {
+      |             ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10169:62: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10169 | inline void TensorConnection::set_allocated_from_tensor(std::string* value) {
+      |                                                              ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10169:70: error: ‘value’ was not declared in this scope
+10169 | inline void TensorConnection::set_allocated_from_tensor(std::string* value) {
+      |                                                                      ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10185:19: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10185 | inline const std::string& TensorConnection::to_tensor() const
+      |                   ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10191:36: error: no declaration matches ‘void ml_dtypes::float8_internal::tensorflow::TensorConnection::set_to_tensor(Arg_&&, Args_ ...)’
+10191 | inline PROTOBUF_ALWAYS_INLINE void TensorConnection::set_to_tensor(Arg_&& arg,
+      |                                    ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:646:8: note: candidate is: ‘template<class Arg_> void ml_dtypes::float8_internal::tensorflow::TensorConnection::set_to_tensor(...)’
+  646 |   void set_to_tensor(Arg_&& arg, Args_... args);
+      |        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘class ml_dtypes::float8_internal::tensorflow::TensorConnection’ defined here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10197:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10197 | inline std::string* TensorConnection::mutable_to_tensor() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10202:19: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10202 | inline const std::string& TensorConnection::_internal_to_tensor() const {
+      |                   ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10206:66: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10206 | inline void TensorConnection::_internal_set_to_tensor(const std::string& value) {
+      |                                                                  ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::TensorConnection::_internal_set_to_tensor(const int&)’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10208:24: error: no matching function for call to ‘google::protobuf::internal::ArenaStringPtr::Set(const int&, google::protobuf::Arena*)’
+10208 |   _impl_.to_tensor_.Set(value, GetArena());
+      |   ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:468:13: note: candidate: ‘void google::protobuf::internal::ArenaStringPtr::Set(const char*, google::protobuf::Arena*)’ (near match)
+  468 | inline void ArenaStringPtr::Set(const char* s, Arena* arena) {
+      |             ^~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:468:13: note:   conversion of argument 1 would be ill-formed:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10208:25: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+10208 |   _impl_.to_tensor_.Set(value, GetArena());
+      |                         ^~~~~
+      |                         |
+      |                         int
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:301:8: note: candidate: ‘template<class ... OverloadDisambiguator> void google::protobuf::internal::ArenaStringPtr::Set(const std::string&, google::protobuf::Arena*)’
+  301 |   void Set(const std::string& value, Arena* arena);
+      |        ^~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:301:8: note:   template argument deduction/substitution failed:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10208:25: note:   cannot convert ‘value’ (type ‘const int’) to type ‘const std::string&’ {aka ‘const std::__cxx11::basic_string<char>&’}
+10208 |   _impl_.to_tensor_.Set(value, GetArena());
+      |                         ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:313:8: note: candidate: ‘template<class RefWrappedType> void google::protobuf::internal::ArenaStringPtr::Set(std::reference_wrapper<_Tp>, google::protobuf::Arena*)’
+  313 |   void Set(std::reference_wrapper<RefWrappedType> const_string_ref,
+      |        ^~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:313:8: note:   template argument deduction/substitution failed:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10208:24: note:   mismatched types ‘std::reference_wrapper<_Tp>’ and ‘int’
+10208 |   _impl_.to_tensor_.Set(value, GetArena());
+      |   ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:298:8: note: candidate: ‘void google::protobuf::internal::ArenaStringPtr::Set(absl::lts_20250127::string_view, google::protobuf::Arena*)’
+  298 |   void Set(absl::string_view value, Arena* arena);
+      |        ^~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:298:30: note:   no known conversion for argument 1 from ‘const int’ to ‘absl::lts_20250127::string_view’
+  298 |   void Set(absl::string_view value, Arena* arena);
+      |            ~~~~~~~~~~~~~~~~~~^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:299:8: note: candidate: ‘void google::protobuf::internal::ArenaStringPtr::Set(std::string&&, google::protobuf::Arena*)’
+  299 |   void Set(std::string&& value, Arena* arena);
+      |        ^~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:299:26: note:   no known conversion for argument 1 from ‘const int’ to ‘std::string&&’ {aka ‘std::__cxx11::basic_string<char>&&’}
+  299 |   void Set(std::string&& value, Arena* arena);
+      |            ~~~~~~~~~~~~~~^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:472:13: note: candidate: ‘void google::protobuf::internal::ArenaStringPtr::Set(const char*, size_t, google::protobuf::Arena*)’
+  472 | inline void ArenaStringPtr::Set(const char* s, size_t n, Arena* arena) {
+      |             ^~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/arenastring.h:472:13: note:   candidate expects 3 arguments, 2 provided
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10210:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10210 | inline std::string* TensorConnection::_internal_mutable_to_tensor() {
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10214:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10214 | inline std::string* TensorConnection::release_to_tensor() {
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10219:13: error: variable or field ‘set_allocated_to_tensor’ declared void
+10219 | inline void TensorConnection::set_allocated_to_tensor(std::string* value) {
+      |             ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10219:60: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10219 | inline void TensorConnection::set_allocated_to_tensor(std::string* value) {
+      |                                                            ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10219:68: error: ‘value’ was not declared in this scope
+10219 | inline void TensorConnection::set_allocated_to_tensor(std::string* value) {
+      |                                                                    ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_feed_size() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10240:27: error: request for member ‘size’ in ‘((const ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_feed()’, which is of non-class type ‘const int’
+10240 |   return _internal_feed().size();
+      |                           ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::clear_feed()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10247:16: error: request for member ‘Clear’ in ‘((ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::feed_’, which is of non-class type ‘int’
+10247 |   _impl_.feed_.Clear();
+      |                ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10249:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10249 | inline std::string* CallableOptions::add_feed() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10255:19: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10255 | inline const std::string& CallableOptions::feed(int index) const
+      |                   ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10260:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10260 | inline std::string* CallableOptions::mutable_feed(int index)
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10266:13: error: no declaration matches ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::set_feed(int, Arg_&&, Args_ ...)’
+10266 | inline void CallableOptions::set_feed(int index, Arg_&& value, Args_... args) {
+      |             ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:4128:8: note: candidate is: ‘template<class Arg_> void ml_dtypes::float8_internal::tensorflow::CallableOptions::set_feed(...)’
+ 4128 |   void set_feed(int index, Arg_&& value, Args_... args);
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:3968:23: note: ‘class ml_dtypes::float8_internal::tensorflow::CallableOptions’ defined here
+ 3968 | class PROTOBUF_EXPORT CallableOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10273:13: error: no declaration matches ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::add_feed(Arg_&&, Args_ ...)’
+10273 | inline void CallableOptions::add_feed(Arg_&& value, Args_... args) {
+      |             ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:4131:8: note: candidate is: ‘template<class Arg_> void ml_dtypes::float8_internal::tensorflow::CallableOptions::add_feed(...)’
+ 4131 |   void add_feed(Arg_&& value, Args_... args);
+      |        ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:3968:23: note: ‘class ml_dtypes::float8_internal::tensorflow::CallableOptions’ defined here
+ 3968 | class PROTOBUF_EXPORT CallableOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10280:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10280 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10280:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10280 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10280:62: error: template argument 1 is invalid
+10280 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10285:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10285 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10285:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10285 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10285:56: error: template argument 1 is invalid
+10285 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10291:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10291 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10291:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10291 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10291:62: error: template argument 1 is invalid
+10291 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10296:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10296 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10296:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10296 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10296:56: error: template argument 1 is invalid
+10296 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_fetch_size() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10304:28: error: request for member ‘size’ in ‘((const ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_fetch()’, which is of non-class type ‘const int’
+10304 |   return _internal_fetch().size();
+      |                            ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::clear_fetch()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10311:17: error: request for member ‘Clear’ in ‘((ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::fetch_’, which is of non-class type ‘int’
+10311 |   _impl_.fetch_.Clear();
+      |                 ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10313:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10313 | inline std::string* CallableOptions::add_fetch() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10319:19: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10319 | inline const std::string& CallableOptions::fetch(int index) const
+      |                   ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10324:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10324 | inline std::string* CallableOptions::mutable_fetch(int index)
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10330:13: error: no declaration matches ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::set_fetch(int, Arg_&&, Args_ ...)’
+10330 | inline void CallableOptions::set_fetch(int index, Arg_&& value, Args_... args) {
+      |             ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:4150:8: note: candidate is: ‘template<class Arg_> void ml_dtypes::float8_internal::tensorflow::CallableOptions::set_fetch(...)’
+ 4150 |   void set_fetch(int index, Arg_&& value, Args_... args);
+      |        ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:3968:23: note: ‘class ml_dtypes::float8_internal::tensorflow::CallableOptions’ defined here
+ 3968 | class PROTOBUF_EXPORT CallableOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10337:13: error: no declaration matches ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::add_fetch(Arg_&&, Args_ ...)’
+10337 | inline void CallableOptions::add_fetch(Arg_&& value, Args_... args) {
+      |             ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:4153:8: note: candidate is: ‘template<class Arg_> void ml_dtypes::float8_internal::tensorflow::CallableOptions::add_fetch(...)’
+ 4153 |   void add_fetch(Arg_&& value, Args_... args);
+      |        ^~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:3968:23: note: ‘class ml_dtypes::float8_internal::tensorflow::CallableOptions’ defined here
+ 3968 | class PROTOBUF_EXPORT CallableOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10344:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10344 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10344:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10344 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10344:62: error: template argument 1 is invalid
+10344 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10349:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10349 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10349:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10349 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10349:56: error: template argument 1 is invalid
+10349 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10355:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10355 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10355:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10355 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10355:62: error: template argument 1 is invalid
+10355 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10360:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10360 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10360:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10360 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10360:56: error: template argument 1 is invalid
+10360 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_target_size() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10368:29: error: request for member ‘size’ in ‘((const ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_target()’, which is of non-class type ‘const int’
+10368 |   return _internal_target().size();
+      |                             ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::clear_target()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10375:18: error: request for member ‘Clear’ in ‘((ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::target_’, which is of non-class type ‘int’
+10375 |   _impl_.target_.Clear();
+      |                  ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10377:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10377 | inline std::string* CallableOptions::add_target() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10383:19: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10383 | inline const std::string& CallableOptions::target(int index) const
+      |                   ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10388:13: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+10388 | inline std::string* CallableOptions::mutable_target(int index)
+      |             ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10394:13: error: no declaration matches ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::set_target(int, Arg_&&, Args_ ...)’
+10394 | inline void CallableOptions::set_target(int index, Arg_&& value, Args_... args) {
+      |             ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:4172:8: note: candidate is: ‘template<class Arg_> void ml_dtypes::float8_internal::tensorflow::CallableOptions::set_target(...)’
+ 4172 |   void set_target(int index, Arg_&& value, Args_... args);
+      |        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:3968:23: note: ‘class ml_dtypes::float8_internal::tensorflow::CallableOptions’ defined here
+ 3968 | class PROTOBUF_EXPORT CallableOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10401:13: error: no declaration matches ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::add_target(Arg_&&, Args_ ...)’
+10401 | inline void CallableOptions::add_target(Arg_&& value, Args_... args) {
+      |             ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:4175:8: note: candidate is: ‘template<class Arg_> void ml_dtypes::float8_internal::tensorflow::CallableOptions::add_target(...)’
+ 4175 |   void add_target(Arg_&& value, Args_... args);
+      |        ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:3968:23: note: ‘class ml_dtypes::float8_internal::tensorflow::CallableOptions’ defined here
+ 3968 | class PROTOBUF_EXPORT CallableOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10408:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10408 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10408:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10408 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10408:62: error: template argument 1 is invalid
+10408 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10413:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10413 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10413:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10413 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10413:56: error: template argument 1 is invalid
+10413 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10419:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10419 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10419:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10419 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10419:62: error: template argument 1 is invalid
+10419 | inline const ::google::protobuf::RepeatedPtrField<std::string>&
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10424:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10424 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10424:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10424 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10424:56: error: template argument 1 is invalid
+10424 | inline ::google::protobuf::RepeatedPtrField<std::string>*
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘bool ml_dtypes::float8_internal::tensorflow::CallableOptions::has_run_options() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10433:36: error: ‘const struct ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_’ has no member named ‘run_options_’
+10433 |   PROTOBUF_ASSUME(!value || _impl_.run_options_ != nullptr);
+      |                                    ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/google/protobuf/port_def.inc:973:9: note: in definition of macro ‘PROTOBUF_ASSUME’
+  973 |   if (!(pred)) {                                                               \
+      |         ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::clear_run_options()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10438:14: error: ‘struct ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_’ has no member named ‘run_options_’
+10438 |   if (_impl_.run_options_ != nullptr) _impl_.run_options_->Clear();
+      |              ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10438:46: error: ‘struct ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_’ has no member named ‘run_options_’
+10438 |   if (_impl_.run_options_ != nullptr) _impl_.run_options_->Clear();
+      |                                              ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10441:28: error: ‘RunOptions’ in namespace ‘tensorflow’ does not name a type
+10441 | inline const ::tensorflow::RunOptions& CallableOptions::_internal_run_options() const {
+      |                            ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10446:28: error: ‘RunOptions’ in namespace ‘tensorflow’ does not name a type
+10446 | inline const ::tensorflow::RunOptions& CallableOptions::run_options() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                            ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10450:13: error: variable or field ‘unsafe_arena_set_allocated_run_options’ declared void
+10450 | inline void CallableOptions::unsafe_arena_set_allocated_run_options(::tensorflow::RunOptions* value) {
+      |             ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10450:83: error: ‘RunOptions’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunOptions’?
+10450 | inline void CallableOptions::unsafe_arena_set_allocated_run_options(::tensorflow::RunOptions* value) {
+      |                                                                                   ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:2799:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunOptions’ declared here
+ 2799 | class PROTOBUF_EXPORT RunOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10450:95: error: ‘value’ was not declared in this scope
+10450 | inline void CallableOptions::unsafe_arena_set_allocated_run_options(::tensorflow::RunOptions* value) {
+      |                                                                                               ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10463:22: error: ‘RunOptions’ in namespace ‘tensorflow’ does not name a type
+10463 | inline ::tensorflow::RunOptions* CallableOptions::release_run_options() {
+      |                      ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10482:22: error: ‘RunOptions’ in namespace ‘tensorflow’ does not name a type
+10482 | inline ::tensorflow::RunOptions* CallableOptions::unsafe_arena_release_run_options() {
+      |                      ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10491:22: error: ‘RunOptions’ in namespace ‘tensorflow’ does not name a type
+10491 | inline ::tensorflow::RunOptions* CallableOptions::_internal_mutable_run_options() {
+      |                      ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10499:22: error: ‘RunOptions’ in namespace ‘tensorflow’ does not name a type
+10499 | inline ::tensorflow::RunOptions* CallableOptions::mutable_run_options() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10505:13: error: variable or field ‘set_allocated_run_options’ declared void
+10505 | inline void CallableOptions::set_allocated_run_options(::tensorflow::RunOptions* value) {
+      |             ^~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10505:70: error: ‘RunOptions’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunOptions’?
+10505 | inline void CallableOptions::set_allocated_run_options(::tensorflow::RunOptions* value) {
+      |                                                                      ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:2799:23: note: ‘ml_dtypes::float8_internal::tensorflow::RunOptions’ declared here
+ 2799 | class PROTOBUF_EXPORT RunOptions final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10505:82: error: ‘value’ was not declared in this scope
+10505 | inline void CallableOptions::set_allocated_run_options(::tensorflow::RunOptions* value) {
+      |                                                                                  ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_tensor_connection_size() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10528:40: error: request for member ‘size’ in ‘((const ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_tensor_connection()’, which is of non-class type ‘const int’
+10528 |   return _internal_tensor_connection().size();
+      |                                        ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::clear_tensor_connection()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10535:29: error: request for member ‘Clear’ in ‘((ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::tensor_connection_’, which is of non-class type ‘int’
+10535 |   _impl_.tensor_connection_.Clear();
+      |                             ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10537:22: error: ‘TensorConnection’ in namespace ‘tensorflow’ does not name a type
+10537 | inline ::tensorflow::TensorConnection* CallableOptions::mutable_tensor_connection(int index)
+      |                      ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10542:59: error: ‘TensorConnection’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’?
+10542 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>* CallableOptions::mutable_tensor_connection()
+      |                                                           ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’ declared here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10542:59: error: ‘TensorConnection’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’?
+10542 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>* CallableOptions::mutable_tensor_connection()
+      |                                                           ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’ declared here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10542:75: error: template argument 1 is invalid
+10542 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>* CallableOptions::mutable_tensor_connection()
+      |                                                                           ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10548:28: error: ‘TensorConnection’ in namespace ‘tensorflow’ does not name a type
+10548 | inline const ::tensorflow::TensorConnection& CallableOptions::tensor_connection(int index) const
+      |                            ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10553:22: error: ‘TensorConnection’ in namespace ‘tensorflow’ does not name a type
+10553 | inline ::tensorflow::TensorConnection* CallableOptions::add_tensor_connection() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                      ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10559:65: error: ‘TensorConnection’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’?
+10559 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>& CallableOptions::tensor_connection() const
+      |                                                                 ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’ declared here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10559:65: error: ‘TensorConnection’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’?
+10559 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>& CallableOptions::tensor_connection() const
+      |                                                                 ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’ declared here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10559:81: error: template argument 1 is invalid
+10559 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>& CallableOptions::tensor_connection() const
+      |                                                                                 ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10564:65: error: ‘TensorConnection’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’?
+10564 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>&
+      |                                                                 ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’ declared here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10564:65: error: ‘TensorConnection’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’?
+10564 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>&
+      |                                                                 ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’ declared here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10564:81: error: template argument 1 is invalid
+10564 | inline const ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>&
+      |                                                                                 ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10569:59: error: ‘TensorConnection’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’?
+10569 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>*
+      |                                                           ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’ declared here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10569:59: error: ‘TensorConnection’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’?
+10569 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>*
+      |                                                           ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:482:23: note: ‘ml_dtypes::float8_internal::tensorflow::TensorConnection’ declared here
+  482 | class PROTOBUF_EXPORT TensorConnection final : public ::google::protobuf::Message
+      |                       ^~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10569:75: error: template argument 1 is invalid
+10569 | inline ::google::protobuf::RepeatedPtrField<::tensorflow::TensorConnection>*
+      |                                                                           ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_feed_devices_size() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10577:35: error: request for member ‘size’ in ‘((const ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_feed_devices()’, which is of non-class type ‘const int’
+10577 |   return _internal_feed_devices().size();
+      |                                   ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::clear_feed_devices()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10584:24: error: request for member ‘Clear’ in ‘((ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::feed_devices_’, which is of non-class type ‘int’
+10584 |   _impl_.feed_devices_.Clear();
+      |                        ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10586:43: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10586 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_feed_devices() const {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10586:43: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10586 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_feed_devices() const {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10586:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10586 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_feed_devices() const {
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10586:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10586 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_feed_devices() const {
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10586:62: error: template argument 1 is invalid
+10586 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_feed_devices() const {
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10586:62: error: template argument 2 is invalid
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘const int& ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_feed_devices() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10588:31: error: request for member ‘GetMap’ in ‘((const ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::feed_devices_’, which is of non-class type ‘const int’
+10588 |   return _impl_.feed_devices_.GetMap();
+      |                               ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10590:43: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10590 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::feed_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10590:43: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10590 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::feed_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10590:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10590 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::feed_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10590:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10590 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::feed_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10590:62: error: template argument 1 is invalid
+10590 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::feed_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10590:62: error: template argument 2 is invalid
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10594:37: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10594 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_feed_devices() {
+      |                                     ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10594:37: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10594 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_feed_devices() {
+      |                                     ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10594:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10594 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_feed_devices() {
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10594:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10594 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_feed_devices() {
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10594:56: error: template argument 1 is invalid
+10594 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_feed_devices() {
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10594:56: error: template argument 2 is invalid
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int* ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_mutable_feed_devices()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10596:31: error: request for member ‘MutableMap’ in ‘((ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::feed_devices_’, which is of non-class type ‘int’
+10596 |   return _impl_.feed_devices_.MutableMap();
+      |                               ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10598:37: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10598 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_feed_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                     ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10598:37: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10598 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_feed_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                     ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10598:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10598 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_feed_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10598:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10598 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_feed_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10598:56: error: template argument 1 is invalid
+10598 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_feed_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10598:56: error: template argument 2 is invalid
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_fetch_devices_size() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10605:36: error: request for member ‘size’ in ‘((const ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_fetch_devices()’, which is of non-class type ‘const int’
+10605 |   return _internal_fetch_devices().size();
+      |                                    ^~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘void ml_dtypes::float8_internal::tensorflow::CallableOptions::clear_fetch_devices()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10612:25: error: request for member ‘Clear’ in ‘((ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::fetch_devices_’, which is of non-class type ‘int’
+10612 |   _impl_.fetch_devices_.Clear();
+      |                         ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10614:43: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10614 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_fetch_devices() const {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10614:43: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10614 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_fetch_devices() const {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10614:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10614 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_fetch_devices() const {
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10614:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10614 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_fetch_devices() const {
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10614:62: error: template argument 1 is invalid
+10614 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::_internal_fetch_devices() const {
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10614:62: error: template argument 2 is invalid
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘const int& ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_fetch_devices() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10616:32: error: request for member ‘GetMap’ in ‘((const ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::fetch_devices_’, which is of non-class type ‘const int’
+10616 |   return _impl_.fetch_devices_.GetMap();
+      |                                ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10618:43: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10618 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::fetch_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10618:43: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10618 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::fetch_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                           ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10618:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10618 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::fetch_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10618:56: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10618 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::fetch_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                        ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10618:62: error: template argument 1 is invalid
+10618 | inline const ::google::protobuf::Map<std::string, std::string>& CallableOptions::fetch_devices() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10618:62: error: template argument 2 is invalid
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10622:37: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10622 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_fetch_devices() {
+      |                                     ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10622:37: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10622 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_fetch_devices() {
+      |                                     ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10622:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10622 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_fetch_devices() {
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10622:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10622 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_fetch_devices() {
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10622:56: error: template argument 1 is invalid
+10622 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::_internal_mutable_fetch_devices() {
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10622:56: error: template argument 2 is invalid
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: In member function ‘int* ml_dtypes::float8_internal::tensorflow::CallableOptions::_internal_mutable_fetch_devices()’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10624:32: error: request for member ‘MutableMap’ in ‘((ml_dtypes::float8_internal::tensorflow::CallableOptions*)this)->ml_dtypes::float8_internal::tensorflow::CallableOptions::<anonymous>.ml_dtypes::float8_internal::tensorflow::CallableOptions::<unnamed union>::_impl_.ml_dtypes::float8_internal::tensorflow::CallableOptions::Impl_::fetch_devices_’, which is of non-class type ‘int’
+10624 |   return _impl_.fetch_devices_.MutableMap();
+      |                                ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10626:37: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10626 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_fetch_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                     ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10626:37: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10626 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_fetch_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                     ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10626:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10626 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_fetch_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10626:50: error: ‘string’ is not a member of ‘ml_dtypes::float8_internal::std’; did you mean ‘std::string’?
+10626 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_fetch_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                  ^~~~~~
+/usr/include/c++/13/bits/stringfwd.h:77:33: note: ‘std::string’ declared here
+   77 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10626:56: error: template argument 1 is invalid
+10626 | inline ::google::protobuf::Map<std::string, std::string>* CallableOptions::mutable_fetch_devices() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+      |                                                        ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10626:56: error: template argument 2 is invalid
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10802:8: error: ‘is_proto_enum’ is not a class template
+10802 | struct is_proto_enum<::tensorflow::OptimizerOptions_Level> : std::true_type {};
+      |        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10802:36: error: ‘OptimizerOptions_Level’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::OptimizerOptions_Level’?
+10802 | struct is_proto_enum<::tensorflow::OptimizerOptions_Level> : std::true_type {};
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:135:6: note: ‘ml_dtypes::float8_internal::tensorflow::OptimizerOptions_Level’ declared here
+  135 | enum OptimizerOptions_Level : int {
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10802:36: error: ‘OptimizerOptions_Level’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::OptimizerOptions_Level’?
+10802 | struct is_proto_enum<::tensorflow::OptimizerOptions_Level> : std::true_type {};
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:135:6: note: ‘ml_dtypes::float8_internal::tensorflow::OptimizerOptions_Level’ declared here
+  135 | enum OptimizerOptions_Level : int {
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10802:58: error: ‘ml_dtypes::float8_internal::google::protobuf::is_proto_enum’ is not a template
+10802 | struct is_proto_enum<::tensorflow::OptimizerOptions_Level> : std::true_type {};
+      |                                                          ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/protobuf/error_codes.pb.h:137:8: note: previous declaration here
+  137 | struct is_proto_enum<::tensorflow::error::Code> : std::true_type {};
+      |        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10802:77: error: expected class-name before ‘{’ token
+10802 | struct is_proto_enum<::tensorflow::OptimizerOptions_Level> : std::true_type {};
+      |                                                                             ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10804:14: error: ‘EnumDescriptor’ does not name a type; did you mean ‘Descriptor’?
+10804 | inline const EnumDescriptor* GetEnumDescriptor<::tensorflow::OptimizerOptions_Level>() {
+      |              ^~~~~~~~~~~~~~
+      |              Descriptor
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10808:8: error: ‘is_proto_enum’ is not a class template
+10808 | struct is_proto_enum<::tensorflow::OptimizerOptions_GlobalJitLevel> : std::true_type {};
+      |        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10808:36: error: ‘OptimizerOptions_GlobalJitLevel’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::OptimizerOptions_GlobalJitLevel’?
+10808 | struct is_proto_enum<::tensorflow::OptimizerOptions_GlobalJitLevel> : std::true_type {};
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:168:6: note: ‘ml_dtypes::float8_internal::tensorflow::OptimizerOptions_GlobalJitLevel’ declared here
+  168 | enum OptimizerOptions_GlobalJitLevel : int {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10808:36: error: ‘OptimizerOptions_GlobalJitLevel’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::OptimizerOptions_GlobalJitLevel’?
+10808 | struct is_proto_enum<::tensorflow::OptimizerOptions_GlobalJitLevel> : std::true_type {};
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:168:6: note: ‘ml_dtypes::float8_internal::tensorflow::OptimizerOptions_GlobalJitLevel’ declared here
+  168 | enum OptimizerOptions_GlobalJitLevel : int {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10808:67: error: ‘ml_dtypes::float8_internal::google::protobuf::is_proto_enum’ is not a template
+10808 | struct is_proto_enum<::tensorflow::OptimizerOptions_GlobalJitLevel> : std::true_type {};
+      |                                                                   ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/protobuf/error_codes.pb.h:137:8: note: previous declaration here
+  137 | struct is_proto_enum<::tensorflow::error::Code> : std::true_type {};
+      |        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10808:86: error: expected class-name before ‘{’ token
+10808 | struct is_proto_enum<::tensorflow::OptimizerOptions_GlobalJitLevel> : std::true_type {};
+      |                                                                                      ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10810:14: error: ‘EnumDescriptor’ does not name a type; did you mean ‘Descriptor’?
+10810 | inline const EnumDescriptor* GetEnumDescriptor<::tensorflow::OptimizerOptions_GlobalJitLevel>() {
+      |              ^~~~~~~~~~~~~~
+      |              Descriptor
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10814:8: error: ‘is_proto_enum’ is not a class template
+10814 | struct is_proto_enum<::tensorflow::ConfigProto_Experimental_MlirBridgeRollout> : std::true_type {};
+      |        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10814:36: error: ‘ConfigProto_Experimental_MlirBridgeRollout’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::ConfigProto_Experimental_MlirBridgeRollout’?
+10814 | struct is_proto_enum<::tensorflow::ConfigProto_Experimental_MlirBridgeRollout> : std::true_type {};
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:203:6: note: ‘ml_dtypes::float8_internal::tensorflow::ConfigProto_Experimental_MlirBridgeRollout’ declared here
+  203 | enum ConfigProto_Experimental_MlirBridgeRollout : int {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10814:36: error: ‘ConfigProto_Experimental_MlirBridgeRollout’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::ConfigProto_Experimental_MlirBridgeRollout’?
+10814 | struct is_proto_enum<::tensorflow::ConfigProto_Experimental_MlirBridgeRollout> : std::true_type {};
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:203:6: note: ‘ml_dtypes::float8_internal::tensorflow::ConfigProto_Experimental_MlirBridgeRollout’ declared here
+  203 | enum ConfigProto_Experimental_MlirBridgeRollout : int {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10814:78: error: ‘ml_dtypes::float8_internal::google::protobuf::is_proto_enum’ is not a template
+10814 | struct is_proto_enum<::tensorflow::ConfigProto_Experimental_MlirBridgeRollout> : std::true_type {};
+      |                                                                              ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/protobuf/error_codes.pb.h:137:8: note: previous declaration here
+  137 | struct is_proto_enum<::tensorflow::error::Code> : std::true_type {};
+      |        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10814:97: error: expected class-name before ‘{’ token
+10814 | struct is_proto_enum<::tensorflow::ConfigProto_Experimental_MlirBridgeRollout> : std::true_type {};
+      |                                                                                                 ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10816:14: error: ‘EnumDescriptor’ does not name a type; did you mean ‘Descriptor’?
+10816 | inline const EnumDescriptor* GetEnumDescriptor<::tensorflow::ConfigProto_Experimental_MlirBridgeRollout>() {
+      |              ^~~~~~~~~~~~~~
+      |              Descriptor
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10820:8: error: ‘is_proto_enum’ is not a class template
+10820 | struct is_proto_enum<::tensorflow::RunOptions_TraceLevel> : std::true_type {};
+      |        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10820:36: error: ‘RunOptions_TraceLevel’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunOptions_TraceLevel’?
+10820 | struct is_proto_enum<::tensorflow::RunOptions_TraceLevel> : std::true_type {};
+      |                                    ^~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:237:6: note: ‘ml_dtypes::float8_internal::tensorflow::RunOptions_TraceLevel’ declared here
+  237 | enum RunOptions_TraceLevel : int {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10820:36: error: ‘RunOptions_TraceLevel’ is not a member of ‘tensorflow’; did you mean ‘ml_dtypes::float8_internal::tensorflow::RunOptions_TraceLevel’?
+10820 | struct is_proto_enum<::tensorflow::RunOptions_TraceLevel> : std::true_type {};
+      |                                    ^~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:237:6: note: ‘ml_dtypes::float8_internal::tensorflow::RunOptions_TraceLevel’ declared here
+  237 | enum RunOptions_TraceLevel : int {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10820:57: error: ‘ml_dtypes::float8_internal::google::protobuf::is_proto_enum’ is not a template
+10820 | struct is_proto_enum<::tensorflow::RunOptions_TraceLevel> : std::true_type {};
+      |                                                         ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/protobuf/error_codes.pb.h:137:8: note: previous declaration here
+  137 | struct is_proto_enum<::tensorflow::error::Code> : std::true_type {};
+      |        ^~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10820:76: error: expected class-name before ‘{’ token
+10820 | struct is_proto_enum<::tensorflow::RunOptions_TraceLevel> : std::true_type {};
+      |                                                                            ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/protobuf/config.pb.h:10822:14: error: ‘EnumDescriptor’ does not name a type; did you mean ‘Descriptor’?
+10822 | inline const EnumDescriptor* GetEnumDescriptor<::tensorflow::RunOptions_TraceLevel>() {
+      |              ^~~~~~~~~~~~~~
+      |              Descriptor
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:172:14: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+  172 |   const std::string& name() const { return props_->node_def.name(); }
+      |              ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:173:9: error: ‘string_view’ in namespace ‘ml_dtypes::float8_internal::absl’ does not name a type
+  173 |   absl::string_view name_view() const { return name_view_; }
+      |         ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:174:14: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+  174 |   const std::string& type_string() const { return props_->node_def.op(); }
+      |              ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:175:9: error: ‘string_view’ in namespace ‘ml_dtypes::float8_internal::absl’ does not name a type
+  175 |   absl::string_view type_string_view() const { return type_string_view_; }
+      |         ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:176:14: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+  176 |   const std::string& requested_input(int i) const {
+      |              ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:179:14: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+  179 |   const std::string& requested_device() const {
+      |              ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:184:3: error: ‘DataType’ does not name a type; did you mean ‘DataTypeSet’?
+  184 |   DataType input_type(int i) const { return props_->input_types[i]; }
+      |   ^~~~~~~~
+      |   DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:185:9: error: ‘DataTypeVector’ does not name a type; did you mean ‘DataTypeSet’?
+  185 |   const DataTypeVector& input_types() const { return props_->input_types; }
+      |         ^~~~~~~~~~~~~~
+      |         DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:186:9: error: ‘MemoryTypeVector’ does not name a type; did you mean ‘MemoryType’?
+  186 |   const MemoryTypeVector& input_memory_types() const {
+      |         ^~~~~~~~~~~~~~~~
+      |         MemoryType
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:191:3: error: ‘DataType’ does not name a type; did you mean ‘DataTypeSet’?
+  191 |   DataType output_type(int o) const { return props_->output_types[o]; }
+      |   ^~~~~~~~
+      |   DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:192:9: error: ‘DataTypeVector’ does not name a type; did you mean ‘DataTypeSet’?
+  192 |   const DataTypeVector& output_types() const { return props_->output_types; }
+      |         ^~~~~~~~~~~~~~
+      |         DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:193:9: error: ‘MemoryTypeVector’ does not name a type; did you mean ‘MemoryType’?
+  193 |   const MemoryTypeVector& output_memory_types() const {
+      |         ^~~~~~~~~~~~~~~~
+      |         MemoryType
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:197:74: warning: ‘using ml_dtypes::float8_internal::tensorflow::StringPiece = class absl::lts_20250127::string_view’ is deprecated [-Wdeprecated-declarations]
+  197 |   absl::Status InputRange(StringPiece input_name, int* start, int* stop) const;
+      |                                                                          ^~~~~
+In file included from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/tstring.h:21,
+                 from /home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/types.h:25:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:199:39: warning: ‘using ml_dtypes::float8_internal::tensorflow::StringPiece = class absl::lts_20250127::string_view’ is deprecated [-Wdeprecated-declarations]
+  199 |                            int* stop) const;
+      |                                       ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:207:16: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+  207 |   virtual std::string TraceString(const OpKernelContext& ctx,
+      |                ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:211:8: error: ‘string’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a type
+  211 |   std::string ShapeTraceString(const OpKernelContext& ctx) const;
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:214:14: error: ‘shared_ptr’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a template type
+  214 |   const std::shared_ptr<const NodeProperties> props_;
+      |              ^~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:215:9: error: ‘MemoryTypeVector’ does not name a type; did you mean ‘MemoryType’?
+  215 |   const MemoryTypeVector input_memory_types_;
+      |         ^~~~~~~~~~~~~~~~
+      |         MemoryType
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:216:9: error: ‘MemoryTypeVector’ does not name a type; did you mean ‘MemoryType’?
+  216 |   const MemoryTypeVector output_memory_types_;
+      |         ^~~~~~~~~~~~~~~~
+      |         MemoryType
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:217:3: error: ‘NameRangeMap’ does not name a type
+  217 |   NameRangeMap input_name_map_;
+      |   ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:218:3: error: ‘NameRangeMap’ does not name a type
+  218 |   NameRangeMap output_name_map_;
+      |   ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:219:15: error: ‘string_view’ in namespace ‘ml_dtypes::float8_internal::absl’ does not name a type
+  219 |   const absl::string_view name_view_;
+      |               ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:220:15: error: ‘string_view’ in namespace ‘ml_dtypes::float8_internal::absl’ does not name a type
+  220 |   const absl::string_view type_string_view_;
+      |               ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h: In member function ‘const ml_dtypes::float8_internal::tensorflow::NodeDef& ml_dtypes::float8_internal::tensorflow::OpKernel::def() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:171:39: error: ‘props_’ was not declared in this scope
+  171 |   const NodeDef& def() const { return props_->node_def; }
+      |                                       ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::OpKernel::num_inputs() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:183:35: error: ‘props_’ was not declared in this scope
+  183 |   int num_inputs() const { return props_->input_types.size(); }
+      |                                   ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h: In member function ‘int ml_dtypes::float8_internal::tensorflow::OpKernel::num_outputs() const’:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:190:36: error: ‘props_’ was not declared in this scope
+  190 |   int num_outputs() const { return props_->output_types.size(); }
+      |                                    ^~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h: At global scope:
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:248:16: error: ‘function’ in namespace ‘ml_dtypes::float8_internal::std’ does not name a template type
+  248 |   typedef std::function<void()> DoneCallback;
+      |                ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:249:55: error: ‘DoneCallback’ has not been declared
+  249 |   virtual void ComputeAsync(OpKernelContext* context, DoneCallback done) = 0;
+      |                                                       ^~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:258:34: error: expected ‘)’ before ‘device_type’
+  258 |   OpKernelConstruction(DeviceType device_type, DeviceBase* device,
+      |                       ~          ^~~~~~~~~~~~
+      |                                  )
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:280:30: error: ‘DataType’ has not been declared
+  280 |   absl::Status allocate_temp(DataType type, const TensorShape& shape,
+      |                              ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:282:30: error: ‘DataType’ has not been declared
+  282 |   absl::Status allocate_temp(DataType type, const TensorShape& shape,
+      |                              ^~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:291:3: error: ‘DataType’ does not name a type; did you mean ‘DataTypeSet’?
+  291 |   DataType input_type(int i) const { return props_->input_types[i]; }
+      |   ^~~~~~~~
+      |   DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:292:9: error: ‘DataTypeSlice’ does not name a type; did you mean ‘DataTypeSet’?
+  292 |   const DataTypeSlice& input_types() const { return props_->input_types_slice; }
+      |         ^~~~~~~~~~~~~
+      |         DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:293:9: error: ‘MemoryTypeSlice’ does not name a type; did you mean ‘MemoryType’?
+  293 |   const MemoryTypeSlice& input_memory_types() const {
+      |         ^~~~~~~~~~~~~~~
+      |         MemoryType
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:299:3: error: ‘DataType’ does not name a type; did you mean ‘DataTypeSet’?
+  299 |   DataType output_type(int i) const { return props_->output_types[i]; }
+      |   ^~~~~~~~
+      |   DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:300:9: error: ‘DataTypeSlice’ does not name a type; did you mean ‘DataTypeSet’?
+  300 |   const DataTypeSlice& output_types() const {
+      |         ^~~~~~~~~~~~~
+      |         DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:303:9: error: ‘MemoryTypeSlice’ does not name a type; did you mean ‘MemoryType’?
+  303 |   const MemoryTypeSlice& output_memory_types() const {
+      |         ^~~~~~~~~~~~~~~
+      |         MemoryType
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:310:37: error: ‘DataTypeSlice’ does not name a type; did you mean ‘DataTypeSet’?
+  310 |   absl::Status MatchSignature(const DataTypeSlice expected_inputs,
+      |                                     ^~~~~~~~~~~~~
+      |                                     DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:311:37: error: ‘DataTypeSlice’ does not name a type; did you mean ‘DataTypeSet’?
+  311 |                               const DataTypeSlice expected_outputs);
+      |                                     ^~~~~~~~~~~~~
+      |                                     DataTypeSet
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/macros.h:24:55: warning: ‘using ml_dtypes::float8_internal::tensorflow::StringPiece = class absl::lts_20250127::string_view’ is deprecated [-Wdeprecated-declarations]
+   24 | #define TF_ATTRIBUTE_NOINLINE __attribute__((noinline))
+      |                                                       ^
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:322:40: note: in expansion of macro ‘TF_ATTRIBUTE_NOINLINE’
+  322 |                        T* value) const TF_ATTRIBUTE_NOINLINE;
+      |                                        ^~~~~~~~~~~~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:325:39: warning: ‘using ml_dtypes::float8_internal::tensorflow::StringPiece = class absl::lts_20250127::string_view’ is deprecated [-Wdeprecated-declarations]
+  325 |   bool HasAttr(StringPiece attr_name) const;
+      |                                       ^~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/platform/stringpiece.h:39:7: note: declared here
+   39 | using StringPiece ABSL_DEPRECATE_AND_INLINE() = absl::string_view;
+      |       ^~~~~~~~~~~
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:328:9: error: ‘DeviceType’ does not name a type; did you mean ‘DeviceName’?
+  328 |   const DeviceType& device_type() const { return device_type_; }
+      |         ^~~~~~~~~~
+      |         DeviceName
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:360:9: error: ‘DeviceType’ does not name a type; did you mean ‘DeviceName’?
+  360 |   const DeviceType device_type_;
+      |         ^~~~~~~~~~
+      |         DeviceName
+/home/csrobot/venvs/tfenv12/lib/python3.12/site-packages/tensorflow/include/tensorflow/core/framework/op_kernel.h:365:8: error: ‘shared_ptr’ in namespace ‘ml_dtypes::float8_internal::s

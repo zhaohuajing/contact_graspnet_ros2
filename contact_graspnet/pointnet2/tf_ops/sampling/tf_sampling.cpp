@@ -7,6 +7,8 @@
 #include "tensorflow/core/framework/shape_inference.h"
 #include "absl/status/status.h"
 
+#include "tensorflow/tsl/platform/status.h"
+
 using ::tensorflow::DEVICE_CPU;
 using ::tensorflow::DEVICE_GPU;
 using ::tensorflow::OpKernel;
@@ -34,7 +36,9 @@ REGISTER_OP("FarthestPointSample")
       } else {
         c->set_output(0, c->MakeShape({npoint_dim}));
       }
-      return absl::OkStatus();
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+
     })
     .Doc(R"doc(
 Selects farthest-point samples.
@@ -70,7 +74,9 @@ REGISTER_OP("GatherPoint")
       } else {
         c->set_output(0, c->UnknownShape());
       }
-      return absl::OkStatus();
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+
     });
 
 REGISTER_OP("GatherPointGrad")
@@ -80,7 +86,9 @@ REGISTER_OP("GatherPointGrad")
     .Output("grad_points: float32") // [B, C, N] or [C, N]
     .SetShapeFn([](shape_inference::InferenceContext* c) {
       c->set_output(0, c->input(0)); // same shape as points
-      return absl::OkStatus();
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+
     });
 
 // -------------------------------
@@ -109,7 +117,9 @@ REGISTER_OP("ThreeNN")
         c->set_output(0, c->UnknownShape());
         c->set_output(1, c->UnknownShape());
       }
-      return absl::OkStatus();
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+
     });
 
 // -------------------------------
@@ -140,7 +150,8 @@ REGISTER_OP("ThreeInterpolate")
       } else {
         c->set_output(0, c->UnknownShape());
       }
-      return absl::OkStatus();
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
     });
 
 REGISTER_OP("ThreeInterpolateGrad")
@@ -162,7 +173,9 @@ REGISTER_OP("ThreeInterpolateGrad")
       } else {
         c->set_output(0, c->UnknownShape());
       }
-      return absl::OkStatus();
+      // return absl::OkStatus();
+      return tsl::Status();  // Returns default "OK" status
+
     });
 
 // =====================================================================

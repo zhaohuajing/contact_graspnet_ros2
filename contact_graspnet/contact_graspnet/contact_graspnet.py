@@ -15,7 +15,7 @@ sys.path.append(os.path.join(BASE_DIR, 'pointnet2'))
 import tf_util
 from pointnet_util import pointnet_sa_module, pointnet_fp_module, pointnet_sa_module_msg
 from tf_sampling import farthest_point_sample, gather_point
-from tf_grouping import query_ball_point, group_point, knn_point
+# from tf_grouping import query_ball_point, group_point, knn_point
 
 import mesh_utils
 
