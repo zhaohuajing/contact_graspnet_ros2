@@ -1,0 +1,137 @@
+csrobot@nerve-desktop-6:~/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet/pointnet2/tf_ops/sampling$ bash compile.sh
+TF_INC: /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include
+TF_LIB: /home/csrobot/.local/lib/python3.12/site-packages/tensorflow
+CUDA_INC: /usr/local/cuda/include
+CUDA_LIB: /usr/local/cuda/lib64
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/hash/internal/hash.h(479): warning #68-D: integer conversion resulted in a change of sign
+        sizeof(T) == -1,
+                     ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/log/internal/vlog_config.h(96): warning #970-D: the qualifier on this friend declaration is ignored
+    friend int log_internal::RegisterAndInitialize(VLogSite* v);
+               ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/log/internal/vlog_config.h(97): warning #970-D: the qualifier on this friend declaration is ignored
+    friend void log_internal::UpdateVLogSites();
+                ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/google/protobuf/extension_set.h(552): warning #970-D: the qualifier on this friend declaration is ignored
+    friend void internal::InitializeLazyExtensionSet();
+                ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/internal/btree.h(230): warning #554-D: "absl::lts_20250127::container_internal::key_compare_adapter<Compare, Key>::checked_compare::operator std::less<int>() const [with Compare=std::less<int>, Key=int]" will not be called for implicit or explicit conversions
+      explicit operator Compare() const { return comp(); }
+               ^
+          detected during:
+            instantiation of class "absl::lts_20250127::container_internal::key_compare_adapter<Compare, Key>::checked_compare [with Compare=std::less<int>, Key=int]" at line 2569 of /usr/include/c++/13/type_traits
+            instantiation of class "std::__result_of_impl<false, false, _Functor, _ArgTypes...> [with _Functor=const absl::lts_20250127::container_internal::key_compare_adapter<std::less<int>, int>::checked_compare, _ArgTypes=<const int &, const int &>]" at line 2583 of /usr/include/c++/13/type_traits
+            instantiation of class "std::__invoke_result<_Functor, _ArgTypes...> [with _Functor=const absl::lts_20250127::container_internal::key_compare_adapter<std::less<int>, int>::checked_compare, _ArgTypes=<const int &, const int &>]" at line 3062 of /usr/include/c++/13/type_traits
+            instantiation of class "std::invoke_result<_Functor, _ArgTypes...> [with _Functor=const absl::lts_20250127::container_internal::key_compare_adapter<std::less<int>, int>::checked_compare, _ArgTypes=<const int &, const int &>]" at line 315 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/meta/type_traits.h
+            instantiation of class "absl::lts_20250127::type_traits_internal::result_of<F (Args...)> [with F=const absl::lts_20250127::container_internal::key_compare_adapter<std::less<int>, int>::checked_compare, Args=<const int &, const int &>]" at line 324 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/meta/type_traits.h
+            [ 5 instantiation contexts not shown ]
+            instantiation of class "absl::lts_20250127::container_internal::btree<Params> [with Params=absl::lts_20250127::container_internal::map_params<int, google::protobuf::internal::ExtensionSet::Extension, std::less<int>, std::allocator<std::pair<const int, google::protobuf::internal::ExtensionSet::Extension>>, 256, false>]" at line 38 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/internal/btree_container.h
+            instantiation of class "absl::lts_20250127::container_internal::btree_container<Tree> [with Tree=absl::lts_20250127::container_internal::btree<absl::lts_20250127::container_internal::map_params<int, google::protobuf::internal::ExtensionSet::Extension, std::less<int>, std::allocator<std::pair<const int, google::protobuf::internal::ExtensionSet::Extension>>, 256, false>>]" at line 279 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/internal/btree_container.h
+            instantiation of class "absl::lts_20250127::container_internal::btree_set_container<Tree> [with Tree=absl::lts_20250127::container_internal::btree<absl::lts_20250127::container_internal::map_params<int, google::protobuf::internal::ExtensionSet::Extension, std::less<int>, std::allocator<std::pair<const int, google::protobuf::internal::ExtensionSet::Extension>>, 256, false>>]" at line 445 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/internal/btree_container.h
+            instantiation of class "absl::lts_20250127::container_internal::btree_map_container<Tree> [with Tree=absl::lts_20250127::container_internal::btree<absl::lts_20250127::container_internal::map_params<int, google::protobuf::internal::ExtensionSet::Extension, std::less<int>, std::allocator<std::pair<const int, google::protobuf::internal::ExtensionSet::Extension>>, 256, false>>]" at line 91 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/btree_map.h
+            instantiation of class "absl::lts_20250127::btree_map<Key, Value, Compare, Alloc> [with Key=int, Value=google::protobuf::internal::ExtensionSet::Extension, Compare=std::less<int>, Alloc=std::allocator<std::pair<const int, google::protobuf::internal::ExtensionSet::Extension>>]" at line 761 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/google/protobuf/extension_set.h
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/internal/btree.h(230): warning #554-D: "absl::lts_20250127::container_internal::key_compare_adapter<Compare, Key>::checked_compare::operator std::less<google::protobuf::internal::VariantKey>() const [with Compare=std::less<google::protobuf::internal::VariantKey>, Key=google::protobuf::internal::VariantKey]" will not be called for implicit or explicit conversions
+      explicit operator Compare() const { return comp(); }
+               ^
+          detected during:
+            instantiation of class "absl::lts_20250127::container_internal::key_compare_adapter<Compare, Key>::checked_compare [with Compare=std::less<google::protobuf::internal::VariantKey>, Key=google::protobuf::internal::VariantKey]" at line 2569 of /usr/include/c++/13/type_traits
+            instantiation of class "std::__result_of_impl<false, false, _Functor, _ArgTypes...> [with _Functor=const absl::lts_20250127::container_internal::key_compare_adapter<std::less<google::protobuf::internal::VariantKey>, google::protobuf::internal::VariantKey>::checked_compare, _ArgTypes=<const google::protobuf::internal::VariantKey &, const google::protobuf::internal::VariantKey &>]" at line 2583 of /usr/include/c++/13/type_traits
+            instantiation of class "std::__invoke_result<_Functor, _ArgTypes...> [with _Functor=const absl::lts_20250127::container_internal::key_compare_adapter<std::less<google::protobuf::internal::VariantKey>, google::protobuf::internal::VariantKey>::checked_compare, _ArgTypes=<const google::protobuf::internal::VariantKey &, const google::protobuf::internal::VariantKey &>]" at line 3062 of /usr/include/c++/13/type_traits
+            instantiation of class "std::invoke_result<_Functor, _ArgTypes...> [with _Functor=const absl::lts_20250127::container_internal::key_compare_adapter<std::less<google::protobuf::internal::VariantKey>, google::protobuf::internal::VariantKey>::checked_compare, _ArgTypes=<const google::protobuf::internal::VariantKey &, const google::protobuf::internal::VariantKey &>]" at line 315 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/meta/type_traits.h
+            instantiation of class "absl::lts_20250127::type_traits_internal::result_of<F (Args...)> [with F=const absl::lts_20250127::container_internal::key_compare_adapter<std::less<google::protobuf::internal::VariantKey>, google::protobuf::internal::VariantKey>::checked_compare, Args=<const google::protobuf::internal::VariantKey &, const google::protobuf::internal::VariantKey &>]" at line 324 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/meta/type_traits.h
+            [ 5 instantiation contexts not shown ]
+            instantiation of class "absl::lts_20250127::container_internal::btree<Params> [with Params=absl::lts_20250127::container_internal::map_params<google::protobuf::internal::VariantKey, google::protobuf::internal::NodeBase *, std::less<google::protobuf::internal::VariantKey>, google::protobuf::internal::MapAllocator<std::pair<const google::protobuf::internal::VariantKey, google::protobuf::internal::NodeBase *>>, 256, false>]" at line 38 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/internal/btree_container.h
+            instantiation of class "absl::lts_20250127::container_internal::btree_container<Tree> [with Tree=absl::lts_20250127::container_internal::btree<absl::lts_20250127::container_internal::map_params<google::protobuf::internal::VariantKey, google::protobuf::internal::NodeBase *, std::less<google::protobuf::internal::VariantKey>, google::protobuf::internal::MapAllocator<std::pair<const google::protobuf::internal::VariantKey, google::protobuf::internal::NodeBase *>>, 256, false>>]" at line 279 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/internal/btree_container.h
+            instantiation of class "absl::lts_20250127::container_internal::btree_set_container<Tree> [with Tree=absl::lts_20250127::container_internal::btree<absl::lts_20250127::container_internal::map_params<google::protobuf::internal::VariantKey, google::protobuf::internal::NodeBase *, std::less<google::protobuf::internal::VariantKey>, google::protobuf::internal::MapAllocator<std::pair<const google::protobuf::internal::VariantKey, google::protobuf::internal::NodeBase *>>, 256, false>>]" at line 445 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/internal/btree_container.h
+            instantiation of class "absl::lts_20250127::container_internal::btree_map_container<Tree> [with Tree=absl::lts_20250127::container_internal::btree<absl::lts_20250127::container_internal::map_params<google::protobuf::internal::VariantKey, google::protobuf::internal::NodeBase *, std::less<google::protobuf::internal::VariantKey>, google::protobuf::internal::MapAllocator<std::pair<const google::protobuf::internal::VariantKey, google::protobuf::internal::NodeBase *>>, 256, false>>]" at line 91 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/container/btree_map.h
+            instantiation of class "absl::lts_20250127::btree_map<Key, Value, Compare, Alloc> [with Key=google::protobuf::internal::VariantKey, Value=google::protobuf::internal::NodeBase *, Compare=std::less<google::protobuf::internal::VariantKey>, Alloc=google::protobuf::internal::MapAllocator<std::pair<const google::protobuf::internal::VariantKey, google::protobuf::internal::NodeBase *>>]" at line 686 of /home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/google/protobuf/map.h
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/status/status.h(810): warning #2810-D: ignoring return value type with "nodiscard" attribute
+      *this = std::move(new_status);
+            ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/status/internal/statusor_internal.h(303): warning #2810-D: ignoring return value type with "nodiscard" attribute
+        status_ = OkStatus();
+                ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/absl/status/internal/statusor_internal.h(310): warning #2810-D: ignoring return value type with "nodiscard" attribute
+      status_ = static_cast<absl::Status>(std::forward<U>(v));
+              ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/xla/tsl/framework/allocator.h(252): warning #611-D: overloaded virtual function "tsl::Allocator::DeallocateRaw" is only partially overridden in class "tsl::AllocatorWrapper"
+  class AllocatorWrapper : public Allocator {
+        ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h(597): warning #611-D: overloaded virtual function "tsl::FileSystem::FilesExist" is only partially overridden in class "tsl::WrappedFileSystem"
+  class WrappedFileSystem : public FileSystem {
+        ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/file_system.h(597): warning #611-D: overloaded virtual function "tsl::FileSystem::CreateDir" is only partially overridden in class "tsl::WrappedFileSystem"
+  class WrappedFileSystem : public FileSystem {
+        ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/xla/tsl/platform/env.h(526): warning #611-D: overloaded virtual function "tsl::Env::RegisterFileSystem" is only partially overridden in class "tsl::EnvWrapper"
+  class EnvWrapper : public Env {
+        ^
+
+/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include/xla/tsl/framework/tracking_allocator.h(56): warning #611-D: overloaded virtual function "tsl::Allocator::DeallocateRaw" is only partially overridden in class "tsl::TrackingAllocator"
+  class TrackingAllocator : public Allocator {
+        ^
+
+tf_sampling.cpp(20): warning #3004-D: type of discarded object has "nodiscard" attribute
+      c->WithRank(c->input(0), 2, &dims1);
+                 ^
+
+tf_sampling.cpp(22): warning #3004-D: type of discarded object has "nodiscard" attribute
+      c->WithRank(c->input(1), 2, &dims2);
+                 ^
+
+tf_sampling.cpp(26): error: class "absl::lts_20250127::Status" has no member "OK"
+      return Status::OK();
+                     ^
+
+tf_sampling.cpp(18): error: no suitable user-defined conversion from "lambda [](tensorflow::shape_inference::InferenceContext *)-><error-type>" to "tensorflow::OpShapeInferenceFn" (aka "std::function<absl::lts_20250127::Status (tensorflow::shape_inference::InferenceContext *)>") exists
+    .SetShapeFn([](::tensorflow::shape_inference::InferenceContext* c) {
+                ^
+
+tf_sampling.cpp(34): warning #3004-D: type of discarded object has "nodiscard" attribute
+      c->WithRank(c->input(0), 3, &dims1);
+                 ^
+
+tf_sampling.cpp(39): error: class "absl::lts_20250127::Status" has no member "OK"
+      return Status::OK();
+                     ^
+
+tf_sampling.cpp(47): warning #3004-D: type of discarded object has "nodiscard" attribute
+      c->WithRank(c->input(0), 3, &dims1);
+                 ^
+
+tf_sampling.cpp(49): warning #3004-D: type of discarded object has "nodiscard" attribute
+      c->WithRank(c->input(1), 2, &dims2);
+                 ^
+
+tf_sampling.cpp(53): error: class "absl::lts_20250127::Status" has no member "OK"
+      return Status::OK();
+                     ^
+
+tf_sampling.cpp(45): error: no suitable user-defined conversion from "lambda [](tensorflow::shape_inference::InferenceContext *)-><error-type>" to "tensorflow::OpShapeInferenceFn" (aka "std::function<absl::lts_20250127::Status (tensorflow::shape_inference::InferenceContext *)>") exists
+    .SetShapeFn([](::tensorflow::shape_inference::InferenceContext* c) {
+                ^
+
+tf_sampling.cpp(62): error: class "absl::lts_20250127::Status" has no member "OK"
+      return Status::OK();
+                     ^
+
+tf_sampling.cpp(60): error: no suitable user-defined conversion from "lambda [](tensorflow::shape_inference::InferenceContext *)-><error-type>" to "tensorflow::OpShapeInferenceFn" (aka "std::function<absl::lts_20250127::Status (tensorflow::shape_inference::InferenceContext *)>") exists
+    .SetShapeFn([](::tensorflow::shape_inference::InferenceContext* c) {
+                ^
+
+7 errors detected in the compilation of "tf_sampling.cpp".

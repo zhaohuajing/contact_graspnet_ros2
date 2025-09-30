@@ -1,3 +1,4 @@
+int32 scene_id
 float32[] points
 uint32[] mask
 ---

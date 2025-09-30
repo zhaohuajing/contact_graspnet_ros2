@@ -8,8 +8,8 @@ import cv2
 
 import tensorflow.compat.v1 as tf
 tf.disable_eager_execution()
-# physical_devices = tf.config.experimental.list_physical_devices('GPU')
-# tf.config.experimental.set_memory_growth(physical_devices[0], True)
+physical_devices = tf.config.experimental.list_physical_devices('GPU')
+tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(BASE_DIR))
@@ -17,7 +17,7 @@ import config_utils
 from data import regularize_pc_point_count, depth2pc, load_available_input_data
 
 from contact_grasp_estimator import GraspEstimator
-from visualization_utils import visualize_grasps, show_image
+# from visualization_utils import visualize_grasps, show_image
 
 def inference(global_config, checkpoint_dir, input_paths, K=None, local_regions=True, skip_border_objects=False, filter_grasps=True, segmap_id=None, z_range=[0.2,1.8], forward_passes=1):
     """
@@ -76,9 +76,9 @@ def inference(global_config, checkpoint_dir, input_paths, K=None, local_regions=
         np.savez('results/predictions_{}'.format(os.path.basename(p.replace('png','npz').replace('npy','npz'))), 
                   pred_grasps_cam=pred_grasps_cam, scores=scores, contact_pts=contact_pts)
 
-        # Visualize results          
-        show_image(rgb, segmap)
-        visualize_grasps(pc_full, pred_grasps_cam, scores, plot_opencv_cam=True, pc_colors=pc_colors)
+        # # Visualize results          
+        # show_image(rgb, segmap)
+        # visualize_grasps(pc_full, pred_grasps_cam, scores, plot_opencv_cam=True, pc_colors=pc_colors)
         
     if not glob.glob(input_paths):
         print('No files found: ', input_paths)

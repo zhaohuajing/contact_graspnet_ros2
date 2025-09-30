@@ -1,58 +1,3 @@
-# Dockerized Contact-GraspNet  
-original readme below. All credits to the authors.
-
-This fork provides a (minimal-effort) docker image to facilitate integration of the contact-graspnet grasp predictions. The codebase requires tensorflow 2.5, which makes it hard to integrate directly in your python projects, hence the docker image.
-
-Make sure to make yourself familiar with the original repo first. I recommend running inference on the test examples manually.  You can use this updated [conda env file](./environment.yaml) and follow the original Readme.
-
-Integration example of the dockerized grasp predictor (code available [here](robot/grasping_using_docker.py)):
-
-https://github.com/tlpss/contact_graspnet/assets/37955681/2236c3f0-8157-4cf0-a167-cc2ecae7a4df
-
-
-## Using the docker image 
-
-The docker image wraps the inference code of the grasp estimator in a Flask webserver for ease of use. Depth images/pointclouds and other input as well as the results are passed using file sharing in a docker volume.
-
-The steps to obtain grasp proposals are:
-1. create a numpy npz file that contains a depth map (in meters), rgb image, intrinsics matrix and segmentation map (can have object of interest segmentation or region of interest segmentation, defaults to the entire image):
-
- `np.save('inputs.npz', rgb=..,depth=.., segmap=..,K=..)`
-
-2. send a request to the webserver endpoint (`localhost:5000/` endpoint)
-
-3. load the grasp proposals and their scores from the resulting npz file.
-
-The grasp proposals are expressed in the base frame of a panda gripper, make sure to transform them to the TCP frame (11cm in Z direction) or to your grippers base frame. (only aspect that matters is distance between fingertips and gripper base).
-
-See `robot/grasping_using_docker.py` for an example on how to do use the webserver. See `robot/dump_pointcloud.py` and `robot/grasp.py` for code to manually create an input file and to execute the best grasp.
-These scripts make use of [airo-mono](https://github.com/airo-ugent/airo-mono) to quickly develop a robotic application. Make sure to install it if you want to use the scripts.
-
-
-Example video can be seen [here](examples/contact-graspnet-dockerized.mp4).
-
-## Starting the docker container 
-
-Make sure you have installed the nvidia container toolkit: https://github.com/NVIDIA/nvidia-container-toolkit.
-
-Run the following command `xhost +local:` in your terminal.
-
-Use the following command in the terminal to start the container. Adapt the mount location to the directory where you will save/load the images.
-`docker run --gpus all  -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix  --network=host -v "$(pwd)"/flask_files:/contact_graspnet/flask_files tlpss/contact-graspnet-flask`
-
-Note that this is by no means safe for production (and even then, the original license does not allow commercial use anyways)
-
-You can now access the webserver from your python script on the `localhost:5000/` endpoint after you have saved your inputs in the the `.npz` file.
-## Building the container 
-
-- download the checkpoint (see original repo)
-- `docker build . -f docker/Dockerfile -t contact-graspnet-flask`
-
----
-original readme
-
-
-
 # Contact-GraspNet  
 
 ### Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes   
@@ -89,7 +34,7 @@ Inference: 1x Nvidia GPU >= 8GB VRAM (might work with less)
 ### Model
 Download trained models from [here](https://drive.google.com/drive/folders/1tBHKf60K8DLM5arm-Chyf7jxkzOr5zGl?usp=sharing) and copy them into the `checkpoints/` folder.
 ### Test data
-Download the test data from [here](https://drive.google.com/drive/folders/1v0_QMTUIEOcu09Int5V6N2Nuq7UCtuAA?usp=sharing) and copy them them into the `test_data/` folder.
+Download the test data from [here](https://drive.google.com/drive/folders/1TqpM2wHAAo0j3i1neu3Xeru3_WnsYQnx?usp=sharing) and copy them them into the `test_data/` folder.
 
 ## Inference
 

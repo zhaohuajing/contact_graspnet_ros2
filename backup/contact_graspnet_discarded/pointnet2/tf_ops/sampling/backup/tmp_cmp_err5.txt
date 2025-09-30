@@ -1,0 +1,181 @@
+(tfenv310) csrobot@nerve-desktop-6:~/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet/pointnet2/tf_ops/sampling$ ./compile.sh 
+2025-09-23 16:26:50.804606: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-09-23 16:26:50.835647: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-09-23 16:26:50.835934: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-23 16:26:51.451517: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-09-23 16:26:53.131148: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-09-23 16:26:53.162344: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-09-23 16:26:53.162663: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-23 16:26:53.786418: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-09-23 16:26:55.454413: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-09-23 16:26:55.484930: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-09-23 16:26:55.485224: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-23 16:26:56.102113: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-09-23 16:26:57.777341: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-09-23 16:26:57.807688: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-09-23 16:26:57.807976: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-23 16:26:58.412013: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+tf_sampling.cpp: In lambda function:
+tf_sampling.cpp:37:28: error: inconsistent types ‘tsl::Status’ and ‘absl::lts_20220623::Status’ deduced for lambda return type
+   37 |       return absl::OkStatus();
+      |              ~~~~~~~~~~~~~~^~
+tf_sampling.cpp:37:29: error: no matching function for call to ‘tsl::Status::Status(absl::lts_20220623::Status)’
+   37 |       return absl::OkStatus();
+      |                             ^
+In file included from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/platform/status.h:23,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/lib/core/status.h:19,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/resource_base.h:20,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/resource_handle.h:21,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/types.h:27,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/op_def_builder.h:28,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/full_type_inference_util.h:23,
+                 from /home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/op.h:27,
+                 from tf_sampling.cpp:5:
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:8: note: candidate: ‘tsl::Status::Status(tsl::Status&&, tsl::SourceLocation)’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:32: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘tsl::Status&&’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |                       ~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:8: note: candidate: ‘tsl::Status::Status(const tsl::Status&)’
+  296 | inline Status::Status(const Status& s)
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:37: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘const tsl::Status&’
+  296 | inline Status::Status(const Status& s)
+      |                       ~~~~~~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note: candidate: ‘tsl::Status::Status(tsl::error::Code, absl::lts_20220623::string_view, tsl::SourceLocation)’
+   71 |   Status(tsl::error::Code code, absl::string_view msg,
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note:   candidate expects 3 arguments, 1 provided
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note: candidate: ‘tsl::Status::Status()’
+   66 |   Status() {}
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note:   candidate expects 0 arguments, 1 provided
+tf_sampling.cpp: In lambda function:
+tf_sampling.cpp:73:28: error: inconsistent types ‘tsl::Status’ and ‘absl::lts_20220623::Status’ deduced for lambda return type
+   73 |       return absl::OkStatus();
+      |              ~~~~~~~~~~~~~~^~
+tf_sampling.cpp:73:29: error: no matching function for call to ‘tsl::Status::Status(absl::lts_20220623::Status)’
+   73 |       return absl::OkStatus();
+      |                             ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:8: note: candidate: ‘tsl::Status::Status(tsl::Status&&, tsl::SourceLocation)’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:32: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘tsl::Status&&’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |                       ~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:8: note: candidate: ‘tsl::Status::Status(const tsl::Status&)’
+  296 | inline Status::Status(const Status& s)
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:37: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘const tsl::Status&’
+  296 | inline Status::Status(const Status& s)
+      |                       ~~~~~~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note: candidate: ‘tsl::Status::Status(tsl::error::Code, absl::lts_20220623::string_view, tsl::SourceLocation)’
+   71 |   Status(tsl::error::Code code, absl::string_view msg,
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note:   candidate expects 3 arguments, 1 provided
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note: candidate: ‘tsl::Status::Status()’
+   66 |   Status() {}
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note:   candidate expects 0 arguments, 1 provided
+tf_sampling.cpp: At global scope:
+tf_sampling.cpp:81:17: error: cannot convert ‘<lambda(tensorflow::shape_inference::InferenceContext*)>’ to ‘tensorflow::OpShapeInferenceFn’ {aka ‘std::function<tsl::Status(tensorflow::shape_inference::InferenceContext*)>’}
+   81 |     .SetShapeFn([](shape_inference::InferenceContext* c) {
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 |
+      |                 <lambda(tensorflow::shape_inference::InferenceContext*)>
+   82 |       c->set_output(0, c->input(0)); // same shape as points
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   83 |       return absl::OkStatus();
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~
+   84 |     });
+      |     ~            
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/core/framework/op.h:272:54: note:   initializing argument 1 of ‘tensorflow::register_op::OpDefBuilderWrapper& tensorflow::register_op::OpDefBuilderWrapper::SetShapeFn(tensorflow::OpShapeInferenceFn)’
+  272 |   OpDefBuilderWrapper& SetShapeFn(OpShapeInferenceFn fn) {
+      |                                   ~~~~~~~~~~~~~~~~~~~^~
+tf_sampling.cpp: In lambda function:
+tf_sampling.cpp:112:28: error: inconsistent types ‘tsl::Status’ and ‘absl::lts_20220623::Status’ deduced for lambda return type
+  112 |       return absl::OkStatus();
+      |              ~~~~~~~~~~~~~~^~
+tf_sampling.cpp:112:29: error: no matching function for call to ‘tsl::Status::Status(absl::lts_20220623::Status)’
+  112 |       return absl::OkStatus();
+      |                             ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:8: note: candidate: ‘tsl::Status::Status(tsl::Status&&, tsl::SourceLocation)’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:32: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘tsl::Status&&’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |                       ~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:8: note: candidate: ‘tsl::Status::Status(const tsl::Status&)’
+  296 | inline Status::Status(const Status& s)
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:37: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘const tsl::Status&’
+  296 | inline Status::Status(const Status& s)
+      |                       ~~~~~~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note: candidate: ‘tsl::Status::Status(tsl::error::Code, absl::lts_20220623::string_view, tsl::SourceLocation)’
+   71 |   Status(tsl::error::Code code, absl::string_view msg,
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note:   candidate expects 3 arguments, 1 provided
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note: candidate: ‘tsl::Status::Status()’
+   66 |   Status() {}
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note:   candidate expects 0 arguments, 1 provided
+tf_sampling.cpp: In lambda function:
+tf_sampling.cpp:143:28: error: inconsistent types ‘tsl::Status’ and ‘absl::lts_20220623::Status’ deduced for lambda return type
+  143 |       return absl::OkStatus();
+      |              ~~~~~~~~~~~~~~^~
+tf_sampling.cpp:143:29: error: no matching function for call to ‘tsl::Status::Status(absl::lts_20220623::Status)’
+  143 |       return absl::OkStatus();
+      |                             ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:8: note: candidate: ‘tsl::Status::Status(tsl::Status&&, tsl::SourceLocation)’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:32: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘tsl::Status&&’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |                       ~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:8: note: candidate: ‘tsl::Status::Status(const tsl::Status&)’
+  296 | inline Status::Status(const Status& s)
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:37: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘const tsl::Status&’
+  296 | inline Status::Status(const Status& s)
+      |                       ~~~~~~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note: candidate: ‘tsl::Status::Status(tsl::error::Code, absl::lts_20220623::string_view, tsl::SourceLocation)’
+   71 |   Status(tsl::error::Code code, absl::string_view msg,
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note:   candidate expects 3 arguments, 1 provided
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note: candidate: ‘tsl::Status::Status()’
+   66 |   Status() {}
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note:   candidate expects 0 arguments, 1 provided
+tf_sampling.cpp: In lambda function:
+tf_sampling.cpp:165:28: error: inconsistent types ‘tsl::Status’ and ‘absl::lts_20220623::Status’ deduced for lambda return type
+  165 |       return absl::OkStatus();
+      |              ~~~~~~~~~~~~~~^~
+tf_sampling.cpp:165:29: error: no matching function for call to ‘tsl::Status::Status(absl::lts_20220623::Status)’
+  165 |       return absl::OkStatus();
+      |                             ^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:8: note: candidate: ‘tsl::Status::Status(tsl::Status&&, tsl::SourceLocation)’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:309:32: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘tsl::Status&&’
+  309 | inline Status::Status(Status&& s, SourceLocation loc) noexcept
+      |                       ~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:8: note: candidate: ‘tsl::Status::Status(const tsl::Status&)’
+  296 | inline Status::Status(const Status& s)
+      |        ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:296:37: note:   no known conversion for argument 1 from ‘absl::lts_20220623::Status’ to ‘const tsl::Status&’
+  296 | inline Status::Status(const Status& s)
+      |                       ~~~~~~~~~~~~~~^
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note: candidate: ‘tsl::Status::Status(tsl::error::Code, absl::lts_20220623::string_view, tsl::SourceLocation)’
+   71 |   Status(tsl::error::Code code, absl::string_view msg,
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:71:3: note:   candidate expects 3 arguments, 1 provided
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note: candidate: ‘tsl::Status::Status()’
+   66 |   Status() {}
+      |   ^~~~~~
+/home/csrobot/venvs/tfenv310/lib/python3.10/site-packages/tensorflow/include/tensorflow/tsl/platform/status.h:66:3: note:   candidate expects 0 arguments, 1 provided

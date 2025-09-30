@@ -4,6 +4,8 @@ import rclpy
 from rclpy.node import Node
 from contact_graspnet_ros2.srv import GetGrasps
 import numpy as np
+import os, sys
+
 
 class GraspClient(Node):
 
@@ -13,7 +15,10 @@ class GraspClient(Node):
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting...')
 
-        npy_path = 'test_data/0.npy'
+        self.base_path = "/home/csrobot/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet"
+        self.scene_id = int(sys.argv[1])
+
+        npy_path = os.path.join(self.base_path, "test_data", f"{self.scene_id}.npy") 
         depth, K, seg = self.load_npy_file(npy_path)
         points = self.depth_to_point_cloud(depth, K)
         mask = self.flatten_segmentation(seg)
@@ -25,6 +30,7 @@ class GraspClient(Node):
         req = GetGrasps.Request()
         req.points = points.astype(np.float32).flatten().tolist()
         req.mask = mask.tolist()
+        req.scene_id = self.scene_id
 
         future = self.client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
@@ -51,6 +57,9 @@ class GraspClient(Node):
 
 def main(args=None):
     rclpy.init(args=args)
+    if len(sys.argv) < 2:
+        print("Usage: python client_grasp_request.py <scene_id>")
+        return
     GraspClient()
     rclpy.shutdown()
 

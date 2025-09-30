@@ -1,1 +1,0 @@
-# contact_graspnet_ros2/__init__.py

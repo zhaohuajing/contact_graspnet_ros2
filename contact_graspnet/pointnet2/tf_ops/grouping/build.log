@@ -1,5 +1,0 @@
-+ PYBIN=python3
-++ python3 -c 'import tensorflow as tf; print(tf.sysconfig.get_include())'
-2025-09-22 17:39:21.735690: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-+ TF_INC=/home/csrobot/.local/lib/python3.12/site-packages/tensorflow/include

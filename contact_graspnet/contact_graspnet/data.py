@@ -300,7 +300,7 @@ def load_available_input_data(p, K=None):
     :returns: All available data among segmap, rgb, depth, cam_K, pc_full, pc_colors
     """
     
-    segmap, rgb, depth, pc_full, pc_colors,cam_K = None, None, None, None, None,None
+    segmap, rgb, depth, pc_full, pc_colors = None, None, None, None, None
 
     if K is not None:
         if isinstance(K,str):
