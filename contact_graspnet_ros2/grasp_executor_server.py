@@ -21,8 +21,8 @@ class GraspServer(Node):
         self.result_loading = "_use_npz" #["_use_json", "_use_npz"]
 
     def run_inference_in_docker(self,scene_id):
-        # container_name = "contact_graspnet_container"
-        container_name = "magical_lovelace"
+        container_name = "contact_graspnet_container"
+        # container_name = "magical_lovelace"
         np_path = f"test_data/{scene_id}.npy"
 
         # cmd = [
