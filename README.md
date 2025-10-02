@@ -13,9 +13,7 @@ The same approach can be extended to other grasp planners or perception algorith
 
 ## Architecture  
 
-## Architecture  
-
-**```**
+```text
 +-----------------+        +-------------------+        +------------------+
 |   ROS2 Client   | -----> |   ROS2 Server     | -----> |   Docker (CGN)   |
 | (grasp request) |        | (subprocess call) | <----- |   inference.py   |
@@ -23,7 +21,7 @@ The same approach can be extended to other grasp planners or perception algorith
         ^                             |                   (grasp planning)                     
         |                             v                               
         +-----  Grasp Results  <------+
-**```**
+```
 
 Flow:  
 1. Client sends a scene ID to the server.  
