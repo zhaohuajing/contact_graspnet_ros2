@@ -1,0 +1,24 @@
+last error inside Ubuntu22.04, cuda11.8, python3.9, nested python3.10 conda environment;
+
+(contact-graspnet-py310) root@fccbf63ddce8:~/graspnet_ws# ros2 launch contact_graspnet_ros2 grasp_server.launch.py 
+[INFO] [launch]: All log files can be found below /root/.ros/log/2025-09-25-10-00-11-608124-fccbf63ddce8-16326
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [grasp_server-1]: process started with pid [16327]
+[grasp_server-1] Traceback (most recent call last):
+[grasp_server-1]   File "/root/graspnet_ws/install/contact_graspnet_ros2/lib/contact_graspnet_ros2/grasp_server", line 4, in <module>
+[grasp_server-1]     import rclpy
+[grasp_server-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 49, in <module>
+[grasp_server-1]     from rclpy.signals import install_signal_handlers
+[grasp_server-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/signals.py", line 15, in <module>
+[grasp_server-1]     from rclpy.exceptions import InvalidHandle
+[grasp_server-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/exceptions.py", line 15, in <module>
+[grasp_server-1]     from rclpy.impl.implementation_singleton import rclpy_implementation as _rclpy
+[grasp_server-1]   File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/impl/implementation_singleton.py", line 32, in <module>
+[grasp_server-1]     rclpy_implementation = import_c_library('._rclpy_pybind11', package)
+[grasp_server-1]   File "/opt/ros/humble/lib/python3.10/site-packages/rpyutils/import_c_library.py", line 39, in import_c_library
+[grasp_server-1]     return importlib.import_module(name, package=package)
+[grasp_server-1]   File "/opt/conda/envs/contact-graspnet-py310/lib/python3.10/importlib/__init__.py", line 126, in import_module
+[grasp_server-1]     return _bootstrap._gcd_import(name[level:], package, level)
+[grasp_server-1] ImportError: /opt/conda/envs/contact-graspnet-py310/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by /opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/_rclpy_pybind11.cpython-310-x86_64-linux-gnu.so)
+[grasp_server-1] The C extension '/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/_rclpy_pybind11.cpython-310-x86_64-linux-gnu.so' failed to be imported while being present on the system. Please refer to 'https://docs.ros.org/en/{distro}/Guides/Installation-Troubleshooting.html#import-failing-even-with-library-present-on-the-system' for possible solutions
+[ERROR] [grasp_server-1]: process has died [pid 16327, exit code 1, cmd '/root/graspnet_ws/install/contact_graspnet_ros2/lib/contact_graspnet_ros2/grasp_server --ros-args -r __node:=grasp_server'].
