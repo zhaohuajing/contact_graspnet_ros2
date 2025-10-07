@@ -2,21 +2,20 @@
 FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
 
 # NOTE: To build docker, run: "docker build -t contact_graspnet:cuda118 ."
+# alternative (for later) run: "docker build -t cuda118:contact-graspnet ." or "docker build -t cuda118:unseen_obj ."
 
-# Remove dangling images left from previous builds
-docker image prune -f
+# # Remove dangling images left from previous builds: "docker image prune -f"
 
 # Force Qt (used by Mayavi/VTK) into offscreen rendering mode
 ENV QT_QPA_PLATFORM=offscreen
 
 # Install system utilities
 RUN apt-get update && apt-get install -y \
-        wget \
-        git \
+        wget git curl sudo bzip2 build-essential cmake \
+        python3 python3-pip python3-dev \
         libxrender1 \
         mesa-common-dev \
-        tree \
-        sudo \
+        tree sudo \
     && rm -rf /var/lib/apt/lists/*
 
 
@@ -43,8 +42,8 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86
     && conda init bash \
     && conda config --system --set auto_activate_base false
 
-# Use bash login shell so that .bashrc (with conda init) is sourced
-SHELL ["/bin/bash", "-lc"]
+# # Use bash login shell so that .bashrc (with conda init) is sourced
+# SHELL ["/bin/bash", "-lc"]
 
 # WORKDIR /workspace/contact_graspnet
 WORKDIR /root/graspnet_ws
@@ -106,11 +105,45 @@ RUN apt update && apt install -y \
     git \
     && rosdep init && rosdep update
 
+# Create Contact-GraspNet env (contact-graspnet)
+RUN conda create -y -n contact-graspnet python=3.9 && \
+    conda run -n contact-graspnet pip install --upgrade pip && \
+    conda run -n contact-graspnet pip install tensorflow==2.17.* numpy==1.26.* \
+        opencv-python open3d mayavi pyopengl
+
+# Create UnseenObjectClustering env (unseen_obj)
+COPY requirements_ucn_env_py.txt /tmp/requirements_ucn_env_py.txt
+
+# Python deps
+RUN conda create -y -n unseen_obj python=3.9 && \
+    conda run -n unseen_obj pip install --upgrade pip && \
+    conda run -n unseen_obj pip install \
+        torch==1.13.1 \
+        torchvision==0.14.1 \
+        torchaudio==0.13.1 \
+        --extra-index-url https://download.pytorch.org/whl/cu116 && \
+    conda run -n unseen_obj pip install -r /tmp/requirements_ucn_env_py.txt
+
+
+COPY requirements_ucn_original.txt /tmp/requirements_ucn_original.txt
+# Python deps
+RUN  conda run -n unseen_obj pip install -r /tmp/requirements_ucn_env_py.txt
+
+# COPY requirements_ucn_env_ros.txt /tmp/requirements_ucn_env_ros.txt
+# # ROS deps installed with apt (ensure rosdep init/update beforehand)
+# RUN apt-get update && \
+#     xargs -a /tmp/requirements_ucn_env_ros.txt apt-get install -y
+
 # Source ROS 2 setup in every shell
 RUN echo "source /opt/ros/humble/setup.bash" >> /root/.bashrc
 
+# RUN echo "conda activate contact-graspnet" >> ~/.bashrc
 
-RUN echo "conda activate contact-graspnet" >> ~/.bashrc
+# # Default to an interactive bash login shell
+# CMD ["bash", "-l"]
 
-# Default to an interactive bash login shell
-CMD ["bash", "-l"]
+# Make bash default shell
+SHELL ["/bin/bash", "-c"]
+
+# Set default command
+CMD ["bash"]

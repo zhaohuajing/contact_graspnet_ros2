@@ -13,7 +13,7 @@ docker run --gpus all -it --rm --shm-size=32g \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -v ~/graspnet_ws:/root/graspnet_ws \
-  contact_graspnet:cuda118 \
+  cuda118:contact_graspnet \
   bash -lc "\
     cd /root/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet/ && \
     conda run -n contact-graspnet bash compile_pointnet_tfops.sh && \
