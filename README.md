@@ -56,12 +56,10 @@ This script launches the Contact-GraspNet container with the proper environment 
 	source install/setup.bash
 	```
 3. **Run the ROS 2 server** (in one terminal):
-	```cd ~/graspnet_ws/src/contact_graspnet_ros2
-	python grasp_executor_server.py
+	```ros2 run contact_graspnet_ros2 grasp_executor_server
 	```
 4. **Run the ROS 2 client** (in another terminal):
-	```cd ~/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet_ros2
-	python client_grasp_request.py <scene_id>
+	```ros2 run contact_graspnet_ros2 client_grasp_request <scene_id>
 	```
 This requests grasps for test_data/<scene_id>.npy.
 
