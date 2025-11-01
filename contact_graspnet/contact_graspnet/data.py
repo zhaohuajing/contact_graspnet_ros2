@@ -306,6 +306,9 @@ def load_available_input_data(p, K=None):
         if isinstance(K,str):
             cam_K = eval(K)
         cam_K = np.array(K).reshape(3,3)
+    # added 2025: Ensure cam_K is defined even when we only have a point cloud
+    else:
+        cam_K = np.eye(3, dtype=np.float32)
 
     if '.np' in p:
         data = np.load(p, allow_pickle=True)

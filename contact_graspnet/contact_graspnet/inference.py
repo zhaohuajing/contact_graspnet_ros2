@@ -64,6 +64,10 @@ def inference(global_config, checkpoint_dir, input_paths, K=None, local_regions=
         pc_segments = {}
         segmap, rgb, depth, cam_K, pc_full, pc_colors = load_available_input_data(p, K=K)
         
+        # added fall-back 2025
+        if cam_K is None:
+            cam_K = np.eye(3, dtype=np.float32)     
+
         if segmap is None and (local_regions or filter_grasps):
             raise ValueError('Need segmentation map to extract local regions or filter grasps')
 
