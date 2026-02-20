@@ -1,5 +1,0 @@
-network used:
-
-checkpoints/seg_resnet34_8s_embedding_cosine_rgbd_add_sampling_epoch_16.checkpoint.pth
-checkpoints/seg_resnet34_8s_embedding_cosine_rgbd_add_crop_sampling_epoch_16.checkpoint.pth
-cfgs/seg_resnet34_8s_embedding_cosine_rgbd_add_sampling_epoch_16.yml

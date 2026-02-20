@@ -1,6 +1,0 @@
-Keys: ['pred_grasps_cam', 'scores', 'contact_pts']
-pred_grasps_cam: shape=(), dtype=object
-scores: shape=(), dtype=object
-contact_pts: shape=(), dtype=object
-picked scores: scores
-picked samples: contact_pts
