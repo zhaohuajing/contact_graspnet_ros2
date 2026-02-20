@@ -26,3 +26,4 @@ contact_graspnet_docker/backup
 contact_graspnet/
 contact_graspnet_docker/
 launch/backup
+contact_graspnet_ros2/backup
