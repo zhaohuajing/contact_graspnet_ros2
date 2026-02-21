@@ -40,7 +40,17 @@ Flow:
 - **Docker** with GPU runtime enabled (`nvidia-docker2` or `nvidia-container-toolkit`).  
 - **Built Docker image** for Contact-GraspNet (see `Dockerfile_CGN`).  
 
-- Assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`
+- Assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`, git clone the repo for ros2 server:
+	```bash
+	cd ~/graspnet_ws/src/contact_graspnet/
+	git clone -b ros2_server https://github.com/zhaohuajing/contact_graspnet_ros2.git
+	```
+
+- Clone contact_graspnet source repo from: https://github.com/zhaohuajing/compare_contact_graspnet.git and create local folder named `contact_graspnet`:
+	```bash
+	cd ~/graspnet_ws/src/contact_graspnet_ros2/
+	git clone https://github.com/zhaohuajing/compare_contact_graspnet contact_graspnet
+	```
 
 #### 2. Setup Docker container:
 
@@ -100,11 +110,11 @@ This requests grasps for test_data/<scene_name>.npy.
  ---
 
 
- ## Real-time integrations for ROS 2 grasp servers
+## Real-time integrations for ROS 2 grasp servers
 
 This repository provides **two complementary ROS 2 wrappers for Contact-GraspNet**, enabling integration with real-world sensor inputs depending on the perception pipeline and available modalities.
 
- ### 1. Real-time RGB-D Scene Integration (**Recommended**)
+### 1. Real-time RGB-D Scene Integration (**Recommended**)
 We introduce a ROS 2 server, **`grasp_executor_rgbd_server`**, which enables Contact-GraspNet to operate directly on **live RGB-D scenes** (e.g., from Gazebo or a physical camera), instead of only static, pre-generated datasets.
 
 **Key features:**
@@ -141,7 +151,6 @@ A **full perception-to-action pipeline example** using FlexBE state machines is 
 
 This enables a full **RGB-D → segmentation → grasp planning → MoveIt** pipeline without requiring intermediate point cloud processing by the user. For this reason, the RGB-D interface is currently the **recommended entry point** for end-to-end perception-to-action workflows in both simulation and real hardware.
 
----
 
 ### 2. PointCloud Scene Integration (NOT recommended)
 
