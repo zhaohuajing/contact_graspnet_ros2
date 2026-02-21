@@ -31,7 +31,6 @@ Flow:
 5. Results are returned to the client as a ROS 2 message.  
 
 ---
----
 
 ## Setup instruction  
 
