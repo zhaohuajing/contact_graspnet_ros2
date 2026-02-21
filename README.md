@@ -47,7 +47,7 @@ Flow:
 - **Download the Docker files**: 
 
 	```bash
-	   git clone https://github.com/zhaohuajing/contact_graspnet_docker 
+	git clone https://github.com/zhaohuajing/contact_graspnet_docker 
 	```
 
 - **Build the Docker image**:
