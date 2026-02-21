@@ -31,81 +31,84 @@ Flow:
 5. Results are returned to the client as a ROS 2 message.  
 
 ---
+---
 
-## Prerequisites  
+## Setup instruction  
+
+#### 1. Prerequisites:
 
 - **ROS 2 Jazzy** (or compatible distro) installed on host.  
 - **Docker** with GPU runtime enabled (`nvidia-docker2` or `nvidia-container-toolkit`).  
-- **Built Docker image** for Contact-GraspNet (see `Dockerfile`).  
+- **Built Docker image** for Contact-GraspNet (see `Dockerfile_CGN`).  
 
----
+- Assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`
 
-## Usage  
+#### 2. Setup Docker container:
 
-1. **Setup Docker container**:
+- **Download the Docker files**: 
 
-### Download Docker files:
+	```bash
+	   git clone https://github.com/zhaohuajing/contact_graspnet_docker 
+	```
 
-```bash
-   git clone https://github.com/zhaohuajing/contact_graspnet_docker 
-```
-
-### Build the Docker image:
-```bash
+- **Build the Docker image**:
+	```bash
 	docker build -t cuda118:contact_graspnet -f Dockerfile_CGN .
-```
-
-Alternatively, you may use the following command to pull the docker image for contact-graspnet from docker hub:
+	```
+	Alternatively, you may use the following command to pull the docker image for contact-graspnet from docker hub:
    ```
    docker pull zhaohuajing/cuda118:contact_graspnet
    ```
 
-### Start the Docker container:  
+- **Start the Docker container**:  
    ```bash
    ./run_docker.sh
    ```
-This script launches the Contact-GraspNet container with the proper environment and names it:
-	```contact_graspnet_container
-	```
+	This script launches the Contact-GraspNet container with the proper environment and names it as: `contact_graspnet_container`
 
-2. **Compile the ROS 2 package** (needed after code changes; assuming repository put under ~/graspnet_ws/src):
+
+#### 3. Compile the ROS 2 package:
+
+- Start an new terminal on the host machine (i.e., outside of the docker container). Assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`, run the following command:
 	```bash
 	cd ~/graspnet_ws
 	colcon build --symlink-install
 	source install/setup.bash
 	```
-3. **Run the ROS 2 server** (in one terminal):
+
+#### 4. Test run of the ROS 2 server WITHOUT real-time inputs:
+
+- Both server and client commands should run on the host machine (i.e., outside of the docker container).
+
+- **Run the test ROS 2 server (in one terminal)**:
 
 	```bash
 	ros2 run contact_graspnet_ros2 grasp_executor_server
 	```
 	
-4. **Run the ROS 2 client** (in another terminal):
+- **Run the test ROS 2 client (in another terminal)**:
 	```bash
 	ros2 run contact_graspnet_ros2 client_grasp_request <scene_name>
 	```
 This requests grasps for test_data/<scene_name>.npy.
 
----
 
-## Notes
+#### Notes
 
  - The server uses subprocess + docker exec to call inference inside the container.
- - Inference results are serialized to JSON (<<<BEGIN_JSON>>> ... <<<END_JSON>>>) inside Docker and parsed by the server. If JSON extraction fails, the server falls back to raw line parsing for robustness.
  - You can extend this wrapper for other perception or grasp planning modules by reusing the same server–client communication pattern.
 
  ---
- ---
 
 
- ## 1. Real-time ROS 2 grasp server
+ ## Real-time integrations for ROS 2 grasp servers
 
 This repository provides **two complementary ROS 2 wrappers for Contact-GraspNet**, enabling integration with real-world sensor inputs depending on the perception pipeline and available modalities.
 
- ###  Real-Time RGB-D Scene Integration (**Recommended**)
+ ### 1. Real-time RGB-D Scene Integration (**Recommended**)
 We introduce a ROS 2 server, **`grasp_executor_rgbd_server`**, which enables Contact-GraspNet to operate directly on **live RGB-D scenes** (e.g., from Gazebo or a physical camera), instead of only static, pre-generated datasets.
 
-Key features:
+**Key features:**
 - ROS 2 service interface for grasp requests.
 - Converts live RGB-D inputs (and optional instance segmentation outputs) into Contact-GraspNet-compatible scene files.
 - Launches Contact-GraspNet inference **inside Docker via `subprocess`**, enabling:
@@ -141,7 +144,7 @@ This enables a full **RGB-D → segmentation → grasp planning → MoveIt** pip
 
 ---
 
-### Real-Time PointCloud Scene Integration 
+### 2. PointCloud Scene Integration (NOT recommended)
 
 We also provide a **point cloud–based Contact-GraspNet wrapper**, intended for pipelines that operate directly on 3D geometry rather than images. This variant:
 
@@ -165,7 +168,7 @@ With appropriate upstream perception, the point cloud wrapper can be used as an 
 
 ---
 
-## 2. Frame Alignment Between Contact-GraspNet and ROS TF
+## Additional Features: Frame Alignment Between Contact-GraspNet and ROS TF
 
 A major contribution of this work is the **explicit and correct alignment of frame conventions** between Contact-GraspNet and standard ROS TF / URDF definitions.
 
@@ -193,19 +196,3 @@ the resulting grasp poses are:
 - Directly usable by MoveIt without ad-hoc offsets.
 
 These transformations are implemented in `grasp_executor_rgbd_server.py` and documented inline.
-
----
-
-## 3. Debugging and Visualization Utilities
-
-To support validation and debugging, this repository includes:
-- RViz marker publishers for visualizing transformed grasp poses.
-- Optional saving of intermediate results (JSON / NPZ / TXT) for offline inspection.
-- Improved plotting utilities for Contact-GraspNet outputs with:
-  - Consistent axis coloring (X=red, Y=green, Z=blue),
-  - Fixed camera viewpoints,
-  - Deterministic screenshot export.
-
-These tools were essential for verifying correctness across:
-`camera → pedestal → robot base → end-effector frames`.
-
