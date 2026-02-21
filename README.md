@@ -42,7 +42,25 @@ Flow:
 
 ## Usage  
 
-1. **Start the Docker container** (if not already running):  
+1. **Setup Docker container**:
+
+### Download Docker files:
+
+```bash
+   git clone https://github.com/zhaohuajing/contact_graspnet_docker 
+```
+
+### Build the Docker image:
+```bash
+	docker build -t cuda118:contact_graspnet -f Dockerfile_CGN .
+```
+
+Alternatively, you may use the following command to pull the docker image for contact-graspnet from docker hub:
+   ```
+   docker pull zhaohuajing/cuda118:contact_graspnet
+   ```
+
+### Start the Docker container:  
    ```bash
    ./run_docker.sh
    ```
