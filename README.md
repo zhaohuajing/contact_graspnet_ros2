@@ -42,7 +42,7 @@ Flow:
 
 - Assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`, git clone the repo for ros2 server:
 	```bash
-	cd ~/graspnet_ws/src/contact_graspnet/
+	cd ~/graspnet_ws/src/
 	git clone -b ros2_server https://github.com/zhaohuajing/contact_graspnet_ros2.git
 	```
 
