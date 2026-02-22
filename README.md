@@ -3,8 +3,8 @@
 This package provides a ROS 2 service–client wrapper around **Contact-GraspNet**, using a `subprocess` call inside the ROS 2 server to run grasp inference in a Docker container.  
 
 This design allows us to:  
-- Keep ROS 2 running on the host system (e.g., Python 3.12, CUDA 12.2).  
-- Execute Contact-GraspNet inference in a controlled environment (Docker with Python 3.9, CUDA 11.8).  
+- Keep ROS 2 running on the host system (e.g., Ubuntu 24.04, Python 3.12, CUDA 12.2).  
+- Execute Contact-GraspNet inference in a controlled environment (Docker with Ubuntu 22.04 Python 3.9, CUDA 11.8).  
 - Cleanly return grasp results (`pred_grasps_cam`, `scores`, `contact_pts`) to the ROS 2 ecosystem.  
 
 The same approach can be extended to other grasp planners or perception algorithms (e.g., **UnseenObjectClustering**) running in Docker or conda environments.  
@@ -36,32 +36,37 @@ Flow:
 
 #### 1. Prerequisites:
 
-- **ROS 2 Jazzy** (or compatible distro) installed on host.  
-- **Docker** with GPU runtime enabled (`nvidia-docker2` or `nvidia-container-toolkit`).  
-- **Built Docker image** for Contact-GraspNet (see `Dockerfile_CGN`).  
+- **ROS 2 Jazzy** (or compatible distro) installed on host (i.e., Ubuntu 24.04).  
+- **Docker** with GPU runtime enabled (`nvidia-docker2` or `nvidia-container-toolkit`).
 
-- Assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`, git clone the repo for ros2 server:
+#### 2. Setup the ros2 server and the source code for Contact-Graspnet:
+
+- **Clone this repo for ros2 server** (assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`):
 	```bash
 	cd ~/graspnet_ws/src/
 	git clone -b ros2_server https://github.com/zhaohuajing/contact_graspnet_ros2.git
 	```
 
-- Clone contact_graspnet source repo from: https://github.com/zhaohuajing/compare_contact_graspnet.git and create local folder named `contact_graspnet`:
+- **Clone the contact_graspnet source repo** from: https://github.com/zhaohuajing/compare_contact_graspnet.git and create local folder named `contact_graspnet`:
 	```bash
 	cd ~/graspnet_ws/src/contact_graspnet_ros2/
 	git clone https://github.com/zhaohuajing/compare_contact_graspnet contact_graspnet
 	```
 
-#### 2. Setup Docker container:
+#### 3. Setup Docker container for Contact-Graspnet:
 
-- **Download the Docker files**: 
+We use `Dockerfile_CGN` from `https://github.com/zhaohuajing/contact_graspnet_docker` to build a docker image with Base image: CUDA 11.8 with cuDNN 8 on Ubuntu 22.04 for Contact-GraspNet. We use `run_docker.sh` to start the docker container, which at the same time mount the local workspace (i.e., `~/graspnet_ws/src`) from the host machine to the docker container.
+
+- **Clone the Docker files** (CUDA 11.8 with cuDNN 8 on Ubuntu 22.04): 
 
 	```bash
+ 	cd ~/graspnet_ws/src/contact_graspnet_ros2/
 	git clone https://github.com/zhaohuajing/contact_graspnet_docker 
 	```
 
 - **Build the Docker image**:
 	```bash
+ 	cd ~/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet_docker
 	docker build -t cuda118:contact_graspnet -f Dockerfile_CGN .
 	```
 	Alternatively, you may use the following command to pull the docker image for contact-graspnet from docker hub:
@@ -73,10 +78,10 @@ Flow:
    ```bash
    ./run_docker.sh
    ```
-	This script launches the Contact-GraspNet container with the proper environment and names it as: `contact_graspnet_container`
+	This script launches the Contact-GraspNet container with the proper environment and names it as: `contact_graspnet_container`. Note that `run_docker.sh` script will mount the entire workspace (i.e., `~/graspnet_ws/src`) to the docker container through `-v ~/graspnet_ws:/root/graspnet_ws`; you may adjust the name of workspace to your local setup as needed.
 
 
-#### 3. Compile the ROS 2 package:
+#### 4. Compile the ROS 2 package:
 
 - Start an new terminal on the host machine (i.e., outside of the docker container). Assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`, run the following command:
 	```bash
@@ -85,9 +90,9 @@ Flow:
 	source install/setup.bash
 	```
 
-#### 4. Test run of the ROS 2 server WITHOUT real-time inputs:
+#### 5. Test run of the ROS 2 server WITHOUT real-time inputs:
 
-- Both server and client commands should run on the host machine (i.e., outside of the docker container).
+- Both **server** and **client** commands should run on the host machine (i.e., Ubuntu 24.04 compatible with **ROS 2 Jazzy** outside of the docker container).
 
 - **Run the test ROS 2 server (in one terminal)**:
 
