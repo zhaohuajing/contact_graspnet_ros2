@@ -124,13 +124,12 @@ This repository provides **two complementary ROS 2 wrappers for Contact-GraspNet
 We introduce a ROS 2 server, **`grasp_executor_rgbd_server`**, which enables Contact-GraspNet to operate directly on **live RGB-D scenes** (e.g., from Gazebo or a physical camera), instead of only static, pre-generated datasets.
 
 **Key features:**
-- ROS 2 service interface for grasp requests.
-- Converts live RGB-D inputs (and optional instance segmentation outputs) into Contact-GraspNet-compatible scene files.
+- ROS 2 service interface `contact_graspnet_ros2/grasp_executor_rgbd_server` for grasp requests.
+- Converts live RGB-D inputs and optional instance segmentation features (e.g., check [`contact_graspnet/contact_graspnet/test_data/sample3/`](https://github.com/zhaohuajing/compare_contact_graspnet/tree/main/test_data/sample_scene_ucn/sample_3)) into Contact-GraspNet-compatible scene files.
 - Launches Contact-GraspNet inference **inside Docker via `subprocess`**, enabling:
   - ROS 2 on the host (modern Python, CUDA, drivers).
   - Contact-GraspNet running in a controlled container environment.
 - Parses inference outputs and returns grasp poses to ROS 2 clients for planning and execution.
-
 
 **Run the ROS 2 server with Live RGB-D inputs**
 ```bash
@@ -151,9 +150,7 @@ This design supports modular integration with upstream perception modules, inclu
 - Other RGB-D or image-based object detection and segmentation algorithms.
 
 A **full perception-to-action pipeline example** using FlexBE state machines is available at:
-- https://github.com/zhaohuajing/compare_flexbe  
-  (branch: `feature/cgn`)
-
+- https://github.com/zhaohuajing/compare_flexbe    (branch: `feature/cgn`)
 
 This enables a full **RGB-D → segmentation → grasp planning → MoveIt** pipeline without requiring intermediate point cloud processing by the user. For this reason, the RGB-D interface is currently the **recommended entry point** for end-to-end perception-to-action workflows in both simulation and real hardware.
 
@@ -178,7 +175,6 @@ However, this point cloud interface is **not directly compatible** with the Unse
 - External perception systems that already output filtered or labeled point clouds  
 
 With appropriate upstream perception, the point cloud wrapper can be used as an alternative grasp planning backend, but it requires the user to manage object isolation and point cloud preparation externally.
-
 
 ---
 
