@@ -55,7 +55,7 @@ Flow:
 
 #### 3. Setup Docker container for Contact-Graspnet:
 
-We use `Dockerfile_CGN` from `https://github.com/zhaohuajing/contact_graspnet_docker` to build a docker image with Base image: CUDA 11.8 with cuDNN 8 on Ubuntu 22.04 for Contact-GraspNet. We use `run_docker.sh` to start the docker container, which at the same time mount the local workspace (i.e., `~/graspnet_ws/src`) from the host machine to the docker container.
+We use `Dockerfile_CGN` from https://github.com/zhaohuajing/contact_graspnet_docker to build a docker image with Base image: CUDA 11.8 with cuDNN 8 on Ubuntu 22.04 for Contact-GraspNet. We use `run_docker.sh` to start the docker container, which at the same time mount the local workspace (i.e., `~/graspnet_ws/src`) from the host machine to the docker container.
 
 - **Clone the Docker files** (CUDA 11.8 with cuDNN 8 on Ubuntu 22.04): 
 
