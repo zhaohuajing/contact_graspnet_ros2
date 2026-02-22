@@ -182,17 +182,19 @@ With appropriate upstream perception, the point cloud wrapper can be used as an 
 
 ---
 
-## Additional Features: Frame Alignment Between Contact-GraspNet and ROS TF
+## Additional Features for Real-time integrations
 
-A major contribution of this work is the **explicit and correct alignment of frame conventions** between Contact-GraspNet and standard ROS TF / URDF definitions.
+### Frame Alignment Between Contact-GraspNet and ROS TF
 
-### Camera frame alignment
+A major contribution of this work is the **explicit and correct alignment of frame conventions** between Contact-GraspNet and standard ROS TF / URDF definitions in **`grasp_executor_rgbd_server`**.
+
+#### Camera frame alignment
 
 Contact-GraspNet internally represents grasps in the **camera optical frame** which mismatches with ROS camera frames (e.g., `camera_link`).
 
 We apply a fixed rotation: `R_optical → camera_link` to map Contact-GraspNet grasp poses into the ROS TF tree correctly. This resolves systematic position errors such as grasps floating above the table or shifted laterally.
 
-### Gripper / end-effector frame alignment
+#### Gripper / end-effector frame alignment
 
 Contact-GraspNet’s **grasp frame** does not exactly match the Panda gripper (`panda_hand`) convention used by ROS and MoveIt.
 
@@ -200,6 +202,7 @@ Based on inspection of prior implementations (e.g., SceneReplica), we introduce 
 - Palm orientation
 - End-effector X/Y axis definitions
 
+#### Note:
 After applying both:
 1. Camera optical → ROS camera frame rotation, and  
 2. Contact-GraspNet grasp frame → Panda gripper frame rotation,
@@ -210,3 +213,4 @@ the resulting grasp poses are:
 - Directly usable by MoveIt without ad-hoc offsets.
 
 These transformations are implemented in `grasp_executor_rgbd_server.py` and documented inline.
+
