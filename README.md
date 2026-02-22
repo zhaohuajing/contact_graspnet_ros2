@@ -3,9 +3,10 @@
 This package provides a ROS 2 service–client wrapper around **Contact-GraspNet**, using a `subprocess` call inside the ROS 2 server to run grasp inference in a Docker container.  
 
 This design allows us to:  
-- Keep ROS 2 running on the host system (e.g., Ubuntu 24.04, Python 3.12, CUDA 12.2).  
-- Execute Contact-GraspNet inference in a controlled environment (Docker with Ubuntu 22.04 Python 3.9, CUDA 11.8).  
-- Cleanly return grasp results (`pred_grasps_cam`, `scores`, `contact_pts`) to the ROS 2 ecosystem.  
+- Keep ROS 2 running on the **host system** compatible with **ROS 2** (e.g., Ubuntu 24.04 with Python 3.12, CUDA 12.2), which uses **subprocess** bridge to call the source code inside a Docker container.  
+- Execute Contact-GraspNet inference in a controlled **Docker environment** (e.g., Ubuntu 22.04 with Ubuntu 22.04 Python 3.9, CUDA 11.8).  
+- Cleanly return grasp results (`pred_grasps_cam`, `scores`, `contact_pts`) to the ROS 2 ecosystem.
+- Addded additional features for Frame Alignment Between Contact-GraspNet and ROS TF for robot manipulation planning.
 
 The same approach can be extended to other grasp planners or perception algorithms (e.g., **UnseenObjectClustering**) running in Docker or conda environments.  
 
