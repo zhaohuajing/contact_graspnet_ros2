@@ -95,7 +95,7 @@ install(DIRECTORY resource/
 )
 
 # Checkpoints: install to share so code can find them via get_package_share_directory
-install(DIRECTORY checkpoints/
+install(DIRECTORY contact_graspnet/checkpoints/
   DESTINATION share/${PROJECT_NAME}/checkpoints
 )
 

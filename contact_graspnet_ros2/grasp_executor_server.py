@@ -19,7 +19,9 @@ class GraspServer(Node):
         super().__init__('grasp_server')
         self.srv = self.create_service(GetGrasps, 'get_grasps', self.handle_grasp_request)
         self.get_logger().info('Grasp server ready (executing inference inside a docker container).')
-        self.base_path = "/home/csrobot/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet"
+        # self.base_path = "/home/csrobot/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet"
+        home_dir = os.path.expanduser("~")
+        self.base_path = os.path.join(home_dir, 'graspnet_ws/src', 'contact_graspnet_ros2/contact_graspnet')
         # self.result_loading = "_use_json" #["_use_json", "_use_npz"]
         self.result_loading = "_use_npz" #["_use_json", "_use_npz"]
 
