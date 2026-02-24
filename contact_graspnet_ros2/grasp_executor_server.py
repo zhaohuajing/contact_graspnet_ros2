@@ -23,10 +23,10 @@ class GraspServer(Node):
         # self.result_loading = "_use_json" #["_use_json", "_use_npz"]
         self.result_loading = "_use_npz" #["_use_json", "_use_npz"]
 
-    def run_inference_in_docker(self,scene_id):
+    def run_inference_in_docker(self,scene_name):
         container_name = "contact_graspnet_container"
         # container_name = "magical_lovelace"
-        np_path = f"test_data/{scene_id}.npy"
+        np_path = f"test_data/{scene_name}.npy"
 
         # cmd = [
         #     "docker", "exec", container_name,
@@ -89,37 +89,37 @@ class GraspServer(Node):
         return json_text
 
     def handle_grasp_request(self, request, response):
-        # For now we assume scene_id=0, later you can parse from request
-        # self.scene_id = 0
-        self.scene_id = request.scene_id
+        # For now we assume scene_name=0, later you can parse from request
+        # self.scene_name = 0
+        self.scene_name = request.scene_name
         # self.get_logger().info(f"Loading precomputed results for {result_path}")
-        self.get_logger().info(f"Running inference in Docker for scene {self.scene_id}...")
+        self.get_logger().info(f"Running inference in Docker for scene {self.scene_name}...")
 
-        output = self.run_inference_in_docker(self.scene_id)
+        output = self.run_inference_in_docker(self.scene_name)
         self.get_logger().info(f"Inference finished") #. Output:\n{output}")
 
         if self.result_loading == "_use_json":
             # Debug: save printed inference outputs to txt file for inspect. Loadable files for grasp results are saved to npz files through inference.py
-            with open(f"./temp/inference_output_scene{self.scene_id}.txt", "w") as f:
+            with open(f"./temp/inference_output_scene{self.scene_name}.txt", "w") as f:
                 f.write(output)
-            self.get_logger().info(f"Saved raw inference output to ./temp/inference_output_scene{self.scene_id}.txt")
+            self.get_logger().info(f"Saved raw inference output to ./temp/inference_output_scene{self.scene_name}.txt")
             results = json.loads(output)
 
             pred_grasps_cam = {k: [np.array(g) for g in v] for k, v in results["pred_grasps_cam"].items()}
             scores = {k: np.array(v) for k, v in results["scores"].items()}
             contact_pts = {k: np.array(v) for k, v in results["contact_pts"].items()}
 
-            self.get_logger().info(f"Received grasp results from docker for scene {self.scene_id}:")
+            self.get_logger().info(f"Received grasp results from docker for scene {self.scene_name}:")
 
         elif self.result_loading == "_use_npz":
-            result_path = os.path.join(self.base_path, "results", f"predictions_{self.scene_id}.npz")
+            result_path = os.path.join(self.base_path, "results", f"predictions_{self.scene_name}.npz")
             data = np.load(result_path, allow_pickle=True)
 
             pred_grasps_cam = data['pred_grasps_cam'].item()
             scores = data['scores'].item()
             contact_pts = data['contact_pts'].item()
 
-            self.get_logger().info(f"Loaded grasp results from docker for scene {self.scene_id}:")
+            self.get_logger().info(f"Loaded grasp results from docker for scene {self.scene_name}:")
 
         pose_list, score_list, sample_list, object_list = [], [], [], []
 
@@ -149,7 +149,7 @@ class GraspServer(Node):
         grasps_msg.object_ids = object_list
         response.grasps = grasps_msg
 
-        self.get_logger().info(f"Responded with {len(pose_list)} grasps from scene {self.scene_id}\n")
+        self.get_logger().info(f"Responded with {len(pose_list)} grasps from scene {self.scene_name}\n")
         return response
 
 
