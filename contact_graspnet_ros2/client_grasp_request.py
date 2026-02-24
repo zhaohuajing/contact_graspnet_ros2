@@ -15,7 +15,8 @@ class GraspClient(Node):
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting...')
 
-        self.base_path = "/home/csrobot/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet"
+        ome_dir = os.path.expanduser("~")
+        self.base_path = os.path.join(home_dir, 'graspnet_ws/src', 'contact_graspnet_ros2/contact_graspnet')
         self.scene_name = sys.argv[1]
 
         npy_path = os.path.join(self.base_path, "test_data", f"{self.scene_name}.npy") 
