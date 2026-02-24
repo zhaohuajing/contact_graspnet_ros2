@@ -79,8 +79,8 @@ We use `Dockerfile_CGN` from https://github.com/zhaohuajing/contact_graspnet_doc
    ```bash
    ./run_docker.sh
    ```
-	This script launches the Contact-GraspNet container with the proper environment and names it as: `contact_graspnet_container`. Note that `run_docker.sh` script will mount the entire workspace (i.e., `~/graspnet_ws/src`) to the docker container through `-v ~/graspnet_ws:/root/graspnet_ws`; you may adjust the name of workspace to your local setup as needed.
-
+	This script launches the Contact-GraspNet container with the proper environment and names it as: `contact_graspnet_container`. Note that `run_docker.sh` script will mount the entire workspace (i.e., `~/graspnet_ws/src`) to the docker container through `-v ~/graspnet_ws:/root/graspnet_ws`; you may adjust the name of workspace to your local setup as needed. 
+	Once the container is running, simply leave that terminal open. No manual commands need to be executed inside the container. All ROS 2 server interactions are initiated from separate terminals on the host machine. These ROS 2 nodes use subprocess calls to automatically enter the running container and execute the required inference scripts internally.
 
 #### 4. Compile the ROS 2 package:
 
@@ -93,7 +93,7 @@ We use `Dockerfile_CGN` from https://github.com/zhaohuajing/contact_graspnet_doc
 
 #### 5. Test run of the ROS 2 server WITHOUT real-time inputs:
 
-- Both **server** and **client** commands should run on the host machine (i.e., Ubuntu 24.04 compatible with **ROS 2 Jazzy** outside of the docker container).
+Both **server** and **client** commands should run on the host machine (i.e., Ubuntu 24.04 compatible with **ROS 2 Jazzy** outside of the docker container).
 
 - **Run the test ROS 2 server (in one terminal)**:
 
