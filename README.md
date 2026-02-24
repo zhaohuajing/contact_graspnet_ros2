@@ -3,9 +3,10 @@
 This package provides a ROS 2 service–client wrapper around **Contact-GraspNet**, using a `subprocess` call inside the ROS 2 server to run grasp inference in a Docker container.  
 
 This design allows us to:  
-- Keep ROS 2 running on the host system (e.g., Python 3.12, CUDA 12.2).  
-- Execute Contact-GraspNet inference in a controlled environment (Docker with Python 3.9, CUDA 11.8).  
-- Cleanly return grasp results (`pred_grasps_cam`, `scores`, `contact_pts`) to the ROS 2 ecosystem.  
+- Keep ROS 2 running on the **host system** compatible with **ROS 2** (e.g., Ubuntu 24.04 with Python 3.12, CUDA 12.2), which uses **subprocess** bridge to call the source code inside a Docker container.  
+- Execute Contact-GraspNet inference in a controlled **Docker environment** (e.g., Ubuntu 22.04 with Ubuntu 22.04 Python 3.9, CUDA 11.8).  
+- Cleanly return grasp results (`pred_grasps_cam`, `scores`, `contact_pts`) to the ROS 2 ecosystem.
+- Addded additional features for Frame Alignment Between Contact-GraspNet and ROS TF for robot manipulation planning.
 
 The same approach can be extended to other grasp planners or perception algorithms (e.g., **UnseenObjectClustering**) running in Docker or conda environments.  
 
@@ -36,32 +37,37 @@ Flow:
 
 #### 1. Prerequisites:
 
-- **ROS 2 Jazzy** (or compatible distro) installed on host.  
-- **Docker** with GPU runtime enabled (`nvidia-docker2` or `nvidia-container-toolkit`).  
-- **Built Docker image** for Contact-GraspNet (see `Dockerfile_CGN`).  
+- **ROS 2 Jazzy** (or compatible distro) installed on host (i.e., Ubuntu 24.04).  
+- **Docker** with GPU runtime enabled (`nvidia-docker2` or `nvidia-container-toolkit`).
 
-- Assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`, git clone the repo for ros2 server:
+#### 2. Setup the ros2 server and the source code for Contact-Graspnet:
+
+- **Clone this repo for ros2 server** (assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`):
 	```bash
 	cd ~/graspnet_ws/src/
 	git clone -b ros2_server https://github.com/zhaohuajing/contact_graspnet_ros2.git
 	```
 
-- Clone contact_graspnet source repo from: https://github.com/zhaohuajing/compare_contact_graspnet.git and create local folder named `contact_graspnet`:
+- **Clone the contact_graspnet source repo** from: https://github.com/zhaohuajing/compare_contact_graspnet.git and create local folder named `contact_graspnet`:
 	```bash
 	cd ~/graspnet_ws/src/contact_graspnet_ros2/
 	git clone https://github.com/zhaohuajing/compare_contact_graspnet contact_graspnet
 	```
 
-#### 2. Setup Docker container:
+#### 3. Setup Docker container for Contact-Graspnet:
 
-- **Download the Docker files**: 
+We use `Dockerfile_CGN` from https://github.com/zhaohuajing/contact_graspnet_docker to build a docker image with Base image: CUDA 11.8 with cuDNN 8 on Ubuntu 22.04 for Contact-GraspNet. We use `run_docker.sh` to start the docker container, which at the same time mount the local workspace (i.e., `~/graspnet_ws/src`) from the host machine to the docker container.
+
+- **Clone the Docker files** (CUDA 11.8 with cuDNN 8 on Ubuntu 22.04): 
 
 	```bash
+ 	cd ~/graspnet_ws/src/contact_graspnet_ros2/
 	git clone https://github.com/zhaohuajing/contact_graspnet_docker 
 	```
 
 - **Build the Docker image**:
 	```bash
+ 	cd ~/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet_docker
 	docker build -t cuda118:contact_graspnet -f Dockerfile_CGN .
 	```
 	Alternatively, you may use the following command to pull the docker image for contact-graspnet from docker hub:
@@ -73,10 +79,10 @@ Flow:
    ```bash
    ./run_docker.sh
    ```
-	This script launches the Contact-GraspNet container with the proper environment and names it as: `contact_graspnet_container`
+	This script launches the Contact-GraspNet container with the proper environment and names it as: `contact_graspnet_container`. Note that `run_docker.sh` script will mount the entire workspace (i.e., `~/graspnet_ws/src`) to the docker container through `-v ~/graspnet_ws:/root/graspnet_ws`; you may adjust the name of workspace to your local setup as needed.
 
 
-#### 3. Compile the ROS 2 package:
+#### 4. Compile the ROS 2 package:
 
 - Start an new terminal on the host machine (i.e., outside of the docker container). Assume repository `contact_graspnet_ros2` is put under `~/graspnet_ws/src`, run the following command:
 	```bash
@@ -85,9 +91,9 @@ Flow:
 	source install/setup.bash
 	```
 
-#### 4. Test run of the ROS 2 server WITHOUT real-time inputs:
+#### 5. Test run of the ROS 2 server WITHOUT real-time inputs:
 
-- Both server and client commands should run on the host machine (i.e., outside of the docker container).
+- Both **server** and **client** commands should run on the host machine (i.e., Ubuntu 24.04 compatible with **ROS 2 Jazzy** outside of the docker container).
 
 - **Run the test ROS 2 server (in one terminal)**:
 
@@ -118,13 +124,12 @@ This repository provides **two complementary ROS 2 wrappers for Contact-GraspNet
 We introduce a ROS 2 server, **`grasp_executor_rgbd_server`**, which enables Contact-GraspNet to operate directly on **live RGB-D scenes** (e.g., from Gazebo or a physical camera), instead of only static, pre-generated datasets.
 
 **Key features:**
-- ROS 2 service interface for grasp requests.
-- Converts live RGB-D inputs (and optional instance segmentation outputs) into Contact-GraspNet-compatible scene files.
+- ROS 2 service interface `contact_graspnet_ros2/grasp_executor_rgbd_server` for grasp requests.
+- Converts live RGB-D inputs and optional instance segmentation features (e.g., check [`contact_graspnet/contact_graspnet/test_data/sample3/`](https://github.com/zhaohuajing/compare_contact_graspnet/tree/main/test_data/sample_scene_ucn/sample_3)) into Contact-GraspNet-compatible scene files.
 - Launches Contact-GraspNet inference **inside Docker via `subprocess`**, enabling:
   - ROS 2 on the host (modern Python, CUDA, drivers).
   - Contact-GraspNet running in a controlled container environment.
 - Parses inference outputs and returns grasp poses to ROS 2 clients for planning and execution.
-
 
 **Run the ROS 2 server with Live RGB-D inputs**
 ```bash
@@ -145,9 +150,7 @@ This design supports modular integration with upstream perception modules, inclu
 - Other RGB-D or image-based object detection and segmentation algorithms.
 
 A **full perception-to-action pipeline example** using FlexBE state machines is available at:
-- https://github.com/zhaohuajing/compare_flexbe  
-  (branch: `feature/cgn`)
-
+- https://github.com/zhaohuajing/compare_flexbe    (branch: `feature/cgn`)
 
 This enables a full **RGB-D → segmentation → grasp planning → MoveIt** pipeline without requiring intermediate point cloud processing by the user. For this reason, the RGB-D interface is currently the **recommended entry point** for end-to-end perception-to-action workflows in both simulation and real hardware.
 
@@ -173,20 +176,21 @@ However, this point cloud interface is **not directly compatible** with the Unse
 
 With appropriate upstream perception, the point cloud wrapper can be used as an alternative grasp planning backend, but it requires the user to manage object isolation and point cloud preparation externally.
 
-
 ---
 
-## Additional Features: Frame Alignment Between Contact-GraspNet and ROS TF
+## Additional Features for Real-time integrations
 
-A major contribution of this work is the **explicit and correct alignment of frame conventions** between Contact-GraspNet and standard ROS TF / URDF definitions.
+### Frame Alignment Between Contact-GraspNet and ROS TF
 
-### Camera frame alignment
+A major contribution of this work is the **explicit and correct alignment of frame conventions** between Contact-GraspNet and standard ROS TF / URDF definitions in **`grasp_executor_rgbd_server`**.
+
+#### Camera frame alignment
 
 Contact-GraspNet internally represents grasps in the **camera optical frame** which mismatches with ROS camera frames (e.g., `camera_link`).
 
 We apply a fixed rotation: `R_optical → camera_link` to map Contact-GraspNet grasp poses into the ROS TF tree correctly. This resolves systematic position errors such as grasps floating above the table or shifted laterally.
 
-### Gripper / end-effector frame alignment
+#### Gripper / end-effector frame alignment
 
 Contact-GraspNet’s **grasp frame** does not exactly match the Panda gripper (`panda_hand`) convention used by ROS and MoveIt.
 
@@ -194,6 +198,7 @@ Based on inspection of prior implementations (e.g., SceneReplica), we introduce 
 - Palm orientation
 - End-effector X/Y axis definitions
 
+#### Note:
 After applying both:
 1. Camera optical → ROS camera frame rotation, and  
 2. Contact-GraspNet grasp frame → Panda gripper frame rotation,
@@ -204,3 +209,4 @@ the resulting grasp poses are:
 - Directly usable by MoveIt without ad-hoc offsets.
 
 These transformations are implemented in `grasp_executor_rgbd_server.py` and documented inline.
+
