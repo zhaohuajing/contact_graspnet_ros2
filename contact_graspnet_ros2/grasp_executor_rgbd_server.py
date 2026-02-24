@@ -24,8 +24,7 @@ class GraspServer(Node):
         self.get_logger().info('Grasp server ready (executing inference inside a docker container).')
 
         # Base path inside the docker container and host
-        ome_dir = os.path.expanduser("~")
-        self.base_path = os.path.join(home_dir, 'graspnet_ws/src', 'contact_graspnet_ros2/contact_graspnet')
+        self.base_path = os.path.expanduser("~/graspnet_ws/src/contact_graspnet_ros2/contact_graspnet")
 
         # Whether to parse JSON from stdout or load the .npz file directly
         self.result_loading = "_use_json"  # ["_use_json", "_use_npz"]
